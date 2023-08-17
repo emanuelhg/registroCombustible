@@ -14,14 +14,25 @@ $(document).ready(function () {
             { title: "Consumo" },
             { title: "Acción" }
         ],
-        columnDefs: [],
+        columnDefs: [
+            {
+                targets: 0,
+                render: function (data, type, full, meta) {
+                    if (type === "display") {
+                        return formatearFecha(data);
+                    }
+                    return data;
+                },
+                type: "date-euro"
+            }
+        ],
         order: [[0, "desc"]],
         language: {
             processing: "Procesando...",
             lengthMenu: "Mostrar _MENU_",
             zeroRecords: "No se encontraron resultados",
             info: "Mostrando _START_ a _END_ de _TOTAL_ registros",
-            emptyTable: "Sin registros de Consumo de Combustible :(",
+            emptyTable: "sin registros de Consumo de Combustible :(",
             infoEmpty: "sin registros",
             infoFiltered: "(filtrado de un total de _MAX_ registros)",
             search: "Buscar:",
@@ -39,6 +50,7 @@ $(document).ready(function () {
         ]
     });
 
+
     function formatearFecha(fecha) {
         const partesFecha = fecha.split('-');
         const dia = partesFecha[2];
@@ -47,6 +59,7 @@ $(document).ready(function () {
         return `${dia}-${mes}-${año}`;
     }
 
+
     calcularBtn.on("click", function () {
         const kilometrosInput = $("#kilometros");
         const litrosInput = $("#litros");
@@ -54,16 +67,20 @@ $(document).ready(function () {
         const kilometros = parseFloat(kilometrosInput.val());
         const litros = parseFloat(litrosInput.val());
         const fecha = fechaInput;
+
         if (isNaN(kilometros) || isNaN(litros) || fecha.trim() === "") {
             advertenciaModal.modal("show");
             return;
         }
+
         const consumo = (litros * 100) / kilometros;
         const resultado = [fecha, `${kilometros.toFixed(2)} km`, `${litros.toFixed(2)} L`, `${consumo.toFixed(2)} L cada 100km`, '<button class="btn btn-danger btn-sm btn-borrar"><i class="fa-sharp fa-solid fa-trash" style="color: #ffffff;"></i></button>'];
+
         tablaDatos.row.add(resultado).draw();
         guardarResultadoLocalStorage(resultado);
         registroForm[0].reset();
         actualizarPromedioModal();
+
     });
 
     borrarTodoBtn.on("click", function () {
@@ -87,6 +104,7 @@ $(document).ready(function () {
     $("#importarInput").on("change", function (e) {
         const archivo = e.target.files[0];
         if (!archivo) return;
+
         const lector = new FileReader();
         lector.onload = function (evento) {
             try {
@@ -113,6 +131,7 @@ $(document).ready(function () {
         };
         lector.readAsText(archivo);
     });
+
 
     $("#exportarBtn").on("click", function () {
         const resultadosGuardados = JSON.parse(localStorage.getItem("resultados")) || [];
@@ -161,6 +180,7 @@ $(document).ready(function () {
         const resultadosGuardados = JSON.parse(localStorage.getItem("resultados")) || [];
         const totalConsumo = resultadosGuardados.reduce((total, resultado) => total + resultado.consumo, 0);
         const promedioConsumo = totalConsumo / resultadosGuardados.length;
+
         $("#promedioModalBody").text(promedioConsumo.toFixed(2) + " L/100km");
     }
 
@@ -178,29 +198,35 @@ $(document).ready(function () {
     $("#promedioBtn").on("click", function () {
         const resultadosGuardados = JSON.parse(localStorage.getItem("resultados")) || [];
         const promedioModalBody = $("#promedioModalBody");
+
         if (resultadosGuardados.length === 0) {
             promedioModalBody.html("No hay datos disponibles para calcular el promedio.");
         } else {
             let totalConsumo = 0;
             let totalKilometros = 0;
             let totalLitros = 0;
+
             resultadosGuardados.forEach(resultado => {
                 totalConsumo += resultado.consumo;
                 totalKilometros += resultado.kilometros;
                 totalLitros += resultado.litros;
             });
+
             const promedioConsumo = totalConsumo / resultadosGuardados.length;
             const promedioKilometros = totalKilometros / resultadosGuardados.length;
             const promedioLitros = totalLitros / resultadosGuardados.length;
+
             const contenidoModal = `
                 <p>✓ Consumo cada 100 km: <span class="text-success fw-bold text-opacity-75">${promedioConsumo.toFixed(2)} L</span>.</p>
                 <p>✓ Recorrido entre recargas: <span class="text-success fw-bold text-opacity-75">${promedioKilometros.toFixed(2)} km</span>.</p>
                 <p>✓ Carga al repostar: <span class="text-success fw-bold text-opacity-75">${promedioLitros.toFixed(2)} L</span>.</p>
             `;
+
             promedioModalBody.html(contenidoModal);
         }
         $("#promedioModal").modal("show");
     });
 
     actualizarPromedioModal();
+
 });
