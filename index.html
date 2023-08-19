@@ -10,8 +10,8 @@
 </head>
 <body>
     <div class="container w-50 p-3" id="contenido">
-        <h1 class="mb-4 text-center text-primary">Registro de Consumo de Combustible</h1>
-        <form id="registroForm" class="fw-bold mt-5">
+        <h1 class="mb-4 text-center">Registro de Consumo de Combustible</h1>
+        <form id="registroForm" class="fw-bold text-secondary mt-5">
             <div class="form-group">
                 <label for="kilometros">Cant. de KM desde la Última Recarga:</label>
                 <input type="text" class="form-control" id="kilometros" required="required">
@@ -62,10 +62,14 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="confirmModalLabel">Confirmación de Borrado</h5>
+                    <h5 class="modal-title" id="confirmModalLabel">
+                        <i class="fa-solid fa-triangle-exclamation fa-lg" style="color: #fbd337;"></i>
+                        Borrar Registros:
+                    </h5>
                 </div>
                 <div class="modal-body">
-                    ¿Estás seguro de que deseas borrar todos los resultados? Esta acción no se puede deshacer.
+                    <p id="confirmModalMessage" style="display: none;">¿Estás seguro de que deseas borrar todos los resultados? Esta acción no se puede deshacer.</p>
+                    <p id="noRecordsMessage" style="display: none;">Debe existir al menos un registro para poder realizar esta acción.</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
@@ -74,11 +78,15 @@
             </div>
         </div>
     </div>
+    
     <div class="modal fade" data-backdrop="static" id="advertenciaModal" tabindex="-1" aria-labelledby="advertenciaModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="advertenciaModalLabel">Advertencia</h5>
+                    <h5 class="modal-title" id="advertenciaModalLabel">
+                        <i class="fa-solid fa-triangle-exclamation fa-lg" style="color: #fbd337;"></i>
+                        Agregar Registros:
+                    </h5>
                 </div>
                 <div class="modal-body">
                     Por favor, completá o corregí todos los campos obligatorios antes de calcular.
@@ -93,7 +101,10 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="promedioModalLabel">Promedios:</h5>
+                    <h5 class="modal-title" id="promedioModalLabel">
+                        <i class="fas fa-gas-pump fa-lg" style="color: #ff8040;"></i>
+                        Promedios:
+                    </h5>
                 </div>
                 <div class="modal-body" id="promedioModalBody">
                 </div>
@@ -103,6 +114,52 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" data-backdrop="static" id="exportResultModal" tabindex="-1" aria-labelledby="exportResultModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exportResultModalLabel">
+                        <i class="fa-solid fa-file-export fa-lg" style="color: #ff8040;"></i>
+                        Exportar Registros:
+                    </h5>
+                </div>
+                <div class="modal-body" id="exportResultMessage">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" data-backdrop="static" id="importResultModal" tabindex="-1" aria-labelledby="importResultModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="importResultModalLabel">
+                        <i class="fa-solid fa-file-import fa-lg" style="color: #ff8040;"></i>
+                        Importar Registros:
+                    </h5>
+                </div>
+                <div class="modal-body" id="importResultMessage">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="text-center py-4">
+        <p>&copy; 2023 - EmanuelHG</p>
+        <div class="footer-icons">
+            <a href="https://www.linkedin.com/in/emanuel-guzzetti/" target="_blank">
+                <i class="fa-brands fa-linkedin-in fa-lg"></i>
+            </a>
+            <a href="https://github.com/emanuelhg" target="_blank">
+                <i class="fa-brands fa-github fa-lg"></i>
+            </a>
+        </div>
+    </footer>    
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://kit.fontawesome.com/06909fba27.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>

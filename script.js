@@ -88,6 +88,20 @@ $(document).ready(function () {
     });
 
     borrarTodoBtn.on("click", function () {
+        const resultadosGuardados = JSON.parse(localStorage.getItem("resultados")) || [];
+        const confirmModalMessage = $("#confirmModalMessage");
+        const noRecordsMessage = $("#noRecordsMessage");
+    
+        if (resultadosGuardados.length === 0) {
+            confirmModalMessage.hide();
+            noRecordsMessage.show();
+            $("#confirmarBorrado").hide();
+        } else {
+            noRecordsMessage.hide();
+            confirmModalMessage.show();
+            $("#confirmarBorrado").show();
+        }
+    
         $("#confirmModal").modal("show");
     });
 
@@ -108,37 +122,60 @@ $(document).ready(function () {
     $("#importarInput").on("change", function (e) {
         const archivo = e.target.files[0];
         if (!archivo) return;
-
+    
         const lector = new FileReader();
         lector.onload = function (evento) {
             try {
                 const resultadosImportados = JSON.parse(evento.target.result);
-                resultadosImportados.forEach(resultado => {
-                    tablaDatos.row.add([
-                        resultado.fecha,
-                        `${resultado.kilometros.toFixed(2)} km`,
-                        `${resultado.litros.toFixed(2)} L`,
-                        `${resultado.consumo.toFixed(2)} L cada 100km`,
-                        '<button class="btn btn-danger btn-sm btn-borrar"><i class="fa-sharp fa-solid fa-trash" style="color: #ffffff;"></i></button>'
-                    ]).draw();
-                    guardarResultadoLocalStorage([
-                        resultado.fecha,
-                        resultado.kilometros.toFixed(2),
-                        resultado.litros.toFixed(2),
-                        resultado.consumo.toFixed(2)
-                    ]);
-                });
-                actualizarPromedioModal();
+                const cantidadRegistros = resultadosImportados.length;
+    
+                if (cantidadRegistros > 0) {
+                    resultadosImportados.forEach(resultado => {
+                        tablaDatos.row.add([
+                            resultado.fecha,
+                            `${resultado.kilometros.toFixed(2)} km`,
+                            `${resultado.litros.toFixed(2)} L`,
+                            `${resultado.consumo.toFixed(2)} L cada 100km`,
+                            '<button class="btn btn-danger btn-sm btn-borrar"><i class="fa-sharp fa-solid fa-trash" style="color: #ffffff;"></i></button>'
+                        ]).draw();
+                        guardarResultadoLocalStorage([
+                            resultado.fecha,
+                            resultado.kilometros.toFixed(2),
+                            resultado.litros.toFixed(2),
+                            resultado.consumo.toFixed(2)
+                        ]);
+                    });
+                    actualizarPromedioModal();
+                    const importResultMessage = $("#importResultMessage");
+                    const modalMessage = `Se importó ${cantidadRegistros} registro/s exitosamente.`;
+                    importResultMessage.text(modalMessage);
+                    $("#importResultModal").modal("show");
+                } else {
+                    const importResultMessage = $("#importResultMessage");
+                    const modalMessage = "No hay registros nuevos en el archivo para importar.";
+                    importResultMessage.text(modalMessage);
+                    $("#importResultModal").modal("show");
+                }
             } catch (error) {
                 console.error("Error al importar los resultados:", error);
             }
         };
         lector.readAsText(archivo);
     });
+    
 
 
     $("#exportarBtn").on("click", function () {
         const resultadosGuardados = JSON.parse(localStorage.getItem("resultados")) || [];
+    
+        if (resultadosGuardados.length === 0) {
+            const exportResultMessage = $("#exportResultMessage");
+            const modalMessage = "No hay registros para exportar.";
+            exportResultMessage.text(modalMessage);
+            $("#exportResultModal").modal("show");
+            return;
+        }
+    
         const resultadosExportados = JSON.stringify(resultadosGuardados, null, 2);
         const fechaHora = obtenerFechaHoraActual();
         const nombreArchivo = `Registros_combustible_${fechaHora}.json`;
@@ -150,7 +187,13 @@ $(document).ready(function () {
         a.download = nombreArchivo;
         a.click();
         URL.revokeObjectURL(url);
+    
+        const exportResultMessage = $("#exportResultMessage");
+        const modalMessage = `Se exportó ${resultadosGuardados.length} registro/s al archivo: '${nombreArchivo}'.`;
+        exportResultMessage.text(modalMessage);
+        $("#exportResultModal").modal("show");
     });
+    
     
     function obtenerFechaHoraActual() {
         const now = new Date();
@@ -225,12 +268,23 @@ $(document).ready(function () {
                 <p>✓ Recorrido entre recargas: <span class="text-success fw-bold text-opacity-75">${promedioKilometros.toFixed(2)} km</span>.</p>
                 <p>✓ Carga al repostar: <span class="text-success fw-bold text-opacity-75">${promedioLitros.toFixed(2)} L</span>.</p>
             `;
-
             promedioModalBody.html(contenidoModal);
         }
         $("#promedioModal").modal("show");
     });
 
     actualizarPromedioModal();
+
+
+    $(".edit-btn").on("click", function() {
+        var id = $(this).data("id");
+        var registro = $("#registros").DataTable().row(this).data();
+        $("#editar-registro").modal("show");
+        $("#id-registro").val(id);
+        $("#fecha-registro").val(registro.fecha);
+        $("#litros-registro").val(registro.litros);
+        $("#kilometros-registro").val(registro.kilometros);
+    });
+
 
 });
