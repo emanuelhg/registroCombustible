@@ -7,6 +7,13 @@ $(document).ready(function () {
     const tablaDatos = $("#tablaDatos").DataTable({
         paging: true,
         pageLength: 5,
+        responsive: {
+            details: {
+                display: DataTable.Responsive.display.childRowImmediate,
+                target: '',
+                type: 'none'
+            }
+        },
         columns: [
             { title: "Fecha" },
             { title: "Kilómetros" },
@@ -15,7 +22,7 @@ $(document).ready(function () {
             { title: "Acción" }
         ],
         columnDefs: [
-            {
+            {   
                 targets: 0,
                 render: function (data, type, full, meta) {
                     if (type === "display") {
@@ -32,8 +39,8 @@ $(document).ready(function () {
             lengthMenu: "Mostrar _MENU_",
             zeroRecords: "No se encontraron resultados",
             info: "Mostrando _START_ a _END_ de _TOTAL_ registros",
-            emptyTable: "sin registros de Consumo de Combustible :(",
-            infoEmpty: "sin registros",
+            emptyTable: "Sin registros de Consumo de Combustible :(",
+            infoEmpty: "Sin registros",
             infoFiltered: "(filtrado de un total de _MAX_ registros)",
             search: "Buscar:",
             loadingRecords: "Cargando...",
@@ -50,7 +57,6 @@ $(document).ready(function () {
         ]
     });
 
-
     function formatearFecha(fecha) {
         const partesFecha = fecha.split('-');
         const dia = partesFecha[2];
@@ -58,8 +64,7 @@ $(document).ready(function () {
         const año = partesFecha[0];
         return `${dia}-${mes}-${año}`;
     }
-
-
+    
     calcularBtn.on("click", function () {
         const kilometrosInput = $("#kilometros");
         const litrosInput = $("#litros");
@@ -80,7 +85,6 @@ $(document).ready(function () {
         guardarResultadoLocalStorage(resultado);
         registroForm[0].reset();
         actualizarPromedioModal();
-
     });
 
     borrarTodoBtn.on("click", function () {

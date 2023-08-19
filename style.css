@@ -1,0 +1,32 @@
+th.sorting {
+    text-align: center !important;
+}
+
+.dataTables_info {
+    font-style: italic;
+}
+
+.dataTables_length {
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .dataTables_length {
+        text-align: initial;
+        margin-bottom: 8px;
+    }
+
+    .dataTables_info {
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 900px) {
+    #contenido {
+        width: auto !important;
+    }
+
+    .dtr-details {
+        text-align: left;
+    }
+}
