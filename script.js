@@ -115,7 +115,12 @@ $(document).ready(function () {
     tablaResultados.on("click", ".btn-borrar", function () {
         const fila = $(this).closest("tr");
         const index = tablaDatos.row(fila).index();
-        tablaDatos.row(fila).remove().draw();
+        if ($(window).width() < 491) {
+            location.reload();
+        }
+        else {
+            tablaDatos.row(fila).remove().draw();
+        }
         borrarResultadoLocalStorage(index);
     });
 
