@@ -64,6 +64,10 @@ $(document).ready(function () {
         const año = partesFecha[0];
         return `${dia}-${mes}-${año}`;
     }
+
+
+
+    
     
     calcularBtn.on("click", function () {
         const kilometrosInput = $("#kilometros");
@@ -72,20 +76,42 @@ $(document).ready(function () {
         const kilometros = parseFloat(kilometrosInput.val());
         const litros = parseFloat(litrosInput.val());
         const fecha = fechaInput;
-
+    
         if (isNaN(kilometros) || isNaN(litros) || fecha.trim() === "") {
             advertenciaModal.modal("show");
             return;
         }
-
+    
         const consumo = (litros * 100) / kilometros;
-        const resultado = [fecha, `${kilometros.toFixed(2)} km`, `${litros.toFixed(2)} L`, `${consumo.toFixed(2)} L cada 100km`, '<button class="btn btn-danger btn-sm btn-borrar"><i class="fa-sharp fa-solid fa-trash" style="color: #ffffff;"></i></button>'];
-
-        tablaDatos.row.add(resultado).draw();
+        const id = obtenerNuevoID(); // Obtener un nuevo ID para el registro
+        const resultado = {
+            id: id, // Agregar el ID al objeto del registro
+            fecha: fecha,
+            kilometros: kilometros,
+            litros: litros,
+            consumo: consumo
+        };
+    
+        tablaDatos.row.add([
+            resultado.fecha,
+            `${resultado.kilometros.toFixed(2)} km`,
+            `${resultado.litros.toFixed(2)} L`,
+            `${resultado.consumo.toFixed(2)} L cada 100km`,
+            '<button class="btn btn-danger btn-sm btn-borrar" data-id="' + resultado.id + '"><i class="fa-sharp fa-solid fa-trash" style="color: #ffffff;"></i></button>'
+        ]).draw();
         guardarResultadoLocalStorage(resultado);
         registroForm[0].reset();
         actualizarPromedioModal();
     });
+
+    function obtenerNuevoID() {
+        const resultadosGuardados = JSON.parse(localStorage.getItem("resultados")) || [];
+        const ids = resultadosGuardados.map(resultado => resultado.id);
+        const maxID = Math.max(...ids, 0);
+        return maxID + 1;
+    }
+    
+    
 
     borrarTodoBtn.on("click", function () {
         const resultadosGuardados = JSON.parse(localStorage.getItem("resultados")) || [];
@@ -114,15 +140,17 @@ $(document).ready(function () {
 
     tablaResultados.on("click", ".btn-borrar", function () {
         const fila = $(this).closest("tr");
-        const index = tablaDatos.row(fila).index();
+        const id = $(this).data("id"); // Obtener el ID del botón
+        const index = resultadosGuardados.findIndex(resultado => resultado.id === id); // Buscar el índice del registro con ese ID
+    
         if ($(window).width() < 491) {
             location.reload();
-        }
-        else {
+        } else {
             tablaDatos.row(fila).remove().draw();
         }
         borrarResultadoLocalStorage(index);
     });
+    
 
     $("#importarInput").on("change", function (e) {
         const archivo = e.target.files[0];
@@ -132,24 +160,32 @@ $(document).ready(function () {
         lector.onload = function (evento) {
             try {
                 const resultadosImportados = JSON.parse(evento.target.result);
+                const resultadosGuardados = JSON.parse(localStorage.getItem("resultados")) || [];
                 const cantidadRegistros = resultadosImportados.length;
     
                 if (cantidadRegistros > 0) {
-                    resultadosImportados.forEach(resultado => {
+                    const maxID = resultadosGuardados.reduce((max, resultado) => Math.max(max, resultado.id), 0);
+                    resultadosImportados.forEach((resultado, index) => {
+                        const id = maxID + index + 1; // Calcular el nuevo ID basado en el último ID en localStorage
                         tablaDatos.row.add([
                             resultado.fecha,
                             `${resultado.kilometros.toFixed(2)} km`,
                             `${resultado.litros.toFixed(2)} L`,
                             `${resultado.consumo.toFixed(2)} L cada 100km`,
-                            '<button class="btn btn-danger btn-sm btn-borrar"><i class="fa-sharp fa-solid fa-trash" style="color: #ffffff;"></i></button>'
+                            `<button class="btn btn-danger btn-sm btn-borrar" data-id="${id}">
+                                <i class="fa-sharp fa-solid fa-trash" style="color: #ffffff;"></i>
+                            </button>`
                         ]).draw();
-                        guardarResultadoLocalStorage([
-                            resultado.fecha,
-                            resultado.kilometros.toFixed(2),
-                            resultado.litros.toFixed(2),
-                            resultado.consumo.toFixed(2)
-                        ]);
+                        const nuevoResultado = {
+                            id: id,
+                            fecha: resultado.fecha,
+                            kilometros: parseFloat(resultado.kilometros),
+                            litros: parseFloat(resultado.litros),
+                            consumo: parseFloat(resultado.consumo)
+                        };
+                        resultadosGuardados.push(nuevoResultado); // Agregar el registro al array
                     });
+                    localStorage.setItem("resultados", JSON.stringify(resultadosGuardados)); // Guardar los registros en localStorage
                     actualizarPromedioModal();
                     const importResultMessage = $("#importResultMessage");
                     const modalMessage = `Se importó ${cantidadRegistros} registro/s exitosamente.`;
@@ -167,6 +203,8 @@ $(document).ready(function () {
         };
         lector.readAsText(archivo);
     });
+    
+    
     
 
 
@@ -212,14 +250,22 @@ $(document).ready(function () {
     
     function guardarResultadoLocalStorage(resultado) {
         const resultadosGuardados = JSON.parse(localStorage.getItem("resultados")) || [];
-        resultadosGuardados.push({
-            fecha: resultado[0],
-            kilometros: parseFloat(resultado[1]),
-            litros: parseFloat(resultado[2]),
-            consumo: parseFloat(resultado[3])
-        });
+    
+        const nuevoResultado = {
+            id: resultado.id, // Usar el ID asignado al registro
+            fecha: resultado.fecha,
+            kilometros: parseFloat(resultado.kilometros),
+            litros: parseFloat(resultado.litros),
+            consumo: parseFloat(resultado.consumo)
+        };
+    
+        resultadosGuardados.push(nuevoResultado);
         localStorage.setItem("resultados", JSON.stringify(resultadosGuardados));
     }
+    
+    
+    
+    
 
     function borrarResultadoLocalStorage(index) {
         const resultadosGuardados = JSON.parse(localStorage.getItem("resultados")) || [];
@@ -232,54 +278,89 @@ $(document).ready(function () {
         const resultadosGuardados = JSON.parse(localStorage.getItem("resultados")) || [];
         const totalConsumo = resultadosGuardados.reduce((total, resultado) => total + resultado.consumo, 0);
         const promedioConsumo = totalConsumo / resultadosGuardados.length;
-
+    
         $("#promedioModalBody").text(promedioConsumo.toFixed(2) + " L/100km");
     }
+    
 
     const resultadosGuardados = JSON.parse(localStorage.getItem("resultados")) || [];
     resultadosGuardados.forEach(resultado => {
-        tablaDatos.row.add([
+        const newRow = tablaDatos.row.add([
             resultado.fecha,
             `${resultado.kilometros.toFixed(2)} km`,
             `${resultado.litros.toFixed(2)} L`,
             `${resultado.consumo.toFixed(2)} L cada 100km`,
-            '<button class="btn btn-danger btn-sm btn-borrar"><i class="fa-sharp fa-solid fa-trash" style="color: #ffffff;"></i></button>'
+            '<button class="btn btn-danger btn-sm btn-borrar" data-id="' + resultado.id + '"><i class="fa-sharp fa-solid fa-trash" style="color: #ffffff;"></i></button>'
         ]).draw();
+    
+        tablaDatos.draw(); // Dibujar la tabla
     });
+    
+    
 
     $("#promedioBtn").on("click", function () {
         const resultadosGuardados = JSON.parse(localStorage.getItem("resultados")) || [];
         const promedioModalBody = $("#promedioModalBody");
-
         if (resultadosGuardados.length === 0) {
             promedioModalBody.html("No hay datos disponibles para calcular el promedio.");
         } else {
-            let totalConsumo = 0;
-            let totalKilometros = 0;
-            let totalLitros = 0;
-
-            resultadosGuardados.forEach(resultado => {
-                totalConsumo += resultado.consumo;
-                totalKilometros += resultado.kilometros;
-                totalLitros += resultado.litros;
-            });
-
-            const promedioConsumo = totalConsumo / resultadosGuardados.length;
-            const promedioKilometros = totalKilometros / resultadosGuardados.length;
-            const promedioLitros = totalLitros / resultadosGuardados.length;
-
+            resultadosGuardados.sort((a, b) => new Date(a.fecha) - new Date(b.fecha)); // Ordenar por fechas ascendentes
+            const labels = resultadosGuardados.map(resultado => formatearFecha(resultado.fecha)); // Formatear las fechas
+            const consumoData = resultadosGuardados.map(resultado => resultado.consumo.toFixed(2));
+            const recorridoData = resultadosGuardados.map(resultado => resultado.kilometros.toFixed(2));
+            const cargaData = resultadosGuardados.map(resultado => resultado.litros.toFixed(2));
             const contenidoModal = `
-                <p>✓ Consumo cada 100 km: <span class="text-success fw-bold text-opacity-75">${promedioConsumo.toFixed(2)} L</span>.</p>
-                <p>✓ Recorrido entre recargas: <span class="text-success fw-bold text-opacity-75">${promedioKilometros.toFixed(2)} km</span>.</p>
-                <p>✓ Carga al repostar: <span class="text-success fw-bold text-opacity-75">${promedioLitros.toFixed(2)} L</span>.</p>
+                <p>✓ Consumo cada 100 km: <span class="text-success fw-bold text-opacity-75">${obtenerPromedio(consumoData).toFixed(2)} L</span>.</p>
+                <p>✓ Recorrido entre recargas: <span class="text-success fw-bold text-opacity-75">${obtenerPromedio(recorridoData).toFixed(2)} km</span>.</p>
+                <p>✓ Carga al repostar: <span class="text-success fw-bold text-opacity-75">${obtenerPromedio(cargaData).toFixed(2)} L</span>.</p>
+                <div class="mt-4">
+                    <canvas id="graficoBarras"></canvas>
+                </div>
             `;
-            promedioModalBody.html(contenidoModal);
+            promedioModalBody.html(contenidoModal); 
+            const ctx = document.getElementById('graficoBarras').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Consumo (L/100km)',
+                        data: consumoData,
+                        backgroundColor: 'rgba(0, 200, 0, 0.49)', // Color de las barras
+                        borderColor: 'rgba(0, 200, 0, 1)', // Color del borde de las barras
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Litros'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Fechas'
+                            }
+                        }
+                    }
+                }
+            });
         }
         $("#promedioModal").modal("show");
     });
+    
+    
+    function obtenerPromedio(valores) {
+        const suma = valores.reduce((total, valor) => total + parseFloat(valor), 0);
+        return suma / valores.length;
+    }
+    
 
     actualizarPromedioModal();
-
 
     $(".edit-btn").on("click", function() {
         var id = $(this).data("id");
@@ -290,6 +371,5 @@ $(document).ready(function () {
         $("#litros-registro").val(registro.litros);
         $("#kilometros-registro").val(registro.kilometros);
     });
-
 
 });
