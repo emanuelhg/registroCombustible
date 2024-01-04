@@ -334,7 +334,8 @@ $(document).ready(function () {
                 options: {
                     scales: {
                         y: {
-                            beginAtZero: true,
+                            beginAtZero: false,
+                            min: 5,
                             title: {
                                 display: true,
                                 text: 'Litros'
