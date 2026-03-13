@@ -1,40 +1,60 @@
-# Registro de Consumo de Combustible
+﻿# Registro de Consumo de Combustible
 
-Este proyecto es una aplicación web que permite llevar un registro de tus consumos de combustible. Puedes ingresar los kilómetros recorridos, la cantidad de litros de cargados y la fecha de la recarga para calcular el consumo promedio cada 100 kilómetros.
+Aplicación web para registrar recargas, calcular consumo (`L/100 km`) y analizar la evolución del rendimiento del vehículo.
 
-## Características
+## Estado actual
 
-- Registro de los siguientes datos por cada recarga:
-  - Kilómetros recorridos
-  - Litros de combustible cargados
+- Interfaz modernizada y responsive (desktop + mobile).
+- Persistencia local con `localStorage` (datos guardados en el navegador).
+- Tabla interactiva con DataTables (búsqueda, paginación y ordenamiento).
+
+## Funcionalidades
+
+- Alta de registros con:
+  - Kilómetros desde la última recarga
+  - Litros cargados
   - Fecha de recarga
-- Cálculo automático del consumo promedio por cada 100 kilómetros.
-- Visualización de los resultados en una tabla interactiva.
-- Opción para borrar un resultado específico o todos los resultados.
-- Exportación e importación de los registros en formato JSON.
-- Cálculo y visualización del promedio de consumo, recorrido entre recargas y cantidad de combustible cargado.
+- Validaciones de formulario (valores numéricos > 0 y fecha válida).
+- Edición de registros existentes.
+- Borrado individual y borrado total con confirmación.
+- KPIs visibles:
+  - Consumo promedio
+  - Recorrido promedio
+  - Carga promedio
+- Modal de promedios con gráfico de tendencia (Chart.js) y escala dinámica.
+- Exportación de datos a JSON.
+- Importación de JSON con validación y normalización de registros.
 
-## Uso
+## Flujo de uso
 
-1. Completa los campos de kilómetros recorridos, litros de combustible cargados y la fecha de recarga.
-2. Presiona el botón "Calcular" para agregar el registro a la tabla de resultados y calcular el consumo promedio.
-3. Si deseas borrar un resultado específico, presiona el botón de "Borrar" correspondiente en la tabla.
-4. Para borrar todos los registros, presiona el botón "Borrar Todos" y confirma la acción.
-5. Utiliza los botones de "Promedios", "Exportar" e "Importar" para calcular y manejar los promedios, exportar los registros y cargar registros desde un archivo JSON, respectivamente.
+1. Completar kilómetros, litros y fecha.
+2. Presionar **Agregar registro**.
+3. Revisar historial en la tabla y usar **Editar** o **Borrar** según necesidad.
+4. Usar **Promedios y gráfico** para ver métricas y tendencia.
+5. Usar **Exportar JSON** y **Importar JSON** para backup/restauración.
 
-## Instalación
+## Tecnologías
 
-1. Clona este repositorio en tu máquina local:
+- HTML5
+- CSS3
+- JavaScript (jQuery)
+- Bootstrap 5
+- DataTables
+- Chart.js
+- Font Awesome
 
-   ```bash
-   git clone https://github.com/emanuelhg/registroCombustible.git
+## Ejecución local
 
-2. Abre el archivo index.html en tu navegador web.
+1. Clonar repositorio:
 
-## Tecnologías Utilizadas
+```bash
+git clone https://github.com/emanuelhg/registroCombustible.git
+```
 
-    - HTML5
-    - CSS3
-    - JavaScript (jQuery)
-    - Bootstrap 5
-    - DataTables
+2. Abrir `index.html` en el navegador.
+
+## Notas
+
+- No requiere backend.
+- Los datos son locales al navegador/dispositivo actual.
+- Para compartir datos entre dispositivos, exportar/importar JSON.

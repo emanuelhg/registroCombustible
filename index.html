@@ -1,171 +1,191 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aplicación web para registrar consumos de combustible, analizar promedios y exportar/importar datos en JSON.">
     <title>Registro de Consumo de Combustible</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link href="https://cdn.datatables.net/v/bs5/dt-1.13.6/r-2.5.0/datatables.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.datatables.net/v/bs5/dt-1.13.8/r-2.5.0/datatables.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container w-50 p-3" id="contenido">
-        <h1 class="mb-4 text-center">Registro de Consumo de Combustible</h1>
-        <form id="registroForm" class="fw-bold text-secondary mt-5">
-            <div class="form-group">
-                <label for="kilometros">Cant. de KM desde la Última Recarga:</label>
-                <input type="text" class="form-control" id="kilometros" required="required">
+    <main class="app-shell container py-4 py-lg-5">
+        <section class="glass-card p-4 p-lg-5 mb-4">
+            <div class="d-flex flex-column flex-lg-row justify-content-between gap-3 align-items-lg-end mb-4">
+                <div>
+                    <p class="eyebrow mb-2">Control de gastos de movilidad</p>
+                    <h1 class="app-title mb-2">Registro de Consumo de Combustible</h1>
+                    <p class="app-subtitle mb-0">Cargá cada repostaje, seguí tu consumo y detectá tendencias.</p>
+                </div>
+                <span class="badge rounded-pill text-bg-light border app-badge">Historial local</span>
             </div>
-            <div class="form-group mt-3">
-                <label for="litros">Cant. de Litros de Combustible Cargados:</label>
-                <input type="text" class="form-control" id="litros" required="required">
+
+            <form id="registroForm" class="row g-3" novalidate>
+                <div class="col-12 col-md-4">
+                    <label for="kilometros" class="form-label">Kilómetros desde la última recarga</label>
+                    <input type="number" class="form-control" id="kilometros" min="0.1" step="0.01" inputmode="decimal" placeholder="Ej: 412.5" required aria-describedby="kilometrosHelp">
+                    <div class="form-text" id="kilometrosHelp">Ingresá un número mayor a 0.</div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <label for="litros" class="form-label">Litros cargados</label>
+                    <input type="number" class="form-control" id="litros" min="0.1" step="0.01" inputmode="decimal" placeholder="Ej: 37.8" required aria-describedby="litrosHelp">
+                    <div class="form-text" id="litrosHelp">Ingresá un número mayor a 0.</div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <label for="fecha" class="form-label">Fecha de recarga</label>
+                    <input type="date" class="form-control" id="fecha" required>
+                </div>
+                <div class="col-12" id="formFeedback" role="status" aria-live="polite"></div>
+                <div class="col-12 d-flex flex-wrap gap-2 pt-2">
+                    <button type="submit" class="btn btn-primary" id="calcularBtn">Agregar registro</button>
+                    <button type="button" class="btn btn-outline-danger" id="borrarTodoBtn">Borrar todo</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="stats-grid mb-4" aria-label="Resumen de consumo">
+            <article class="stat-card">
+                <p class="stat-label">Consumo promedio</p>
+                <p class="stat-value" id="statConsumo">-</p>
+            </article>
+            <article class="stat-card">
+                <p class="stat-label">Recorrido promedio</p>
+                <p class="stat-value" id="statKm">-</p>
+            </article>
+            <article class="stat-card">
+                <p class="stat-label">Carga promedio</p>
+                <p class="stat-value" id="statLitros">-</p>
+            </article>
+        </section>
+
+        <section class="glass-card p-3 p-lg-4 mb-4">
+            <div class="d-flex flex-column flex-lg-row justify-content-between gap-3 align-items-lg-center mb-3">
+                <h2 class="h4 mb-0">Historial de recargas</h2>
+                <div class="d-flex flex-wrap gap-2 table-actions">
+                    <button class="btn btn-outline-dark btn-sm" id="promedioBtn" type="button">Promedios y gráfico</button>
+                    <button class="btn btn-outline-dark btn-sm" id="exportarBtn" type="button">Exportar JSON</button>
+                    <label for="importarInput" class="btn btn-outline-dark btn-sm mb-0">Importar JSON</label>
+                    <input type="file" id="importarInput" accept="application/json" hidden>
+                </div>
             </div>
-            <div class="form-group mt-3">
-                <label for="fecha">Fecha de Recarga:</label>
-                <input type="date" class="form-control" id="fecha" required="required">
+
+            <div class="table-responsive">
+                <table id="tablaDatos" class="table table-hover align-middle w-100">
+                    <thead>
+                        <tr>
+                            <th scope="col">Fecha</th>
+                            <th scope="col">Kilómetros</th>
+                            <th scope="col">Litros</th>
+                            <th scope="col">Consumo</th>
+                            <th scope="col">Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaResultados"></tbody>
+                </table>
             </div>
-            <div class="text-center mt-4">
-                <button type="button" class="btn btn-success" id="calcularBtn">Calcular</button>
-                <button type="button" class="btn btn-danger" id="borrarTodoBtn">Borrar Todos</button>
+        </section>
+
+        <footer class="text-center pb-3">
+            <p class="mb-1">&copy; 2026 - EmanuelHG</p>
+            <div class="footer-icons d-flex justify-content-center gap-3">
+                <a href="https://www.linkedin.com/in/emanuel-guzzetti/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/emanuelhg" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
             </div>
-        </form>
-        <div class="mt-5 text-center">
-            <h3 class="text-secondary">Resultados:</h3>
-            <table id="tablaDatos" class="table table-striped nowrap mt-3">
-                <thead>
-                    <tr>
-                        <th>Fecha</th>
-                        <th>Kilómetros</th>
-                        <th>Litros</th>
-                        <th>Consumo</th>
-                        <th>Acción</th>
-                    </tr>
-                </thead>
-                <tbody id="tablaResultados">
-                </tbody>
-            </table>
-        </div>
-        <div class="text-center mt-4">
-            <button class="btn btn-outline-dark btn-sm" id="promedioBtn">
-                <i class="fas fa-gas-pump me-1" style="color: #ff8040;"></i>Promedios
-            </button>                
-            <button class="btn btn-outline-dark btn-sm" id="exportarBtn">
-                <i class="fa-solid fa-file-export me-1" style="color: #ff8040;"></i>Exportar
-            </button>
-            <label for="importarInput" class="btn btn-outline-dark btn-sm" style="margin-bottom: 0;">
-                <i class="fa-solid fa-file-import me-1" style="color: #ff8040;"></i>Importar
-            </label>
-            <input type="file" id="importarInput" accept="application/json" style="display: none;">
-        </div>
-    </div>
-    <div class="modal fade" data-backdrop="static" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+        </footer>
+    </main>
+
+    <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="confirmModalLabel">
-                        <i class="fa-solid fa-triangle-exclamation fa-lg" style="color: #fbd337;"></i>
-                        Borrar Registros:
-                    </h5>
+                    <h5 class="modal-title" id="confirmModalLabel">Borrar registros</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
-                <div class="modal-body">
-                    <p id="confirmModalMessage" style="display: none;">¿Estás seguro de que deseas borrar todos los resultados? Esta acción no se puede deshacer.</p>
-                    <p id="noRecordsMessage" style="display: none;">Debe existir al menos un registro para poder realizar esta acción.</p>
-                </div>
+                <div class="modal-body" id="confirmModalMessage">¿Querés borrar todos los registros? Esta acción no se puede deshacer.</div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-danger" id="confirmarBorrado">Borrar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-danger" id="confirmarBorrado">Borrar todo</button>
                 </div>
             </div>
         </div>
     </div>
-    
-    <div class="modal fade" data-backdrop="static" id="advertenciaModal" tabindex="-1" aria-labelledby="advertenciaModalLabel" aria-hidden="true">
+
+    <div class="modal fade" id="promedioModal" tabindex="-1" aria-labelledby="promedioModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="promedioModalLabel">Promedios</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body" id="promedioModalBody"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="alertModal" tabindex="-1" aria-labelledby="alertModalLabel" aria-describedby="alertModalMessage" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="advertenciaModalLabel">
-                        <i class="fa-solid fa-triangle-exclamation fa-lg" style="color: #fbd337;"></i>
-                        Agregar Registros:
-                    </h5>
+                    <h5 class="modal-title" id="alertModalLabel">Aviso</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
-                <div class="modal-body">
-                    Por favor, completá o corregí todos los campos obligatorios antes de calcular.
-                </div>
+                <div class="modal-body" id="alertModalMessage"></div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
     </div>
-    <div class="modal fade" data-backdrop="static" id="promedioModal" tabindex="-1" aria-labelledby="promedioModalLabel" aria-hidden="true">
+
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="promedioModalLabel">
-                        <i class="fas fa-gas-pump fa-lg" style="color: #ff8040;"></i>
-                        Promedios:
-                    </h5>
+                    <h5 class="modal-title" id="editModalLabel">Editar registro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
-                <div class="modal-body" id="promedioModalBody">
-                    <canvas id="graficoBarras"></canvas>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                </div>
+                <form id="editForm" novalidate>
+                    <div class="modal-body">
+                        <input type="hidden" id="editId">
+                        <div class="mb-3">
+                            <label for="editKilometros" class="form-label">Kilómetros</label>
+                            <input type="number" class="form-control" id="editKilometros" min="0.1" step="0.01" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editLitros" class="form-label">Litros</label>
+                            <input type="number" class="form-control" id="editLitros" min="0.1" step="0.01" required>
+                        </div>
+                        <div>
+                            <label for="editFecha" class="form-label">Fecha</label>
+                            <input type="date" class="form-control" id="editFecha" required>
+                        </div>
+                        <div class="mt-3" id="editFormFeedback" role="status" aria-live="polite"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-    <div class="modal fade" data-backdrop="static" id="exportResultModal" tabindex="-1" aria-labelledby="exportResultModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exportResultModalLabel">
-                        <i class="fa-solid fa-file-export fa-lg" style="color: #ff8040;"></i>
-                        Exportar Registros:
-                    </h5>
-                </div>
-                <div class="modal-body" id="exportResultMessage">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" data-backdrop="static" id="importResultModal" tabindex="-1" aria-labelledby="importResultModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="importResultModalLabel">
-                        <i class="fa-solid fa-file-import fa-lg" style="color: #ff8040;"></i>
-                        Importar Registros:
-                    </h5>
-                </div>
-                <div class="modal-body" id="importResultMessage">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <footer class="text-center py-4">
-        <p>&copy; 2023 - EmanuelHG</p>
-        <div class="footer-icons">
-            <a href="https://www.linkedin.com/in/emanuel-guzzetti/" target="_blank">
-                <i class="fa-brands fa-linkedin-in fa-lg"></i>
-            </a>
-            <a href="https://github.com/emanuelhg" target="_blank">
-                <i class="fa-brands fa-github fa-lg"></i>
-            </a>
-        </div>
-    </footer>    
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://kit.fontawesome.com/06909fba27.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
-    <script src="https://cdn.datatables.net/v/bs5/dt-1.13.6/r-2.5.0/datatables.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/v/bs5/dt-1.13.8/r-2.5.0/datatables.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/06909fba27.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 </html>
