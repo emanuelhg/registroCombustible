@@ -11,10 +11,14 @@ Aplicación web para registrar recargas, calcular consumo (`L/100 km`) y analiza
 ## Funcionalidades
 
 - Alta de registros con:
+  - Provincia, ciudad, bandera y estación (con catálogo local)
+  - Tipo de combustible
   - Kilómetros desde la última recarga
   - Litros cargados
+  - Precio por litro y/o gasto total
   - Fecha de recarga
 - Validaciones de formulario (valores numéricos > 0 y fecha válida).
+- Autocompletado/sugerencia de precio vigente por estación+combustible (fuente: datos.energia.gob.ar).
 - Edición de registros existentes.
 - Borrado individual y borrado total con confirmación.
 - KPIs visibles:
@@ -42,6 +46,47 @@ Aplicación web para registrar recargas, calcular consumo (`L/100 km`) y analiza
 - DataTables
 - Chart.js
 - Font Awesome
+
+## Catalogo de estaciones y precios
+
+La app usa un catalogo estatico versionado en el repo:
+
+- `stations-catalog.json`: snapshot principal (estaciones + timeline de precios por marca).
+- `stations-catalog.js`: version consumida por el frontend.
+
+Para actualizar estos archivos existe el script:
+
+```bash
+node scripts/update-stations.mjs
+```
+
+El script soporta fuentes remotas opcionales por variables de entorno:
+
+- `OFFICIAL_CSV_URL` o `VIGENTES_CSV_URL` (CSV oficial de precios vigentes)
+- `HISTORICAL_CSV_URL` (CSV histórico alternativo)
+- `STATIONS_SOURCE_URL`
+- `PRICES_SOURCE_URL`
+- `TIMELINE_MONTHS` (default `18`, ventana de meses para timeline)
+
+Si falla la descarga o no existen variables, genera el catalogo con un seed local de respaldo.
+
+## Actualizacion automatica en GitHub Pages
+
+Se incluye workflow en `.github/workflows/update-catalog.yml`:
+
+- Corre diariamente por `cron`.
+- Corre también en `push` a `main` cuando cambian workflow/script/catálogo.
+- Se puede disparar manualmente con `workflow_dispatch`.
+- Si detecta cambios en catalogo, hace commit y push automatico.
+
+Opcional: configurar en GitHub Secrets:
+
+- `HISTORICAL_CSV_URL`
+- `VIGENTES_CSV_URL` o `OFFICIAL_CSV_URL`
+- `STATIONS_SOURCE_URL`
+- `PRICES_SOURCE_URL`
+
+Si no los configurás, el workflow sigue funcionando con seed local.
 
 ## Ejecución local
 

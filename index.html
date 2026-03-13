@@ -14,35 +14,89 @@
 </head>
 <body>
     <main class="app-shell container py-4 py-lg-5">
-        <section class="glass-card p-4 p-lg-5 mb-4">
+        <section class="glass-card form-card p-4 p-lg-5 mb-4">
             <div class="d-flex flex-column flex-lg-row justify-content-between gap-3 align-items-lg-end mb-4">
                 <div>
                     <p class="eyebrow mb-2">Control de gastos de movilidad</p>
                     <h1 class="app-title mb-2">Registro de Consumo de Combustible</h1>
                     <p class="app-subtitle mb-0">Cargá cada repostaje, seguí tu consumo y detectá tendencias.</p>
+                    <div class="app-hints mt-3" aria-label="Aclaraciones del formulario">
+                        <p class="app-hint mb-0">
+                            <strong>Campos obligatorios:</strong> combustible, kilómetros, litros, fecha y al menos uno entre precio/litro o gasto total.
+                        </p>
+                        <p class="app-hint mb-0">
+                            <strong>Precio sugerido:</strong> basado en datos vigentes de datos.energia.gob.ar.
+                        </p>
+                    </div>
                 </div>
                 <span class="badge rounded-pill text-bg-light border app-badge">Historial local</span>
             </div>
 
-            <form id="registroForm" class="row g-3" novalidate>
-                <div class="col-12 col-md-4">
-                    <label for="kilometros" class="form-label">Kilómetros desde la última recarga</label>
+            <form id="registroForm" class="row g-3" novalidate autocomplete="off">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <label for="filtroProvincia" class="form-label">Provincia</label>
+                    <select class="form-select" id="filtroProvincia">
+                        <option value="">Todas</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <label for="filtroCiudad" class="form-label">Ciudad</label>
+                    <select class="form-select" id="filtroCiudad">
+                        <option value="">Todas</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <label for="filtroBandera" class="form-label">Bandera</label>
+                    <select class="form-select" id="filtroBandera">
+                        <option value="">Todas</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <label for="estacion" class="form-label">Estación de servicio</label>
+                    <input type="text" class="form-control" id="estacion" list="estacionesSugeridas" placeholder="Elegí usando filtros" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                    <datalist id="estacionesSugeridas"></datalist>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <label for="combustible" class="form-label">Tipo de combustible</label>
+                    <select class="form-select" id="combustible" required>
+                        <option value="">Seleccionar...</option>
+                        <option value="Nafta Super">Nafta Super</option>
+                        <option value="Nafta Premium">Nafta Premium</option>
+                        <option value="Diesel">Diesel</option>
+                        <option value="Diesel Premium">Diesel Premium</option>
+                        <option value="GNC">GNC</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <label for="kilometros" class="form-label">Kilómetros recorridos</label>
                     <input type="number" class="form-control" id="kilometros" min="0.1" step="0.01" inputmode="decimal" placeholder="Ej: 412.5" required aria-describedby="kilometrosHelp">
                     <div class="form-text" id="kilometrosHelp">Ingresá un número mayor a 0.</div>
                 </div>
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-6 col-lg-3">
                     <label for="litros" class="form-label">Litros cargados</label>
                     <input type="number" class="form-control" id="litros" min="0.1" step="0.01" inputmode="decimal" placeholder="Ej: 37.8" required aria-describedby="litrosHelp">
                     <div class="form-text" id="litrosHelp">Ingresá un número mayor a 0.</div>
                 </div>
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <label for="precioLitro" class="form-label">Precio por litro (ARS)</label>
+                    <input type="number" class="form-control" id="precioLitro" min="0.01" step="0.01" inputmode="decimal" placeholder="Ej: 1250.40">
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <label for="gastoTotal" class="form-label">Gasto total (ARS)</label>
+                    <input type="number" class="form-control" id="gastoTotal" min="0.01" step="0.01" inputmode="decimal" placeholder="Ej: 47265.12">
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
                     <label for="fecha" class="form-label">Fecha de recarga</label>
                     <input type="date" class="form-control" id="fecha" required>
                 </div>
+                <div class="col-12 form-meta" id="formMeta">
+                    <p class="form-meta-line mb-1" id="stationCatalogStatus">Cargando catálogo de estaciones...</p>
+                    <p class="form-meta-line mb-0" id="priceAutoStatus">Completá estación y combustible para sugerir precio vigente.</p>
+                </div>
                 <div class="col-12" id="formFeedback" role="status" aria-live="polite"></div>
-                <div class="col-12 d-flex flex-wrap gap-2 pt-2">
+                <div class="col-12 form-actions">
                     <button type="submit" class="btn btn-primary" id="calcularBtn">Agregar registro</button>
-                    <button type="button" class="btn btn-outline-danger" id="borrarTodoBtn">Borrar todo</button>
+                    <button type="button" class="btn btn-outline-secondary" id="limpiarCargaBtn">Limpiar carga</button>
                 </div>
             </form>
         </section>
@@ -60,33 +114,40 @@
                 <p class="stat-label">Carga promedio</p>
                 <p class="stat-value" id="statLitros">-</p>
             </article>
+            <article class="stat-card">
+                <p class="stat-label">Gasto promedio</p>
+                <p class="stat-value" id="statGasto">-</p>
+            </article>
         </section>
 
-        <section class="glass-card p-3 p-lg-4 mb-4">
+        <section class="glass-card table-card p-3 p-lg-4 mb-4">
             <div class="d-flex flex-column flex-lg-row justify-content-between gap-3 align-items-lg-center mb-3">
                 <h2 class="h4 mb-0">Historial de recargas</h2>
                 <div class="d-flex flex-wrap gap-2 table-actions">
                     <button class="btn btn-outline-dark btn-sm" id="promedioBtn" type="button">Promedios y gráfico</button>
                     <button class="btn btn-outline-dark btn-sm" id="exportarBtn" type="button">Exportar JSON</button>
                     <label for="importarInput" class="btn btn-outline-dark btn-sm mb-0">Importar JSON</label>
+                    <button class="btn btn-outline-danger btn-sm" id="borrarTodoBtn" type="button">Borrar registros</button>
                     <input type="file" id="importarInput" accept="application/json" hidden>
                 </div>
             </div>
 
-            <div class="table-responsive">
-                <table id="tablaDatos" class="table table-hover align-middle w-100">
-                    <thead>
-                        <tr>
-                            <th scope="col">Fecha</th>
-                            <th scope="col">Kilómetros</th>
-                            <th scope="col">Litros</th>
-                            <th scope="col">Consumo</th>
-                            <th scope="col">Acción</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tablaResultados"></tbody>
-                </table>
-            </div>
+            <table id="tablaDatos" class="table table-hover align-middle w-100">
+                <thead>
+                    <tr>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Estación</th>
+                        <th scope="col">Combustible</th>
+                        <th scope="col">Kilómetros</th>
+                        <th scope="col">Litros</th>
+                        <th scope="col">Precio/L</th>
+                        <th scope="col">Gasto total</th>
+                        <th scope="col">Consumo</th>
+                        <th scope="col">Acción</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaResultados"></tbody>
+            </table>
         </section>
 
         <footer class="text-center pb-3">
@@ -155,9 +216,24 @@
                     <h5 class="modal-title" id="editModalLabel">Editar registro</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
-                <form id="editForm" novalidate>
+                <form id="editForm" novalidate autocomplete="off">
                     <div class="modal-body">
                         <input type="hidden" id="editId">
+                        <div class="mb-3">
+                            <label for="editEstacion" class="form-label">Estación de servicio</label>
+                            <input type="text" class="form-control" id="editEstacion" list="estacionesSugeridas" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                        </div>
+                        <div class="mb-3">
+                            <label for="editCombustible" class="form-label">Tipo de combustible</label>
+                            <select class="form-select" id="editCombustible" required>
+                                <option value="">Seleccionar...</option>
+                                <option value="Nafta Super">Nafta Super</option>
+                                <option value="Nafta Premium">Nafta Premium</option>
+                                <option value="Diesel">Diesel</option>
+                                <option value="Diesel Premium">Diesel Premium</option>
+                                <option value="GNC">GNC</option>
+                            </select>
+                        </div>
                         <div class="mb-3">
                             <label for="editKilometros" class="form-label">Kilómetros</label>
                             <input type="number" class="form-control" id="editKilometros" min="0.1" step="0.01" required>
@@ -165,6 +241,15 @@
                         <div class="mb-3">
                             <label for="editLitros" class="form-label">Litros</label>
                             <input type="number" class="form-control" id="editLitros" min="0.1" step="0.01" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editPrecioLitro" class="form-label">Precio por litro (ARS)</label>
+                            <input type="number" class="form-control" id="editPrecioLitro" min="0.01" step="0.01" required>
+                            <div class="form-text" id="editPriceAutoStatus"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editGastoTotal" class="form-label">Gasto total (ARS)</label>
+                            <input type="number" class="form-control" id="editGastoTotal" min="0.01" step="0.01" required>
                         </div>
                         <div>
                             <label for="editFecha" class="form-label">Fecha</label>
@@ -186,6 +271,7 @@
     <script src="https://cdn.datatables.net/v/bs5/dt-1.13.8/r-2.5.0/datatables.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://kit.fontawesome.com/06909fba27.js" crossorigin="anonymous"></script>
+    <script src="stations-catalog.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,53 @@
+name: Update Stations Catalog
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/update-stations.mjs"
+      - "stations-catalog.json"
+      - "stations-catalog.js"
+      - ".github/workflows/update-catalog.yml"
+  workflow_dispatch:
+  schedule:
+    - cron: "15 8 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update-catalog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Generate catalog
+        env:
+          OFFICIAL_CSV_URL: ${{ secrets.OFFICIAL_CSV_URL }}
+          VIGENTES_CSV_URL: ${{ secrets.VIGENTES_CSV_URL }}
+          HISTORICAL_CSV_URL: ${{ secrets.HISTORICAL_CSV_URL }}
+          STATIONS_SOURCE_URL: ${{ secrets.STATIONS_SOURCE_URL }}
+          PRICES_SOURCE_URL: ${{ secrets.PRICES_SOURCE_URL }}
+          TIMELINE_MONTHS: ${{ vars.TIMELINE_MONTHS }}
+        run: node scripts/update-stations.mjs
+
+      - name: Commit and push if changed
+        run: |
+          if git diff --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add stations-catalog.json stations-catalog.js
+          git commit -m "chore: update stations catalog"
+          git push
