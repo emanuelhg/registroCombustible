@@ -13,6 +13,10 @@ on:
   schedule:
     - cron: "15 8 * * *"
 
+concurrency:
+  group: update-stations-catalog
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
@@ -38,6 +42,7 @@ jobs:
           STATIONS_SOURCE_URL: ${{ secrets.STATIONS_SOURCE_URL }}
           PRICES_SOURCE_URL: ${{ secrets.PRICES_SOURCE_URL }}
           TIMELINE_MONTHS: ${{ vars.TIMELINE_MONTHS }}
+          RECENCY_DAYS: ${{ vars.RECENCY_DAYS }}
         run: node scripts/update-stations.mjs
 
       - name: Commit and push if changed

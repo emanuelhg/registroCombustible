@@ -44,13 +44,21 @@
     let chartInstance = null;
     let stationCatalog = [];
     let stationPriceTimeline = {};
+    let stationPriceReference = { meta: {}, local: [], brand: [] };
+    let localPriceReferenceMap = new Map();
+    let brandPriceReferenceMap = new Map();
     let lastAutoPriceMain = null;
     let lastAutoPriceEdit = null;
 
     const tablaDatos = $("#tablaDatos").DataTable({
         paging: true,
         pageLength: 7,
-        responsive: true,
+        responsive: {
+            details: {
+                type: "inline",
+                target: "tr"
+            }
+        },
         autoWidth: false,
         order: [[0, "desc"]],
         language: {
@@ -219,6 +227,70 @@
         return Array.from(keys);
     }
 
+    function normalizePriceReference(raw) {
+        const local = Array.isArray(raw?.local)
+            ? raw.local
+                .map((item) => {
+                    const province = String(item?.province ?? "").trim();
+                    const city = String(item?.city ?? "").trim();
+                    const brand = String(item?.brand ?? "").trim();
+                    const fuel = String(item?.fuel ?? "").trim();
+                    const date = String(item?.date ?? "").trim();
+                    const price = Number(item?.price);
+                    if (!province || !city || !brand || !fuel || !isValidDateString(date) || !isPositiveNumber(price)) return null;
+                    return { province, city, brand, fuel, date, price };
+                })
+                .filter(Boolean)
+            : [];
+
+        const brand = Array.isArray(raw?.brand)
+            ? raw.brand
+                .map((item) => {
+                    const brandLabel = String(item?.brand ?? "").trim();
+                    const fuel = String(item?.fuel ?? "").trim();
+                    const date = String(item?.date ?? "").trim();
+                    const price = Number(item?.price);
+                    if (!brandLabel || !fuel || !isValidDateString(date) || !isPositiveNumber(price)) return null;
+                    return { brand: brandLabel, fuel, date, price };
+                })
+                .filter(Boolean)
+            : [];
+
+        return {
+            meta: {
+                latestDate: String(raw?.meta?.latestDate || "").trim() || null,
+                cutoffDate: String(raw?.meta?.cutoffDate || "").trim() || null,
+                recencyDays: Number(raw?.meta?.recencyDays) || null
+            },
+            local,
+            brand
+        };
+    }
+
+    function buildPriceReferenceIndexes(reference) {
+        const localMap = new Map();
+        const brandMap = new Map();
+
+        reference.local.forEach((item) => {
+            const key = `${normalizeText(item.province)}|${normalizeText(item.city)}|${normalizeText(item.brand)}|${normalizeText(item.fuel)}`;
+            const prev = localMap.get(key);
+            if (!prev || item.date > prev.date) {
+                localMap.set(key, item);
+            }
+        });
+
+        reference.brand.forEach((item) => {
+            const key = `${normalizeText(item.brand)}|${normalizeText(item.fuel)}`;
+            const prev = brandMap.get(key);
+            if (!prev || item.date > prev.date) {
+                brandMap.set(key, item);
+            }
+        });
+
+        localPriceReferenceMap = localMap;
+        brandPriceReferenceMap = brandMap;
+    }
+
     function sanitizeCatalogStation(entry) {
         if (!entry || typeof entry !== "object") {
             return null;
@@ -246,6 +318,11 @@
             : {};
 
         stationPriceTimeline = rawTimeline;
+        const rawReference = window.STATION_PRICE_REFERENCE && typeof window.STATION_PRICE_REFERENCE === "object"
+            ? window.STATION_PRICE_REFERENCE
+            : { meta: {}, local: [], brand: [] };
+        stationPriceReference = normalizePriceReference(rawReference);
+        buildPriceReferenceIndexes(stationPriceReference);
         return stationCatalog;
     }
 
@@ -389,12 +466,45 @@
             return null;
         }
 
+        const fuelCandidates = getFuelKeyCandidates(fuelType);
+        const provinceNorm = normalizeText(station.province || "");
+        const cityNorm = normalizeText(station.city || "");
+        const brandNorm = normalizeText(station.brand || "");
+
+        // 1) Local recent reference: province+city+brand+fuel.
+        for (const fuelCandidate of fuelCandidates) {
+            const localKey = `${provinceNorm}|${cityNorm}|${brandNorm}|${normalizeText(fuelCandidate)}`;
+            const localRef = localPriceReferenceMap.get(localKey);
+            if (localRef) {
+                return {
+                    pointDate: new Date(`${localRef.date}T00:00:00`),
+                    pointDateIso: localRef.date,
+                    price: localRef.price,
+                    sourceLevel: "local"
+                };
+            }
+        }
+
+        // 2) Recent brand fallback.
+        for (const fuelCandidate of fuelCandidates) {
+            const brandKey = `${brandNorm}|${normalizeText(fuelCandidate)}`;
+            const brandRef = brandPriceReferenceMap.get(brandKey);
+            if (brandRef) {
+                return {
+                    pointDate: new Date(`${brandRef.date}T00:00:00`),
+                    pointDateIso: brandRef.date,
+                    price: brandRef.price,
+                    sourceLevel: "brand"
+                };
+            }
+        }
+
+        // 3) Legacy fallback: timeline by brand.
         const timeline = Array.isArray(stationPriceTimeline[station.brand]) ? stationPriceTimeline[station.brand] : [];
         if (!timeline.length) {
             return null;
         }
 
-        const fuelCandidates = getFuelKeyCandidates(fuelType);
         const matches = timeline
             .map((point) => {
                 const pointDate = new Date(`${point.date}T00:00:00`);
@@ -414,7 +524,8 @@
                 return {
                     pointDate,
                     pointDateIso: point.date,
-                    price
+                    price,
+                    sourceLevel: "timeline"
                 };
             })
             .filter(Boolean);
@@ -454,9 +565,12 @@
         precioLitroInput.val(suggested.toFixed(2));
         lastAutoPriceMain = suggested;
         syncCostFields(litrosInput.val(), precioLitroInput.val(), gastoTotalInput.val(), "precio", precioLitroInput, gastoTotalInput);
+        const levelLabel = approx.sourceLevel === "local"
+            ? "referencia local reciente"
+            : (approx.sourceLevel === "brand" ? "referencia de marca reciente" : "referencia vigente");
         setAutoPriceStatus(
             priceAutoStatus,
-            `Precio vigente sugerido: ${formatCurrencyArs(suggested)} (${station.brand}, fuente: datos.energia.gob.ar).`,
+            `Precio vigente sugerido: ${formatCurrencyArs(suggested)} (${station.brand}, ${levelLabel}, fuente: datos.energia.gob.ar).`,
             "success"
         );
     }
@@ -486,9 +600,12 @@
         editPrecioLitroInput.val(suggested.toFixed(2));
         lastAutoPriceEdit = suggested;
         syncCostFields(editLitrosInput.val(), editPrecioLitroInput.val(), editGastoTotalInput.val(), "precio", editPrecioLitroInput, editGastoTotalInput);
+        const levelLabel = approx.sourceLevel === "local"
+            ? "referencia local reciente"
+            : (approx.sourceLevel === "brand" ? "referencia de marca reciente" : "referencia vigente");
         setAutoPriceStatus(
             editPriceAutoStatus,
-            `Sugerido ${formatCurrencyArs(suggested)} (vigente, fuente: datos.energia.gob.ar).`,
+            `Sugerido ${formatCurrencyArs(suggested)} (vigente, ${levelLabel}, fuente: datos.energia.gob.ar).`,
             "success"
         );
     }
@@ -654,11 +771,13 @@
         const displayDate = formatDateDisplay(record.fecha);
         const stationText = record.estacion && record.estacion.trim() ? record.estacion : "-";
         const stationTextSafe = escapeHtml(stationText);
+        const stationCellText = stationText.length > 44 ? `${stationText.slice(0, 41)}...` : stationText;
+        const stationCellTextSafe = escapeHtml(stationCellText);
         const fuelTextSafe = escapeHtml(record.combustible);
 
         return [
             record.fecha,
-            `<span class="station-cell" title="${stationTextSafe}">${stationTextSafe}</span>`,
+            `<span class="station-cell" title="${stationTextSafe}">${stationCellTextSafe}</span>`,
             `<span class="fuel-cell" title="${fuelTextSafe}">${fuelTextSafe}</span>`,
             `${record.kilometros.toFixed(2)} km`,
             `${record.litros.toFixed(2)} L`,

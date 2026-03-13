@@ -67,6 +67,7 @@ El script soporta fuentes remotas opcionales por variables de entorno:
 - `STATIONS_SOURCE_URL`
 - `PRICES_SOURCE_URL`
 - `TIMELINE_MONTHS` (default `18`, ventana de meses para timeline)
+- `RECENCY_DAYS` (default `45`, ventana reciente para sugerencia local/marca)
 
 Si falla la descarga o no existen variables, genera el catalogo con un seed local de respaldo.
 
@@ -78,6 +79,12 @@ Se incluye workflow en `.github/workflows/update-catalog.yml`:
 - Corre también en `push` a `main` cuando cambian workflow/script/catálogo.
 - Se puede disparar manualmente con `workflow_dispatch`.
 - Si detecta cambios en catalogo, hace commit y push automatico.
+
+Regla de sugerencia de precio:
+
+1. Referencia local reciente por `provincia+ciudad+bandera+combustible`.
+2. Fallback reciente por `bandera+combustible` (nacional).
+3. Fallback legacy por timeline de marca si no hay referencia reciente.
 
 Opcional: configurar en GitHub Secrets:
 
