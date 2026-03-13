@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-13T03:14:28.642Z",
+  "updatedAt": "2026-03-13T03:33:33.480Z",
   "source": "http://datos.energia.gob.ar/dataset/1c181390-5045-475e-94dc-410429be4b17/resource/80ac25de-a44a-4445-9215-090cf55cfda5/download/precios-en-surtidor-resolucin-3142016.csv",
   "stations": [
     {
@@ -25463,6 +25463,15 @@
       ]
     },
     {
+      "brand": "Blanca",
+      "name": "CHAÑAR Y SAN LUIS",
+      "city": "Rivadavia",
+      "province": "Mendoza",
+      "fuels": [
+        "GNC"
+      ]
+    },
+    {
       "brand": "Axion Energy",
       "name": "CHANETON 390",
       "city": "Neuquen",
@@ -25472,15 +25481,6 @@
         "Diesel Premium",
         "Nafta Premium",
         "Nafta Super"
-      ]
-    },
-    {
-      "brand": "Blanca",
-      "name": "CHAÑAR Y SAN LUIS",
-      "city": "Rivadavia",
-      "province": "Mendoza",
-      "fuels": [
-        "GNC"
       ]
     },
     {
@@ -63870,6 +63870,15 @@
       },
       {
         "province": "Buenos Aires",
+        "city": "Muñiz",
+        "brand": "Blanca",
+        "fuel": "GNC",
+        "date": "2026-02-27",
+        "price": 669.9,
+        "count": 1
+      },
+      {
+        "province": "Buenos Aires",
         "city": "Munro",
         "brand": "Dapsa S.a.",
         "fuel": "Diesel",
@@ -63974,15 +63983,6 @@
         "fuel": "Nafta Super",
         "date": "2026-03-10",
         "price": 1816,
-        "count": 1
-      },
-      {
-        "province": "Buenos Aires",
-        "city": "Muñiz",
-        "brand": "Blanca",
-        "fuel": "GNC",
-        "date": "2026-02-27",
-        "price": 669.9,
         "count": 1
       },
       {

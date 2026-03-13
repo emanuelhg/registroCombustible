@@ -25460,6 +25460,15 @@ window.STATIONS_CATALOG = [
     ]
   },
   {
+    "brand": "Blanca",
+    "name": "CHAÑAR Y SAN LUIS",
+    "city": "Rivadavia",
+    "province": "Mendoza",
+    "fuels": [
+      "GNC"
+    ]
+  },
+  {
     "brand": "Axion Energy",
     "name": "CHANETON 390",
     "city": "Neuquen",
@@ -25469,15 +25478,6 @@ window.STATIONS_CATALOG = [
       "Diesel Premium",
       "Nafta Premium",
       "Nafta Super"
-    ]
-  },
-  {
-    "brand": "Blanca",
-    "name": "CHAÑAR Y SAN LUIS",
-    "city": "Rivadavia",
-    "province": "Mendoza",
-    "fuels": [
-      "GNC"
     ]
   },
   {
@@ -63869,6 +63869,15 @@ window.STATION_PRICE_REFERENCE = {
     },
     {
       "province": "Buenos Aires",
+      "city": "Muñiz",
+      "brand": "Blanca",
+      "fuel": "GNC",
+      "date": "2026-02-27",
+      "price": 669.9,
+      "count": 1
+    },
+    {
+      "province": "Buenos Aires",
       "city": "Munro",
       "brand": "Dapsa S.a.",
       "fuel": "Diesel",
@@ -63973,15 +63982,6 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Nafta Super",
       "date": "2026-03-10",
       "price": 1816,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Muñiz",
-      "brand": "Blanca",
-      "fuel": "GNC",
-      "date": "2026-02-27",
-      "price": 669.9,
       "count": 1
     },
     {
