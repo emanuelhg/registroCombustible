@@ -116,10 +116,10 @@ function fuelAlias(raw) {
 }
 
 function parseDateIso(raw) {
-  const value = String(raw ?? "").trim();
+  const value = String(raw ?? "").trim().replace("T", " ");
   if (!value) return null;
 
-  const dmy = value.match(/^(\d{1,2})[/-](\d{1,2})[/-](\d{2,4})$/);
+  const dmy = value.match(/^(\d{1,2})[/-](\d{1,2})[/-](\d{2,4})/);
   if (dmy) {
     const day = dmy[1].padStart(2, "0");
     const month = dmy[2].padStart(2, "0");
@@ -234,16 +234,17 @@ function pickSmart(record, exactCandidates, fuzzyPatterns) {
   return pick(record, exactCandidates) || pickByPattern(record, fuzzyPatterns);
 }
 
-function buildFromHistoricalCsv(records, timelineMonths = 18) {
+function buildFromHistoricalCsv(records, timelineMonths = 18, recencyDays = 45) {
   const stationsMap = new Map();
-  const priceAgg = new Map();
+  const monthlyAgg = new Map();
+  const stationDayAgg = new Map();
 
   const parsedRows = records.map(mapKeys);
   const latestDate = parsedRows.reduce((max, row) => {
     const iso = parseDateIso(
       pickSmart(
         row,
-        ["fecha", "fecha vigencia", "fechavigencia", "fecha_registro", "date"],
+        ["fecha", "fecha vigencia", "fechavigencia", "fecha_vigencia", "fecha_registro", "date"],
         ["fecha"]
       )
     );
@@ -256,18 +257,25 @@ function buildFromHistoricalCsv(records, timelineMonths = 18) {
   }
 
   const [y, m] = latestDate.split("-").map(Number);
-  const cutoff = new Date(Date.UTC(y, m - 1, 1));
-  cutoff.setUTCMonth(cutoff.getUTCMonth() - Math.max(1, timelineMonths));
+  const timelineCutoff = new Date(Date.UTC(y, m - 1, 1));
+  timelineCutoff.setUTCMonth(timelineCutoff.getUTCMonth() - Math.max(1, timelineMonths));
+
+  const recencyCutoff = new Date(`${latestDate}T00:00:00Z`);
+  recencyCutoff.setUTCDate(recencyCutoff.getUTCDate() - Math.max(1, recencyDays));
+  const recencyCutoffIso = recencyCutoff.toISOString().slice(0, 10);
 
   for (const row of parsedRows) {
     const dateIso = parseDateIso(
       pickSmart(
         row,
-        ["fecha", "fecha vigencia", "fechavigencia", "fecha_registro", "date"],
+        ["fecha", "fecha vigencia", "fechavigencia", "fecha_vigencia", "fecha_registro", "date"],
         ["fecha"]
       )
     );
     if (!dateIso) continue;
+
+    const dateObj = new Date(`${dateIso}T00:00:00Z`);
+    if (Number.isNaN(dateObj.getTime())) continue;
 
     const brand = brandAlias(
       pickSmart(
@@ -311,21 +319,21 @@ function buildFromHistoricalCsv(records, timelineMonths = 18) {
         ["provincia", "region"]
       ) || "Sin provincia";
 
-    const stationKey = `${normalizeText(brand)}|${normalizeText(name)}|${normalizeText(city)}|${normalizeText(province)}`;
+    const cityLabel = titleCase(city);
+    const provinceLabel = titleCase(province);
+    const stationKey = `${normalizeText(brand)}|${normalizeText(name)}|${normalizeText(cityLabel)}|${normalizeText(provinceLabel)}`;
+
     if (!stationsMap.has(stationKey)) {
       stationsMap.set(stationKey, {
         brand,
         name,
-        city: titleCase(city),
-        province: titleCase(province),
+        city: cityLabel,
+        province: provinceLabel,
         fuels: new Set([fuel])
       });
     } else {
       stationsMap.get(stationKey).fuels.add(fuel);
     }
-
-    const dateObj = new Date(`${dateIso}T00:00:00Z`);
-    if (dateObj < cutoff) continue;
 
     const priceRaw = pickSmart(
       row,
@@ -335,12 +343,31 @@ function buildFromHistoricalCsv(records, timelineMonths = 18) {
     const price = Number(String(priceRaw).replace(",", "."));
     if (!Number.isFinite(price) || price <= 0) continue;
 
-    const month = `${dateIso.slice(0, 7)}-01`;
-    const aggKey = `${brand}|${month}|${fuel}`;
-    const prev = priceAgg.get(aggKey) || { total: 0, count: 0 };
-    prev.total += price;
-    prev.count += 1;
-    priceAgg.set(aggKey, prev);
+    if (dateObj >= timelineCutoff) {
+      const month = `${dateIso.slice(0, 7)}-01`;
+      const monthKey = `${brand}|${month}|${fuel}`;
+      const prevMonth = monthlyAgg.get(monthKey) || { total: 0, count: 0 };
+      prevMonth.total += price;
+      prevMonth.count += 1;
+      monthlyAgg.set(monthKey, prevMonth);
+    }
+
+    if (dateObj >= recencyCutoff) {
+      const dayKey = `${stationKey}|${fuel}|${dateIso}`;
+      const prevDay = stationDayAgg.get(dayKey) || {
+        total: 0,
+        count: 0,
+        stationKey,
+        brand,
+        fuel,
+        city: cityLabel,
+        province: provinceLabel,
+        date: dateIso
+      };
+      prevDay.total += price;
+      prevDay.count += 1;
+      stationDayAgg.set(dayKey, prevDay);
+    }
   }
 
   const stations = Array.from(stationsMap.values())
@@ -348,7 +375,7 @@ function buildFromHistoricalCsv(records, timelineMonths = 18) {
     .sort((a, b) => a.name.localeCompare(b.name));
 
   const timeline = {};
-  for (const [key, agg] of priceAgg.entries()) {
+  for (const [key, agg] of monthlyAgg.entries()) {
     const [brand, date, fuel] = key.split("|");
     const avg = Math.round((agg.total / agg.count) * 100) / 100;
     if (!timeline[brand]) timeline[brand] = new Map();
@@ -363,7 +390,105 @@ function buildFromHistoricalCsv(records, timelineMonths = 18) {
       .map(([date, prices]) => ({ date, prices }));
   }
 
-  return { stations, priceTimeline: normalizedTimeline };
+  // Keep one latest value per station+fuel (averaging day duplicates before picking latest day).
+  const latestStationFuel = new Map();
+  for (const agg of stationDayAgg.values()) {
+    const avg = Math.round((agg.total / agg.count) * 100) / 100;
+    const stationFuelKey = `${agg.stationKey}|${agg.fuel}`;
+    const prev = latestStationFuel.get(stationFuelKey);
+    const candidate = {
+      brand: agg.brand,
+      fuel: agg.fuel,
+      city: agg.city,
+      province: agg.province,
+      date: agg.date,
+      price: avg
+    };
+    if (!prev || candidate.date > prev.date) {
+      latestStationFuel.set(stationFuelKey, candidate);
+    }
+  }
+
+  const localAgg = new Map();
+  const brandAgg = new Map();
+
+  for (const entry of latestStationFuel.values()) {
+    const localKey = `${normalizeText(entry.province)}|${normalizeText(entry.city)}|${normalizeText(entry.brand)}|${normalizeText(entry.fuel)}`;
+    const prevLocal = localAgg.get(localKey) || {
+      province: entry.province,
+      city: entry.city,
+      brand: entry.brand,
+      fuel: entry.fuel,
+      total: 0,
+      count: 0,
+      latestDate: entry.date
+    };
+    prevLocal.total += entry.price;
+    prevLocal.count += 1;
+    if (entry.date > prevLocal.latestDate) prevLocal.latestDate = entry.date;
+    localAgg.set(localKey, prevLocal);
+
+    const brandKey = `${normalizeText(entry.brand)}|${normalizeText(entry.fuel)}`;
+    const prevBrand = brandAgg.get(brandKey) || {
+      brand: entry.brand,
+      fuel: entry.fuel,
+      total: 0,
+      count: 0,
+      latestDate: entry.date
+    };
+    prevBrand.total += entry.price;
+    prevBrand.count += 1;
+    if (entry.date > prevBrand.latestDate) prevBrand.latestDate = entry.date;
+    brandAgg.set(brandKey, prevBrand);
+  }
+
+  const local = Array.from(localAgg.values())
+    .map((item) => ({
+      province: item.province,
+      city: item.city,
+      brand: item.brand,
+      fuel: item.fuel,
+      price: Math.round((item.total / item.count) * 100) / 100,
+      date: item.latestDate,
+      count: item.count
+    }))
+    .sort((a, b) => {
+      const p = a.province.localeCompare(b.province);
+      if (p !== 0) return p;
+      const c = a.city.localeCompare(b.city);
+      if (c !== 0) return c;
+      const br = a.brand.localeCompare(b.brand);
+      if (br !== 0) return br;
+      return a.fuel.localeCompare(b.fuel);
+    });
+
+  const brand = Array.from(brandAgg.values())
+    .map((item) => ({
+      brand: item.brand,
+      fuel: item.fuel,
+      price: Math.round((item.total / item.count) * 100) / 100,
+      date: item.latestDate,
+      count: item.count
+    }))
+    .sort((a, b) => {
+      const br = a.brand.localeCompare(b.brand);
+      if (br !== 0) return br;
+      return a.fuel.localeCompare(b.fuel);
+    });
+
+  return {
+    stations,
+    priceTimeline: normalizedTimeline,
+    priceReference: {
+      meta: {
+        latestDate,
+        cutoffDate: recencyCutoffIso,
+        recencyDays: Math.max(1, recencyDays)
+      },
+      local,
+      brand
+    }
+  };
 }
 
 async function fetchText(url) {
@@ -392,6 +517,12 @@ function asTimeline(data) {
   if (!data || typeof data !== "object") return null;
   if (data.priceTimeline && typeof data.priceTimeline === "object") return data.priceTimeline;
   return data;
+}
+
+function asPriceReference(data) {
+  if (!data || typeof data !== "object") return null;
+  if (data.priceReference && typeof data.priceReference === "object") return data.priceReference;
+  return null;
 }
 
 function normalizeStation(raw) {
@@ -440,6 +571,85 @@ function normalizeTimeline(rawTimeline) {
   return timeline;
 }
 
+function normalizePriceReference(raw) {
+  const local = Array.isArray(raw?.local)
+    ? raw.local
+      .map((item) => {
+        const province = String(item?.province ?? "").trim();
+        const city = String(item?.city ?? "").trim();
+        const brand = String(item?.brand ?? "").trim();
+        const fuel = String(item?.fuel ?? "").trim();
+        const date = parseDateIso(item?.date);
+        const price = Number(item?.price);
+        const count = Number(item?.count);
+        if (!province || !city || !brand || !fuel || !date || !Number.isFinite(price) || price <= 0) return null;
+        return { province, city, brand, fuel, date, price, count: Number.isFinite(count) && count > 0 ? Math.round(count) : 1 };
+      })
+      .filter(Boolean)
+    : [];
+
+  const brand = Array.isArray(raw?.brand)
+    ? raw.brand
+      .map((item) => {
+        const brandLabel = String(item?.brand ?? "").trim();
+        const fuel = String(item?.fuel ?? "").trim();
+        const date = parseDateIso(item?.date);
+        const price = Number(item?.price);
+        const count = Number(item?.count);
+        if (!brandLabel || !fuel || !date || !Number.isFinite(price) || price <= 0) return null;
+        return { brand: brandLabel, fuel, date, price, count: Number.isFinite(count) && count > 0 ? Math.round(count) : 1 };
+      })
+      .filter(Boolean)
+    : [];
+
+  const latestDate = parseDateIso(raw?.meta?.latestDate) || null;
+  const cutoffDate = parseDateIso(raw?.meta?.cutoffDate) || null;
+  const recencyDays = Number(raw?.meta?.recencyDays);
+
+  return {
+    meta: {
+      latestDate,
+      cutoffDate,
+      recencyDays: Number.isFinite(recencyDays) && recencyDays > 0 ? Math.round(recencyDays) : null
+    },
+    local,
+    brand
+  };
+}
+
+function buildReferenceFromTimeline(timeline) {
+  const latestByBrandFuel = new Map();
+
+  Object.entries(timeline || {}).forEach(([brand, points]) => {
+    if (!Array.isArray(points)) return;
+    points.forEach((point) => {
+      const date = parseDateIso(point?.date);
+      if (!date) return;
+      Object.entries(point?.prices || {}).forEach(([fuel, rawValue]) => {
+        const price = Number(rawValue);
+        if (!Number.isFinite(price) || price <= 0) return;
+        const key = `${normalizeText(brand)}|${normalizeText(fuel)}`;
+        const prev = latestByBrandFuel.get(key);
+        if (!prev || date > prev.date) {
+          latestByBrandFuel.set(key, { brand, fuel, price, date, count: 1 });
+        }
+      });
+    });
+  });
+
+  const brand = Array.from(latestByBrandFuel.values()).sort((a, b) => {
+    const br = a.brand.localeCompare(b.brand);
+    if (br !== 0) return br;
+    return a.fuel.localeCompare(b.fuel);
+  });
+
+  return {
+    meta: { latestDate: null, cutoffDate: null, recencyDays: null },
+    local: [],
+    brand
+  };
+}
+
 async function resolveCatalog() {
   const stationsUrl = process.env.STATIONS_SOURCE_URL?.trim();
   const timelineUrl = process.env.PRICES_SOURCE_URL?.trim();
@@ -450,20 +660,22 @@ async function resolveCatalog() {
     DEFAULT_VIGENTES_CSV_URL ||
     DEFAULT_OFFICIAL_CSV_URL;
   const timelineMonths = Number(process.env.TIMELINE_MONTHS || 18);
+  const recencyDays = Number(process.env.RECENCY_DAYS || 45);
 
   if (officialCsvUrl) {
     try {
       log(`Descargando CSV oficial: ${officialCsvUrl}`);
       const csvText = await fetchText(officialCsvUrl);
       const csvRows = parseCsv(csvText);
-      const official = buildFromHistoricalCsv(csvRows, timelineMonths);
+      const official = buildFromHistoricalCsv(csvRows, timelineMonths, recencyDays);
       if (official && official.stations.length > 100) {
         log(`Catalogo oficial generado desde CSV. Estaciones: ${official.stations.length}.`);
         return {
           updatedAt: new Date().toISOString(),
           source: officialCsvUrl,
           stations: normalizeStations(official.stations),
-          priceTimeline: normalizeTimeline(official.priceTimeline)
+          priceTimeline: normalizeTimeline(official.priceTimeline),
+          priceReference: normalizePriceReference(official.priceReference)
         };
       }
       log(`CSV oficial procesado pero con pocos registros validos. Se usara fallback.`);
@@ -474,6 +686,7 @@ async function resolveCatalog() {
 
   let stations = DEFAULT_STATIONS;
   let timeline = DEFAULT_TIMELINE;
+  let priceReference = null;
   let source = "default-seed";
 
   if (stationsUrl) {
@@ -497,16 +710,24 @@ async function resolveCatalog() {
         timeline = parsedTimeline;
         source = source === "default-seed" ? timelineUrl : `${source} + ${timelineUrl}`;
       }
+      const parsedReference = asPriceReference(timelinePayload);
+      if (parsedReference) {
+        priceReference = parsedReference;
+      }
     } catch (error) {
       log(`No se pudo descargar timeline JSON: ${error.message}.`);
     }
   }
 
+  const normalizedTimeline = normalizeTimeline(timeline);
+  const normalizedReference = normalizePriceReference(priceReference || buildReferenceFromTimeline(normalizedTimeline));
+
   return {
     updatedAt: new Date().toISOString(),
     source,
     stations: normalizeStations(stations),
-    priceTimeline: normalizeTimeline(timeline)
+    priceTimeline: normalizedTimeline,
+    priceReference: normalizedReference
   };
 }
 
@@ -519,6 +740,8 @@ async function writeOutputs(payload) {
     `window.STATIONS_CATALOG = ${JSON.stringify(payload.stations, null, 2)};`,
     "",
     `window.STATION_PRICE_TIMELINE = ${JSON.stringify(payload.priceTimeline, null, 2)};`,
+    "",
+    `window.STATION_PRICE_REFERENCE = ${JSON.stringify(payload.priceReference, null, 2)};`,
     ""
   ].join("\n");
   await writeFile(JS_OUTPUT, js, "utf8");
@@ -527,7 +750,10 @@ async function writeOutputs(payload) {
 async function main() {
   const payload = await resolveCatalog();
   await writeOutputs(payload);
-  log(`Catalogo generado. Estaciones: ${payload.stations.length}. Marcas con timeline: ${Object.keys(payload.priceTimeline).length}.`);
+  log(
+    `Catalogo generado. Estaciones: ${payload.stations.length}. Marcas con timeline: ${Object.keys(payload.priceTimeline).length}.` +
+    ` Referencias locales recientes: ${payload.priceReference.local.length}.`
+  );
 }
 
 main().catch((error) => {

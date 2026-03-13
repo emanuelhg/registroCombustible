@@ -296,9 +296,17 @@ body {
     text-align: center;
 }
 
-.station-cell,
+.station-cell {
+    max-width: 180px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: bottom;
+}
+
 .fuel-cell {
-    max-width: 100%;
+    max-width: 180px;
     display: inline-block;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -310,14 +318,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.45rem;
+    gap: 0.4rem;
+    flex-direction: row;
     flex-wrap: wrap;
 }
 
 .row-actions .btn {
-    padding: 0.24rem 0.56rem;
+    padding: 0.22rem 0.55rem;
     line-height: 1.2;
-    font-size: 0.88rem;
+    font-size: 0.85rem;
     min-width: 0;
 }
 
@@ -327,7 +336,7 @@ body {
 }
 
 .table-card .dataTables_wrapper {
-    overflow-x: visible;
+    overflow-x: auto;
     overflow-y: hidden;
     padding-bottom: 0.25rem;
     max-width: 100%;
@@ -405,9 +414,7 @@ body {
     }
 
     .table-card .dataTables_wrapper {
-        overflow-x: auto;
-        overscroll-behavior-x: contain;
-        -webkit-overflow-scrolling: touch;
+        overflow-x: hidden;
     }
 
     #tablaDatos {
@@ -425,6 +432,7 @@ body {
     #tablaDatos th,
     #tablaDatos td {
         width: auto !important;
+        white-space: nowrap;
     }
 
     .table-card .dataTables_wrapper .row {
@@ -498,11 +506,15 @@ body {
     .row-actions {
         justify-content: flex-start;
         flex-wrap: wrap;
+        flex-direction: row;
     }
 
-    .station-cell,
-    .fuel-cell {
+    .station-cell {
         max-width: 120px;
+    }
+
+    .fuel-cell {
+        max-width: 110px;
     }
 
     .app-hints {
