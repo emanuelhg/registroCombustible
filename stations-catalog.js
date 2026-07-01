@@ -55265,16 +55265,6 @@ window.STATIONS_CATALOG = [
 window.STATION_PRICE_TIMELINE = {
   "Puma Energy": [
     {
-      "date": "2024-12-01",
-      "prices": {
-        "GNC": 634.07,
-        "Diesel": 1169,
-        "Diesel Premium": 1427,
-        "Nafta Premium": 1413,
-        "Nafta Super": 1154
-      }
-    },
-    {
       "date": "2025-01-01",
       "prices": {
         "GNC": 690.82,
@@ -55438,10 +55428,10 @@ window.STATION_PRICE_TIMELINE = {
       "date": "2026-05-01",
       "prices": {
         "Diesel": 2272.74,
-        "Diesel Premium": 2496.08,
+        "Diesel Premium": 2496.07,
         "Nafta Premium": 2341.99,
         "Nafta Super": 2082.01,
-        "GNC": 812.59
+        "GNC": 818
       }
     },
     {
@@ -55450,22 +55440,12 @@ window.STATION_PRICE_TIMELINE = {
         "Diesel": 2279.32,
         "Diesel Premium": 2497.73,
         "Nafta Premium": 2354.23,
-        "Nafta Super": 2082.21,
-        "GNC": 880.45
+        "Nafta Super": 2084.37,
+        "GNC": 874.19
       }
     }
   ],
   "Shell": [
-    {
-      "date": "2024-12-01",
-      "prices": {
-        "GNC": 626.67,
-        "Diesel": 1269,
-        "Diesel Premium": 1471,
-        "Nafta Premium": 1499,
-        "Nafta Super": 1254
-      }
-    },
     {
       "date": "2025-01-01",
       "prices": {
@@ -55606,17 +55586,17 @@ window.STATION_PRICE_TIMELINE = {
     {
       "date": "2026-03-01",
       "prices": {
-        "GNC": 808.11,
-        "Diesel": 2053.56,
-        "Diesel Premium": 2286.88,
-        "Nafta Premium": 2242.38,
-        "Nafta Super": 1954.85
+        "GNC": 813.2,
+        "Diesel": 2056.53,
+        "Diesel Premium": 2289.8,
+        "Nafta Premium": 2238.35,
+        "Nafta Super": 1948.58
       }
     },
     {
       "date": "2026-04-01",
       "prices": {
-        "GNC": 809.93,
+        "GNC": 808.55,
         "Nafta Super": 2178.67,
         "Diesel": 2297.6,
         "Diesel Premium": 2528.14,
@@ -55626,31 +55606,34 @@ window.STATION_PRICE_TIMELINE = {
     {
       "date": "2026-05-01",
       "prices": {
-        "Diesel": 2284.21,
-        "Diesel Premium": 2545.58,
-        "Nafta Premium": 2445.3,
-        "Nafta Super": 2165.78,
+        "Diesel": 2296.69,
+        "Diesel Premium": 2547.37,
+        "Nafta Premium": 2447.11,
+        "Nafta Super": 2170.23,
         "GNC": 793.44
       }
     },
     {
       "date": "2026-06-01",
       "prices": {
-        "Diesel": 2298.7,
-        "Diesel Premium": 2548.82,
-        "Nafta Premium": 2439.05,
-        "Nafta Super": 2167,
-        "GNC": 800.09
+        "Diesel": 2290.83,
+        "Diesel Premium": 2561.62,
+        "Nafta Premium": 2451.39,
+        "Nafta Super": 2172,
+        "GNC": 792.87
+      }
+    },
+    {
+      "date": "2026-07-01",
+      "prices": {
+        "Diesel": 2249.62,
+        "Nafta Premium": 2454.2,
+        "Nafta Super": 2168.19,
+        "Diesel Premium": 2530.96
       }
     }
   ],
   "YPF": [
-    {
-      "date": "2024-12-01",
-      "prices": {
-        "GNC": 636.43
-      }
-    },
     {
       "date": "2025-01-01",
       "prices": {
@@ -55795,7 +55778,7 @@ window.STATION_PRICE_TIMELINE = {
     {
       "date": "2026-04-01",
       "prices": {
-        "GNC": 829.27,
+        "GNC": 828.65,
         "Diesel Premium": 2266,
         "Nafta Premium": 2234,
         "Nafta Super": 2007
@@ -55804,35 +55787,33 @@ window.STATION_PRICE_TIMELINE = {
     {
       "date": "2026-05-01",
       "prices": {
-        "GNC": 809.81,
+        "GNC": 812.12,
         "Diesel": 2282.8,
         "Diesel Premium": 2469.08,
         "Nafta Premium": 2352.67,
-        "Nafta Super": 2124.33
+        "Nafta Super": 2119.4
       }
     },
     {
       "date": "2026-06-01",
       "prices": {
-        "Diesel": 2219.17,
-        "Diesel Premium": 2438.5,
-        "Nafta Premium": 2208.28,
-        "Nafta Super": 1990.78,
-        "GNC": 801.94
+        "Diesel": 2216,
+        "Diesel Premium": 2438.28,
+        "Nafta Premium": 2208.33,
+        "Nafta Super": 1988.78,
+        "GNC": 803.6
+      }
+    },
+    {
+      "date": "2026-07-01",
+      "prices": {
+        "Diesel": 2281,
+        "Nafta Super": 2077,
+        "GNC": 798
       }
     }
   ],
   "Blanca": [
-    {
-      "date": "2024-12-01",
-      "prices": {
-        "Diesel": 1227.25,
-        "Diesel Premium": 1393,
-        "Nafta Premium": 1340.5,
-        "Nafta Super": 1144.75,
-        "GNC": 594.89
-      }
-    },
     {
       "date": "2025-01-01",
       "prices": {
@@ -55978,7 +55959,7 @@ window.STATION_PRICE_TIMELINE = {
       "prices": {
         "Nafta Super": 2001.35,
         "Nafta Premium": 2259.47,
-        "GNC": 888.03,
+        "GNC": 884.75,
         "Diesel": 2202.28,
         "Diesel Premium": 2301.4
       }
@@ -55998,7 +55979,7 @@ window.STATION_PRICE_TIMELINE = {
       "prices": {
         "Diesel": 2355.5,
         "Diesel Premium": 2557.01,
-        "GNC": 845.22,
+        "GNC": 842.88,
         "Nafta Premium": 2377.65,
         "Nafta Super": 2150.38
       }
@@ -56006,7 +55987,7 @@ window.STATION_PRICE_TIMELINE = {
     {
       "date": "2026-06-01",
       "prices": {
-        "GNC": 811.81,
+        "GNC": 823.08,
         "Diesel": 2352.97,
         "Diesel Premium": 2560.83,
         "Nafta Premium": 2398.81,
@@ -56015,16 +55996,6 @@ window.STATION_PRICE_TIMELINE = {
     }
   ],
   "Axion Energy": [
-    {
-      "date": "2024-12-01",
-      "prices": {
-        "Diesel": 1256.29,
-        "Nafta Premium": 1383.29,
-        "Nafta Super": 1132.43,
-        "Diesel Premium": 1435.67,
-        "GNC": 592.36
-      }
-    },
     {
       "date": "2025-01-01",
       "prices": {
@@ -56208,12 +56179,6 @@ window.STATION_PRICE_TIMELINE = {
   ],
   "Gulf": [
     {
-      "date": "2024-12-01",
-      "prices": {
-        "GNC": 593
-      }
-    },
-    {
       "date": "2025-01-01",
       "prices": {
         "GNC": 649.9,
@@ -56368,7 +56333,7 @@ window.STATION_PRICE_TIMELINE = {
       "date": "2026-06-01",
       "prices": {
         "Diesel": 2256.79,
-        "Diesel Premium": 2401.7,
+        "Diesel Premium": 2401.42,
         "GNC": 838.4,
         "Nafta Premium": 2252.91,
         "Nafta Super": 2093.58
@@ -56376,15 +56341,6 @@ window.STATION_PRICE_TIMELINE = {
     }
   ],
   "Dapsa S.a.": [
-    {
-      "date": "2024-12-01",
-      "prices": {
-        "Diesel": 1200,
-        "Diesel Premium": 1500,
-        "Nafta Premium": 1440,
-        "Nafta Super": 1150
-      }
-    },
     {
       "date": "2025-01-01",
       "prices": {
@@ -56541,7 +56497,7 @@ window.STATION_PRICE_TIMELINE = {
         "Diesel": 2257.17,
         "Nafta Super": 2128.2,
         "Nafta Premium": 2326.14,
-        "Diesel Premium": 2423.55,
+        "Diesel Premium": 2430.8,
         "GNC": 866
       }
     },
@@ -56549,7 +56505,7 @@ window.STATION_PRICE_TIMELINE = {
       "date": "2026-06-01",
       "prices": {
         "Diesel": 2248.13,
-        "Diesel Premium": 2439.69,
+        "Diesel Premium": 2433.86,
         "Nafta Super": 2125.62,
         "GNC": 759,
         "Nafta Premium": 2309.39
@@ -56557,12 +56513,6 @@ window.STATION_PRICE_TIMELINE = {
     }
   ],
   "Voy": [
-    {
-      "date": "2024-12-01",
-      "prices": {
-        "GNC": 779
-      }
-    },
     {
       "date": "2025-02-01",
       "prices": {
@@ -56849,8 +56799,8 @@ window.STATION_PRICE_TIMELINE = {
 
 window.STATION_PRICE_REFERENCE = {
   "meta": {
-    "latestDate": "2026-06-30",
-    "cutoffDate": "2026-05-16",
+    "latestDate": "2026-07-01",
+    "cutoffDate": "2026-05-17",
     "recencyDays": 45
   },
   "local": [
@@ -56892,42 +56842,6 @@ window.STATION_PRICE_REFERENCE = {
     },
     {
       "province": "Buenos Aires",
-      "city": "9 De Julio",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2299,
-      "count": 2
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "9 De Julio",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2542,
-      "count": 2
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "9 De Julio",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2444,
-      "count": 2
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "9 De Julio",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2173,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
       "city": "Abasto",
       "brand": "Dapsa S.a.",
       "fuel": "Diesel",
@@ -56948,18 +56862,9 @@ window.STATION_PRICE_REFERENCE = {
       "province": "Buenos Aires",
       "city": "Acassuso",
       "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2499,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Acassuso",
-      "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2439,
+      "date": "2026-07-01",
+      "price": 2455,
       "count": 1
     },
     {
@@ -56967,8 +56872,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Acassuso",
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2149,
+      "date": "2026-07-01",
+      "price": 2159,
       "count": 1
     },
     {
@@ -57036,42 +56941,6 @@ window.STATION_PRICE_REFERENCE = {
     },
     {
       "province": "Buenos Aires",
-      "city": "Adrogue",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2267,
-      "count": 2
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Adrogue",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2547,
-      "count": 2
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Adrogue",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2474,
-      "count": 2
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Adrogue",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2167,
-      "count": 2
-    },
-    {
-      "province": "Buenos Aires",
       "city": "Alberti",
       "brand": "Blanca",
       "fuel": "Diesel",
@@ -57093,17 +56962,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Ameghino",
       "brand": "Shell",
       "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2361,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Ameghino",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2499,
+      "date": "2026-07-01",
+      "price": 2375,
       "count": 1
     },
     {
@@ -57111,8 +56971,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Ameghino",
       "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2437,
+      "date": "2026-07-01",
+      "price": 2444,
       "count": 1
     },
     {
@@ -57120,8 +56980,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Ameghino",
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2142,
+      "date": "2026-07-01",
+      "price": 2159,
       "count": 1
     },
     {
@@ -57231,42 +57091,6 @@ window.STATION_PRICE_REFERENCE = {
       "date": "2026-06-09",
       "price": 2140,
       "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Avellaneda",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2233,
-      "count": 2
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Avellaneda",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2499,
-      "count": 2
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Avellaneda",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2456,
-      "count": 2
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Avellaneda",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2187.5,
-      "count": 2
     },
     {
       "province": "Buenos Aires",
@@ -57514,42 +57338,6 @@ window.STATION_PRICE_REFERENCE = {
     {
       "province": "Buenos Aires",
       "city": "Banfield",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2240,
-      "count": 2
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Banfield",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2546,
-      "count": 2
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Banfield",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2399,
-      "count": 2
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Banfield",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2181,
-      "count": 2
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Banfield",
       "brand": "YPF",
       "fuel": "GNC",
       "date": "2026-06-04",
@@ -57570,17 +57358,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Beccar",
       "brand": "Shell",
       "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2199,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Beccar",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2499,
+      "date": "2026-07-01",
+      "price": 2219,
       "count": 1
     },
     {
@@ -57588,8 +57367,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Beccar",
       "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2439,
+      "date": "2026-07-01",
+      "price": 2455,
       "count": 1
     },
     {
@@ -57597,8 +57376,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Beccar",
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2149,
+      "date": "2026-07-01",
+      "price": 2159,
       "count": 1
     },
     {
@@ -57686,45 +57465,9 @@ window.STATION_PRICE_REFERENCE = {
       "province": "Buenos Aires",
       "city": "Benavidez",
       "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2192,
-      "count": 2
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Benavidez",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2499,
-      "count": 2
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Benavidez",
-      "brand": "Shell",
       "fuel": "GNC",
       "date": "2026-05-23",
       "price": 749,
-      "count": 2
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Benavidez",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2464,
-      "count": 2
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Benavidez",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2182,
       "count": 2
     },
     {
@@ -57858,36 +57601,27 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Berazategui",
       "brand": "Shell",
       "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2238.5,
-      "count": 2
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Berazategui",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2563,
-      "count": 2
+      "date": "2026-07-01",
+      "price": 2209,
+      "count": 1
     },
     {
       "province": "Buenos Aires",
       "city": "Berazategui",
       "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2460,
-      "count": 2
+      "date": "2026-07-01",
+      "price": 2431,
+      "count": 1
     },
     {
       "province": "Buenos Aires",
       "city": "Berazategui",
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2189.5,
-      "count": 2
+      "date": "2026-07-01",
+      "price": 2175,
+      "count": 1
     },
     {
       "province": "Buenos Aires",
@@ -58056,9 +57790,9 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Bolivar",
       "brand": "Puma Energy",
       "fuel": "Diesel Premium",
-      "date": "2026-05-31",
+      "date": "2026-06-30",
       "price": 2498,
-      "count": 1
+      "count": 2
     },
     {
       "province": "Buenos Aires",
@@ -58170,47 +57904,47 @@ window.STATION_PRICE_REFERENCE = {
     },
     {
       "province": "Buenos Aires",
-      "city": "Bragado",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2338,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Bragado",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2542,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Bragado",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2450,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Bragado",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2184,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
       "city": "Burzaco",
       "brand": "Axion Energy",
       "fuel": "GNC",
       "date": "2026-06-09",
       "price": 639,
+      "count": 1
+    },
+    {
+      "province": "Buenos Aires",
+      "city": "Burzaco",
+      "brand": "Shell",
+      "fuel": "Diesel",
+      "date": "2026-06-30",
+      "price": 2279,
+      "count": 1
+    },
+    {
+      "province": "Buenos Aires",
+      "city": "Burzaco",
+      "brand": "Shell",
+      "fuel": "Diesel Premium",
+      "date": "2026-06-30",
+      "price": 2559,
+      "count": 1
+    },
+    {
+      "province": "Buenos Aires",
+      "city": "Burzaco",
+      "brand": "Shell",
+      "fuel": "Nafta Premium",
+      "date": "2026-06-30",
+      "price": 2479,
+      "count": 1
+    },
+    {
+      "province": "Buenos Aires",
+      "city": "Burzaco",
+      "brand": "Shell",
+      "fuel": "Nafta Super",
+      "date": "2026-06-30",
+      "price": 2179,
       "count": 1
     },
     {
@@ -58449,51 +58183,6 @@ window.STATION_PRICE_REFERENCE = {
     },
     {
       "province": "Buenos Aires",
-      "city": "Caseros",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2199,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Caseros",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2499,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Caseros",
-      "brand": "Shell",
-      "fuel": "GNC",
-      "date": "2026-05-16",
-      "price": 690,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Caseros",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2428,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Caseros",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2126,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
       "city": "Castelar",
       "brand": "Axion Energy",
       "fuel": "Diesel",
@@ -58530,42 +58219,6 @@ window.STATION_PRICE_REFERENCE = {
     },
     {
       "province": "Buenos Aires",
-      "city": "Castelar",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2234,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Castelar",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2481,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Castelar",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2446,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Castelar",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2160,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
       "city": "Castelli",
       "brand": "YPF",
       "fuel": "GNC",
@@ -58577,27 +58230,9 @@ window.STATION_PRICE_REFERENCE = {
       "province": "Buenos Aires",
       "city": "Chascomus",
       "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2228,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Chascomus",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2397,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Chascomus",
-      "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2435,
+      "date": "2026-07-01",
+      "price": 2459,
       "count": 1
     },
     {
@@ -58605,44 +58240,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Chascomus",
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2144,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "City Bell",
-      "brand": "Blanca",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2199,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "City Bell",
-      "brand": "Blanca",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2500,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "City Bell",
-      "brand": "Blanca",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2430,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "City Bell",
-      "brand": "Blanca",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2160,
+      "date": "2026-07-01",
+      "price": 2165,
       "count": 1
     },
     {
@@ -58650,36 +58249,27 @@ window.STATION_PRICE_REFERENCE = {
       "city": "City Bell",
       "brand": "Shell",
       "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2197,
-      "count": 2
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "City Bell",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2499,
-      "count": 2
+      "date": "2026-07-01",
+      "price": 2209,
+      "count": 1
     },
     {
       "province": "Buenos Aires",
       "city": "City Bell",
       "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2430,
-      "count": 2
+      "date": "2026-07-01",
+      "price": 2454,
+      "count": 1
     },
     {
       "province": "Buenos Aires",
       "city": "City Bell",
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2158,
-      "count": 2
+      "date": "2026-07-01",
+      "price": 2175,
+      "count": 1
     },
     {
       "province": "Buenos Aires",
@@ -58722,9 +58312,9 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Ciudadela",
       "brand": "Shell",
       "fuel": "Diesel",
-      "date": "2026-06-26",
-      "price": 2198,
-      "count": 3
+      "date": "2026-07-01",
+      "price": 2209,
+      "count": 2
     },
     {
       "province": "Buenos Aires",
@@ -58732,16 +58322,7 @@ window.STATION_PRICE_REFERENCE = {
       "brand": "Shell",
       "fuel": "Diesel Premium",
       "date": "2026-06-26",
-      "price": 2507,
-      "count": 3
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Ciudadela",
-      "brand": "Shell",
-      "fuel": "GNC",
-      "date": "2026-05-16",
-      "price": 690,
+      "price": 2499,
       "count": 1
     },
     {
@@ -58750,17 +58331,17 @@ window.STATION_PRICE_REFERENCE = {
       "brand": "Shell",
       "fuel": "Nafta Premium",
       "date": "2026-06-26",
-      "price": 2437,
-      "count": 3
+      "price": 2428,
+      "count": 1
     },
     {
       "province": "Buenos Aires",
       "city": "Ciudadela",
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-06-26",
-      "price": 2135.67,
-      "count": 3
+      "date": "2026-07-01",
+      "price": 2142.5,
+      "count": 2
     },
     {
       "province": "Buenos Aires",
@@ -58805,33 +58386,6 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Diesel",
       "date": "2026-05-19",
       "price": 2421,
-      "count": 2
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Colon",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2599,
-      "count": 2
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Colon",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2477,
-      "count": 2
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Colon",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2219,
       "count": 2
     },
     {
@@ -59064,17 +58618,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Ensenada",
       "brand": "Shell",
       "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2197,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Ensenada",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2499,
+      "date": "2026-07-01",
+      "price": 2209,
       "count": 1
     },
     {
@@ -59082,8 +58627,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Ensenada",
       "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2421,
+      "date": "2026-07-01",
+      "price": 2431,
       "count": 1
     },
     {
@@ -59091,8 +58636,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Ensenada",
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2158,
+      "date": "2026-07-01",
+      "price": 2175,
       "count": 1
     },
     {
@@ -59101,8 +58646,8 @@ window.STATION_PRICE_REFERENCE = {
       "brand": "Shell",
       "fuel": "Diesel",
       "date": "2026-06-01",
-      "price": 2269,
-      "count": 5
+      "price": 2277,
+      "count": 1
     },
     {
       "province": "Buenos Aires",
@@ -59110,8 +58655,8 @@ window.STATION_PRICE_REFERENCE = {
       "brand": "Shell",
       "fuel": "Diesel Premium",
       "date": "2026-06-01",
-      "price": 2637.5,
-      "count": 6
+      "price": 2620,
+      "count": 1
     },
     {
       "province": "Buenos Aires",
@@ -59128,8 +58673,8 @@ window.STATION_PRICE_REFERENCE = {
       "brand": "Shell",
       "fuel": "Nafta Premium",
       "date": "2026-06-01",
-      "price": 2527.67,
-      "count": 6
+      "price": 2521,
+      "count": 1
     },
     {
       "province": "Buenos Aires",
@@ -59138,7 +58683,7 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Nafta Super",
       "date": "2026-06-01",
       "price": 2199,
-      "count": 6
+      "count": 1
     },
     {
       "province": "Buenos Aires",
@@ -59273,42 +58818,6 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "GNC",
       "date": "2026-05-30",
       "price": 879,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Florencio Varela",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2280,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Florencio Varela",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2627,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Florencio Varela",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2499,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Florencio Varela",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2221,
       "count": 1
     },
     {
@@ -59450,72 +58959,9 @@ window.STATION_PRICE_REFERENCE = {
       "province": "Buenos Aires",
       "city": "Gral. Belgrano",
       "brand": "Blanca",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2316,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Gral. Belgrano",
-      "brand": "Blanca",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2512,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Gral. Belgrano",
-      "brand": "Blanca",
       "fuel": "GNC",
       "date": "2026-05-21",
       "price": 971,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Gral. Belgrano",
-      "brand": "Blanca",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2115,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Gral. Belgrano",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2332,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Gral. Belgrano",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2536,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Gral. Belgrano",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2450,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Gral. Belgrano",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2123,
       "count": 1
     },
     {
@@ -59595,17 +59041,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Gral. Pacheco",
       "brand": "Shell",
       "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2192,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Gral. Pacheco",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2499,
+      "date": "2026-06-30",
+      "price": 2209,
       "count": 1
     },
     {
@@ -59622,8 +59059,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Gral. Pacheco",
       "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2464,
+      "date": "2026-06-30",
+      "price": 2479,
       "count": 1
     },
     {
@@ -59631,8 +59068,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Gral. Pacheco",
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2182,
+      "date": "2026-06-30",
+      "price": 2199,
       "count": 1
     },
     {
@@ -59748,8 +59185,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Gregorio De La Ferrere",
       "brand": "Shell",
       "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2261,
+      "date": "2026-06-30",
+      "price": 2272,
       "count": 1
     },
     {
@@ -59757,8 +59194,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Gregorio De La Ferrere",
       "brand": "Shell",
       "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2536,
+      "date": "2026-06-30",
+      "price": 2544,
       "count": 1
     },
     {
@@ -59775,8 +59212,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Gregorio De La Ferrere",
       "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2460,
+      "date": "2026-06-30",
+      "price": 2482,
       "count": 1
     },
     {
@@ -59784,8 +59221,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Gregorio De La Ferrere",
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2182,
+      "date": "2026-06-30",
+      "price": 2199,
       "count": 1
     },
     {
@@ -59836,11 +59273,20 @@ window.STATION_PRICE_REFERENCE = {
     {
       "province": "Buenos Aires",
       "city": "Isidro Casanova",
+      "brand": "Puma Energy",
+      "fuel": "GNC",
+      "date": "2026-06-30",
+      "price": 749,
+      "count": 1
+    },
+    {
+      "province": "Buenos Aires",
+      "city": "Isidro Casanova",
       "brand": "YPF",
       "fuel": "GNC",
-      "date": "2026-06-09",
-      "price": 779,
-      "count": 1
+      "date": "2026-06-30",
+      "price": 789,
+      "count": 2
     },
     {
       "province": "Buenos Aires",
@@ -59859,15 +59305,6 @@ window.STATION_PRICE_REFERENCE = {
       "date": "2026-05-23",
       "price": 2476.2,
       "count": 5
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Ituzaingo",
-      "brand": "Axion Energy",
-      "fuel": "GNC",
-      "date": "2026-05-16",
-      "price": 729,
-      "count": 1
     },
     {
       "province": "Buenos Aires",
@@ -59928,18 +59365,9 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Ituzaingo",
       "brand": "Shell",
       "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2267,
-      "count": 3
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Ituzaingo",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2499,
-      "count": 3
+      "date": "2026-07-01",
+      "price": 2287,
+      "count": 2
     },
     {
       "province": "Buenos Aires",
@@ -59955,54 +59383,18 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Ituzaingo",
       "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2481,
-      "count": 3
+      "date": "2026-07-01",
+      "price": 2499,
+      "count": 2
     },
     {
       "province": "Buenos Aires",
       "city": "Ituzaingo",
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2191,
-      "count": 3
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Jauregui",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2335,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Jauregui",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2682,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Jauregui",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2454,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Jauregui",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2169,
-      "count": 1
+      "date": "2026-07-01",
+      "price": 2199,
+      "count": 2
     },
     {
       "province": "Buenos Aires",
@@ -60216,18 +59608,9 @@ window.STATION_PRICE_REFERENCE = {
       "city": "La Plata",
       "brand": "Shell",
       "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2197,
-      "count": 3
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "La Plata",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2499,
-      "count": 5
+      "date": "2026-07-01",
+      "price": 2209,
+      "count": 4
     },
     {
       "province": "Buenos Aires",
@@ -60243,18 +59626,18 @@ window.STATION_PRICE_REFERENCE = {
       "city": "La Plata",
       "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2430,
-      "count": 5
+      "date": "2026-07-01",
+      "price": 2454,
+      "count": 6
     },
     {
       "province": "Buenos Aires",
       "city": "La Plata",
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2158,
-      "count": 5
+      "date": "2026-07-01",
+      "price": 2175,
+      "count": 6
     },
     {
       "province": "Buenos Aires",
@@ -60351,9 +59734,9 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Lanus",
       "brand": "Shell",
       "fuel": "Diesel",
-      "date": "2026-06-02",
-      "price": 2234,
-      "count": 4
+      "date": "2026-07-01",
+      "price": 2241.5,
+      "count": 2
     },
     {
       "province": "Buenos Aires",
@@ -60362,7 +59745,7 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Diesel Premium",
       "date": "2026-06-02",
       "price": 2499,
-      "count": 4
+      "count": 1
     },
     {
       "province": "Buenos Aires",
@@ -60378,18 +59761,18 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Lanus",
       "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-06-02",
-      "price": 2456,
-      "count": 4
+      "date": "2026-07-01",
+      "price": 2460.5,
+      "count": 2
     },
     {
       "province": "Buenos Aires",
       "city": "Lanus",
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-06-02",
-      "price": 2183,
-      "count": 4
+      "date": "2026-07-01",
+      "price": 2191,
+      "count": 2
     },
     {
       "province": "Buenos Aires",
@@ -60404,27 +59787,9 @@ window.STATION_PRICE_REFERENCE = {
       "province": "Buenos Aires",
       "city": "Las Armas",
       "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2228,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Las Armas",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2397,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Las Armas",
-      "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2435,
+      "date": "2026-07-01",
+      "price": 2459,
       "count": 1
     },
     {
@@ -60432,8 +59797,35 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Las Armas",
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2144,
+      "date": "2026-07-01",
+      "price": 2165,
+      "count": 1
+    },
+    {
+      "province": "Buenos Aires",
+      "city": "Libertad",
+      "brand": "Shell",
+      "fuel": "Diesel",
+      "date": "2026-06-30",
+      "price": 2270,
+      "count": 1
+    },
+    {
+      "province": "Buenos Aires",
+      "city": "Libertad",
+      "brand": "Shell",
+      "fuel": "Diesel Premium",
+      "date": "2026-06-30",
+      "price": 2557,
+      "count": 1
+    },
+    {
+      "province": "Buenos Aires",
+      "city": "Libertad",
+      "brand": "Shell",
+      "fuel": "Nafta Super",
+      "date": "2026-06-30",
+      "price": 2225,
       "count": 1
     },
     {
@@ -60470,6 +59862,33 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Nafta Super",
       "date": "2026-05-23",
       "price": 2139,
+      "count": 1
+    },
+    {
+      "province": "Buenos Aires",
+      "city": "Lisandro Olmos",
+      "brand": "Shell",
+      "fuel": "Diesel",
+      "date": "2026-06-30",
+      "price": 2178,
+      "count": 1
+    },
+    {
+      "province": "Buenos Aires",
+      "city": "Lisandro Olmos",
+      "brand": "Shell",
+      "fuel": "Nafta Premium",
+      "date": "2026-06-30",
+      "price": 2454,
+      "count": 1
+    },
+    {
+      "province": "Buenos Aires",
+      "city": "Lisandro Olmos",
+      "brand": "Shell",
+      "fuel": "Nafta Super",
+      "date": "2026-06-30",
+      "price": 2175,
       "count": 1
     },
     {
@@ -60575,46 +59994,10 @@ window.STATION_PRICE_REFERENCE = {
       "province": "Buenos Aires",
       "city": "Loma Hermosa",
       "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2199,
-      "count": 2
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Loma Hermosa",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2499,
-      "count": 2
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Loma Hermosa",
-      "brand": "Shell",
       "fuel": "GNC",
       "date": "2026-06-08",
       "price": 670,
       "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Loma Hermosa",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2428,
-      "count": 2
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Loma Hermosa",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2126,
-      "count": 2
     },
     {
       "province": "Buenos Aires",
@@ -60629,46 +60012,10 @@ window.STATION_PRICE_REFERENCE = {
       "province": "Buenos Aires",
       "city": "Lomas De Zamora",
       "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2240,
-      "count": 3
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Lomas De Zamora",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2546,
-      "count": 3
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Lomas De Zamora",
-      "brand": "Shell",
       "fuel": "GNC",
       "date": "2026-05-31",
       "price": 669,
       "count": 2
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Lomas De Zamora",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2399,
-      "count": 3
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Lomas De Zamora",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2181,
-      "count": 3
     },
     {
       "province": "Buenos Aires",
@@ -60683,45 +60030,9 @@ window.STATION_PRICE_REFERENCE = {
       "province": "Buenos Aires",
       "city": "Lomas Del Mirador",
       "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2230,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Lomas Del Mirador",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2535.5,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Lomas Del Mirador",
-      "brand": "Shell",
       "fuel": "GNC",
       "date": "2026-06-02",
       "price": 649,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Lomas Del Mirador",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2398.5,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Lomas Del Mirador",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2179,
       "count": 1
     },
     {
@@ -60735,83 +60046,11 @@ window.STATION_PRICE_REFERENCE = {
     },
     {
       "province": "Buenos Aires",
-      "city": "Lujan",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2335,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Lujan",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2682,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Lujan",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2454,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Lujan",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2169,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
       "city": "Maipu",
       "brand": "Blanca",
       "fuel": "GNC",
       "date": "2026-05-20",
       "price": 1099,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Manuel B. Gonnet",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2197,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Manuel B. Gonnet",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2499,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Manuel B. Gonnet",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2430,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Manuel B. Gonnet",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2158,
       "count": 1
     },
     {
@@ -60891,9 +60130,9 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Mar Del Plata",
       "brand": "Shell",
       "fuel": "Diesel",
-      "date": "2026-06-29",
-      "price": 2270.88,
-      "count": 8
+      "date": "2026-06-30",
+      "price": 2256,
+      "count": 3
     },
     {
       "province": "Buenos Aires",
@@ -60902,7 +60141,7 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Diesel Premium",
       "date": "2026-05-19",
       "price": 2450,
-      "count": 8
+      "count": 3
     },
     {
       "province": "Buenos Aires",
@@ -60920,7 +60159,7 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Nafta Premium",
       "date": "2026-05-19",
       "price": 2484,
-      "count": 8
+      "count": 3
     },
     {
       "province": "Buenos Aires",
@@ -60929,7 +60168,7 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Nafta Super",
       "date": "2026-05-19",
       "price": 2199,
-      "count": 8
+      "count": 3
     },
     {
       "province": "Buenos Aires",
@@ -60983,42 +60222,6 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Nafta Super",
       "date": "2026-05-23",
       "price": 2139,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Martinez",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2199,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Martinez",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2499,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Martinez",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2439,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Martinez",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2149,
       "count": 1
     },
     {
@@ -61143,17 +60346,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Monte Grande",
       "brand": "Shell",
       "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2235,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Monte Grande",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2499,
+      "date": "2026-07-01",
+      "price": 2260,
       "count": 1
     },
     {
@@ -61161,8 +60355,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Monte Grande",
       "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2440,
+      "date": "2026-07-01",
+      "price": 2457,
       "count": 1
     },
     {
@@ -61170,8 +60364,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Monte Grande",
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2135,
+      "date": "2026-07-01",
+      "price": 2148,
       "count": 1
     },
     {
@@ -61324,8 +60518,8 @@ window.STATION_PRICE_REFERENCE = {
       "brand": "Shell",
       "fuel": "Diesel",
       "date": "2026-05-18",
-      "price": 2321.8,
-      "count": 5
+      "price": 2328,
+      "count": 1
     },
     {
       "province": "Buenos Aires",
@@ -61333,8 +60527,8 @@ window.STATION_PRICE_REFERENCE = {
       "brand": "Shell",
       "fuel": "Diesel Premium",
       "date": "2026-05-18",
-      "price": 2657.8,
-      "count": 5
+      "price": 2662,
+      "count": 1
     },
     {
       "province": "Buenos Aires",
@@ -61351,8 +60545,8 @@ window.STATION_PRICE_REFERENCE = {
       "brand": "Shell",
       "fuel": "Nafta Premium",
       "date": "2026-05-18",
-      "price": 2554.6,
-      "count": 5
+      "price": 2558,
+      "count": 1
     },
     {
       "province": "Buenos Aires",
@@ -61360,8 +60554,8 @@ window.STATION_PRICE_REFERENCE = {
       "brand": "Shell",
       "fuel": "Nafta Super",
       "date": "2026-05-18",
-      "price": 2238.6,
-      "count": 5
+      "price": 2241,
+      "count": 1
     },
     {
       "province": "Buenos Aires",
@@ -61511,45 +60705,9 @@ window.STATION_PRICE_REFERENCE = {
       "province": "Buenos Aires",
       "city": "Munro",
       "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2199,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Munro",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2499,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Munro",
-      "brand": "Shell",
       "fuel": "GNC",
       "date": "2026-06-01",
       "price": 699,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Munro",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2439,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Munro",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2149,
       "count": 1
     },
     {
@@ -61595,42 +60753,6 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Nafta Super",
       "date": "2026-06-01",
       "price": 2139,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Navarro",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2358,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Navarro",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2537,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Navarro",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2451,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Navarro",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2150,
       "count": 1
     },
     {
@@ -61730,7 +60852,7 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Diesel",
       "date": "2026-06-01",
       "price": 2337,
-      "count": 2
+      "count": 1
     },
     {
       "province": "Buenos Aires",
@@ -61739,7 +60861,7 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Diesel Premium",
       "date": "2026-06-01",
       "price": 2498,
-      "count": 2
+      "count": 1
     },
     {
       "province": "Buenos Aires",
@@ -61748,7 +60870,7 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Nafta Premium",
       "date": "2026-06-01",
       "price": 2419,
-      "count": 2
+      "count": 1
     },
     {
       "province": "Buenos Aires",
@@ -61757,24 +60879,6 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Nafta Super",
       "date": "2026-06-01",
       "price": 2157,
-      "count": 2
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Olavarria",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2331,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Olavarria",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2536,
       "count": 1
     },
     {
@@ -61784,24 +60888,6 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "GNC",
       "date": "2026-06-05",
       "price": 949,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Olavarria",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2456,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Olavarria",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2195,
       "count": 1
     },
     {
@@ -61851,47 +60937,20 @@ window.STATION_PRICE_REFERENCE = {
     },
     {
       "province": "Buenos Aires",
-      "city": "Olivos",
-      "brand": "Shell",
+      "city": "Pablo Noghes",
+      "brand": "Dapsa S.a.",
       "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2199,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Olivos",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2499,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Olivos",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2439,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Olivos",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2149,
+      "date": "2026-06-23",
+      "price": 2129,
       "count": 1
     },
     {
       "province": "Buenos Aires",
       "city": "Pablo Noghes",
       "brand": "Dapsa S.a.",
-      "fuel": "Diesel",
-      "date": "2026-06-23",
-      "price": 2129,
+      "fuel": "Diesel Premium",
+      "date": "2026-06-30",
+      "price": 2358,
       "count": 1
     },
     {
@@ -61995,6 +61054,15 @@ window.STATION_PRICE_REFERENCE = {
     },
     {
       "province": "Buenos Aires",
+      "city": "Pedro Luro",
+      "brand": "Blanca",
+      "fuel": "GNC",
+      "date": "2026-06-25",
+      "price": 1030,
+      "count": 1
+    },
+    {
+      "province": "Buenos Aires",
       "city": "Pergamino",
       "brand": "Axion Energy",
       "fuel": "Diesel",
@@ -62027,42 +61095,6 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Nafta Super",
       "date": "2026-06-19",
       "price": 2204,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Pergamino",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2379,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Pergamino",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2578,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Pergamino",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2445,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Pergamino",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2196,
       "count": 1
     },
     {
@@ -62160,8 +61192,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Pilar",
       "brand": "Shell",
       "fuel": "Diesel",
-      "date": "2026-06-04",
-      "price": 2262,
+      "date": "2026-07-01",
+      "price": 2275.5,
       "count": 4
     },
     {
@@ -62169,8 +61201,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Pilar",
       "brand": "Shell",
       "fuel": "Diesel Premium",
-      "date": "2026-06-04",
-      "price": 2670,
+      "date": "2026-07-01",
+      "price": 2674.5,
       "count": 4
     },
     {
@@ -62187,8 +61219,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Pilar",
       "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-06-04",
-      "price": 2525,
+      "date": "2026-07-01",
+      "price": 2532,
       "count": 4
     },
     {
@@ -62196,8 +61228,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Pilar",
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-06-04",
-      "price": 2253,
+      "date": "2026-07-01",
+      "price": 2256,
       "count": 4
     },
     {
@@ -62214,8 +61246,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Pilar",
       "brand": "YPF",
       "fuel": "Diesel Premium",
-      "date": "2026-06-29",
-      "price": 2500,
+      "date": "2026-06-30",
+      "price": 2495,
       "count": 1
     },
     {
@@ -62232,26 +61264,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Pilar",
       "brand": "YPF",
       "fuel": "Nafta Super",
-      "date": "2026-06-29",
-      "price": 2168,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Pinamar",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2219,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Pinamar",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2397,
+      "date": "2026-06-30",
+      "price": 2163,
       "count": 1
     },
     {
@@ -62259,8 +61273,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Pinamar",
       "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2450,
+      "date": "2026-07-01",
+      "price": 2475,
       "count": 1
     },
     {
@@ -62268,8 +61282,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Pinamar",
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2159,
+      "date": "2026-07-01",
+      "price": 2178,
       "count": 1
     },
     {
@@ -62331,17 +61345,26 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Quilmes",
       "brand": "Shell",
       "fuel": "Diesel",
-      "date": "2026-05-17",
-      "price": 2228,
-      "count": 1
+      "date": "2026-06-30",
+      "price": 2234.5,
+      "count": 2
     },
     {
       "province": "Buenos Aires",
       "city": "Quilmes",
       "brand": "Shell",
       "fuel": "Diesel Premium",
-      "date": "2026-05-17",
-      "price": 2498.5,
+      "date": "2026-06-30",
+      "price": 2498.75,
+      "count": 2
+    },
+    {
+      "province": "Buenos Aires",
+      "city": "Quilmes",
+      "brand": "Shell",
+      "fuel": "GNC",
+      "date": "2026-06-30",
+      "price": 670,
       "count": 1
     },
     {
@@ -62349,54 +61372,18 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Quilmes",
       "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-05-17",
-      "price": 2469,
-      "count": 1
+      "date": "2026-06-30",
+      "price": 2474,
+      "count": 2
     },
     {
       "province": "Buenos Aires",
       "city": "Quilmes",
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-05-17",
-      "price": 2191,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Ramallo",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2399,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Ramallo",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2569,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Ramallo",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2483,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Ramallo",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2223,
-      "count": 1
+      "date": "2026-06-30",
+      "price": 2195,
+      "count": 2
     },
     {
       "province": "Buenos Aires",
@@ -62520,26 +61507,17 @@ window.STATION_PRICE_REFERENCE = {
       "city": "San Fernando",
       "brand": "Shell",
       "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2219,
+      "date": "2026-07-01",
+      "price": 2235,
       "count": 1
     },
     {
       "province": "Buenos Aires",
       "city": "San Fernando",
       "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2499,
-      "count": 2
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "San Fernando",
-      "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2439,
+      "date": "2026-07-01",
+      "price": 2459,
       "count": 2
     },
     {
@@ -62547,8 +61525,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "San Fernando",
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2169,
+      "date": "2026-07-01",
+      "price": 2178,
       "count": 2
     },
     {
@@ -62689,42 +61667,6 @@ window.STATION_PRICE_REFERENCE = {
     {
       "province": "Buenos Aires",
       "city": "San Justo",
-      "brand": "Dapsa S.a.",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2171,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "San Justo",
-      "brand": "Dapsa S.a.",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2416,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "San Justo",
-      "brand": "Dapsa S.a.",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2280,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "San Justo",
-      "brand": "Dapsa S.a.",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2111,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "San Justo",
       "brand": "Puma Energy",
       "fuel": "GNC",
       "date": "2026-06-17",
@@ -62781,9 +61723,9 @@ window.STATION_PRICE_REFERENCE = {
       "city": "San Martin",
       "brand": "Shell",
       "fuel": "Diesel",
-      "date": "2026-06-10",
-      "price": 2199,
-      "count": 1
+      "date": "2026-06-30",
+      "price": 2211,
+      "count": 2
     },
     {
       "province": "Buenos Aires",
@@ -62808,8 +61750,17 @@ window.STATION_PRICE_REFERENCE = {
       "city": "San Martin",
       "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-06-26",
-      "price": 2428,
+      "date": "2026-06-30",
+      "price": 2435.5,
+      "count": 2
+    },
+    {
+      "province": "Buenos Aires",
+      "city": "San Martin",
+      "brand": "Shell",
+      "fuel": "Nafta Super",
+      "date": "2026-06-30",
+      "price": 2139,
       "count": 1
     },
     {
@@ -62819,78 +61770,6 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "GNC",
       "date": "2026-06-09",
       "price": 629,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "San Miguel",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2196,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "San Miguel",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2499,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "San Miguel",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2440,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "San Miguel",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2164,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "San Miguel Del Monte",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2291.5,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "San Miguel Del Monte",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2499,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "San Miguel Del Monte",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2465,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "San Miguel Del Monte",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2142,
       "count": 1
     },
     {
@@ -62967,42 +61846,6 @@ window.STATION_PRICE_REFERENCE = {
     },
     {
       "province": "Buenos Aires",
-      "city": "San Nicolas",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2369.5,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "San Nicolas",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2531,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "San Nicolas",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2429.5,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "San Nicolas",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2191,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
       "city": "San Pedro",
       "brand": "Dapsa S.a.",
       "fuel": "Diesel",
@@ -63069,8 +61912,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "San Pedro",
       "brand": "YPF",
       "fuel": "Diesel",
-      "date": "2026-06-29",
-      "price": 2299,
+      "date": "2026-06-30",
+      "price": 2305,
       "count": 2
     },
     {
@@ -63096,62 +61939,17 @@ window.STATION_PRICE_REFERENCE = {
       "city": "San Pedro",
       "brand": "YPF",
       "fuel": "Nafta Super",
-      "date": "2026-06-29",
-      "price": 2117,
-      "count": 2
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "San Vicente",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2267,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "San Vicente",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2556,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "San Vicente",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2465,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "San Vicente",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2158,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Sarandi",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2233,
+      "date": "2026-06-30",
+      "price": 2112,
       "count": 2
     },
     {
       "province": "Buenos Aires",
       "city": "Sarandi",
       "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2499,
+      "fuel": "Diesel",
+      "date": "2026-07-01",
+      "price": 2250,
       "count": 2
     },
     {
@@ -63168,8 +61966,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Sarandi",
       "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2456,
+      "date": "2026-07-01",
+      "price": 2466.5,
       "count": 2
     },
     {
@@ -63177,45 +61975,9 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Sarandi",
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2187.5,
+      "date": "2026-07-01",
+      "price": 2199,
       "count": 2
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Stroeder",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2258,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Stroeder",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2599,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Stroeder",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2279,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Stroeder",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 1926,
-      "count": 1
     },
     {
       "province": "Buenos Aires",
@@ -63258,8 +62020,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Tandil",
       "brand": "Shell",
       "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2358,
+      "date": "2026-07-01",
+      "price": 2389,
       "count": 1
     },
     {
@@ -63267,8 +62029,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Tandil",
       "brand": "Shell",
       "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2536,
+      "date": "2026-07-01",
+      "price": 2559,
       "count": 1
     },
     {
@@ -63285,8 +62047,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Tandil",
       "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2451,
+      "date": "2026-07-01",
+      "price": 2476,
       "count": 1
     },
     {
@@ -63294,8 +62056,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Tandil",
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2150,
+      "date": "2026-07-01",
+      "price": 2172,
       "count": 1
     },
     {
@@ -63384,8 +62146,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Temperley",
       "brand": "Shell",
       "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2240,
+      "date": "2026-07-01",
+      "price": 2259,
       "count": 1
     },
     {
@@ -63393,8 +62155,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Temperley",
       "brand": "Shell",
       "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2546,
+      "date": "2026-07-01",
+      "price": 2559,
       "count": 1
     },
     {
@@ -63402,8 +62164,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Temperley",
       "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2399,
+      "date": "2026-07-01",
+      "price": 2429,
       "count": 1
     },
     {
@@ -63411,8 +62173,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Temperley",
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2181,
+      "date": "2026-07-01",
+      "price": 2199,
       "count": 1
     },
     {
@@ -63465,26 +62227,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Tigre",
       "brand": "Shell",
       "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2201,
-      "count": 3
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Tigre",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2499,
-      "count": 3
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Tigre",
-      "brand": "Shell",
-      "fuel": "GNC",
-      "date": "2026-05-16",
-      "price": 689.9,
+      "date": "2026-07-01",
+      "price": 2235,
       "count": 1
     },
     {
@@ -63492,53 +62236,17 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Tigre",
       "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2455.67,
-      "count": 3
+      "date": "2026-07-01",
+      "price": 2459,
+      "count": 1
     },
     {
       "province": "Buenos Aires",
       "city": "Tigre",
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2177.67,
-      "count": 3
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Tigre",
-      "brand": "YPF",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2329,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Tigre",
-      "brand": "YPF",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2569,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Tigre",
-      "brand": "YPF",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2614,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Tigre",
-      "brand": "YPF",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2406,
+      "date": "2026-07-01",
+      "price": 2178,
       "count": 1
     },
     {
@@ -63588,42 +62296,6 @@ window.STATION_PRICE_REFERENCE = {
     },
     {
       "province": "Buenos Aires",
-      "city": "Trenque Lauquen",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2338,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Trenque Lauquen",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2542,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Trenque Lauquen",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2444,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Trenque Lauquen",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2173,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
       "city": "Tres Arroyos",
       "brand": "Blanca",
       "fuel": "GNC",
@@ -63645,8 +62317,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Tristan Suarez",
       "brand": "Shell",
       "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2268,
+      "date": "2026-07-01",
+      "price": 2289,
       "count": 2
     },
     {
@@ -63654,8 +62326,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Tristan Suarez",
       "brand": "Shell",
       "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2539,
+      "date": "2026-07-01",
+      "price": 2552,
       "count": 2
     },
     {
@@ -63663,8 +62335,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Tristan Suarez",
       "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2471,
+      "date": "2026-07-01",
+      "price": 2488,
       "count": 2
     },
     {
@@ -63672,8 +62344,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Tristan Suarez",
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2165,
+      "date": "2026-07-01",
+      "price": 2178,
       "count": 2
     },
     {
@@ -63903,42 +62575,6 @@ window.STATION_PRICE_REFERENCE = {
     },
     {
       "province": "Buenos Aires",
-      "city": "Victoria",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2219,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Victoria",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2499,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Victoria",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2439,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Victoria",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2169,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
       "city": "Villa Adelina",
       "brand": "Dapsa S.a.",
       "fuel": "Diesel",
@@ -64086,17 +62722,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Villa Elisa",
       "brand": "Shell",
       "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2197,
-      "count": 2
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Villa Elisa",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2499,
+      "date": "2026-07-01",
+      "price": 2209,
       "count": 2
     },
     {
@@ -64104,8 +62731,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Villa Elisa",
       "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2430,
+      "date": "2026-07-01",
+      "price": 2454,
       "count": 2
     },
     {
@@ -64113,8 +62740,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Villa Elisa",
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2158,
+      "date": "2026-07-01",
+      "price": 2175,
       "count": 2
     },
     {
@@ -64254,78 +62881,6 @@ window.STATION_PRICE_REFERENCE = {
     },
     {
       "province": "Buenos Aires",
-      "city": "Villalonga",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2258,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Villalonga",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2599,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Villalonga",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2279,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Villalonga",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 1926,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Virreyes",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2219,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Virreyes",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2499,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Virreyes",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2439,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Virreyes",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2169,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
       "city": "Wilde",
       "brand": "YPF",
       "fuel": "GNC",
@@ -64447,8 +63002,8 @@ window.STATION_PRICE_REFERENCE = {
       "brand": "Puma Energy",
       "fuel": "GNC",
       "date": "2026-05-21",
-      "price": 601.67,
-      "count": 3
+      "price": 563,
+      "count": 2
     },
     {
       "province": "Capital Federal",
@@ -64473,8 +63028,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Capital Federal",
       "brand": "Shell",
       "fuel": "Diesel",
-      "date": "2026-06-01",
-      "price": 2180.67,
+      "date": "2026-07-01",
+      "price": 2195.52,
       "count": 21
     },
     {
@@ -64482,9 +63037,9 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Capital Federal",
       "brand": "Shell",
       "fuel": "Diesel Premium",
-      "date": "2026-06-02",
-      "price": 2491.42,
-      "count": 24
+      "date": "2026-07-01",
+      "price": 2495.82,
+      "count": 22
     },
     {
       "province": "Capital Federal",
@@ -64500,17 +63055,17 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Capital Federal",
       "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-06-02",
-      "price": 2427.54,
-      "count": 24
+      "date": "2026-07-01",
+      "price": 2434.82,
+      "count": 22
     },
     {
       "province": "Capital Federal",
       "city": "Capital Federal",
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-06-02",
-      "price": 2119.5,
+      "date": "2026-07-01",
+      "price": 2131.67,
       "count": 24
     },
     {
@@ -64740,96 +63295,6 @@ window.STATION_PRICE_REFERENCE = {
     },
     {
       "province": "Chaco",
-      "city": "Charata",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2353.75,
-      "count": 2
-    },
-    {
-      "province": "Chaco",
-      "city": "Charata",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2521.75,
-      "count": 2
-    },
-    {
-      "province": "Chaco",
-      "city": "Charata",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2394,
-      "count": 2
-    },
-    {
-      "province": "Chaco",
-      "city": "Charata",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2128,
-      "count": 2
-    },
-    {
-      "province": "Chaco",
-      "city": "Las Breñas",
-      "brand": "Blanca",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2369.5,
-      "count": 1
-    },
-    {
-      "province": "Chaco",
-      "city": "Las Breñas",
-      "brand": "Blanca",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2065,
-      "count": 1
-    },
-    {
-      "province": "Chaco",
-      "city": "Las Breñas",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2354,
-      "count": 1
-    },
-    {
-      "province": "Chaco",
-      "city": "Las Breñas",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2522,
-      "count": 1
-    },
-    {
-      "province": "Chaco",
-      "city": "Las Breñas",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2389,
-      "count": 1
-    },
-    {
-      "province": "Chaco",
-      "city": "Las Breñas",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2124,
-      "count": 1
-    },
-    {
-      "province": "Chaco",
       "city": "Resistencia",
       "brand": "Axion Energy",
       "fuel": "Diesel",
@@ -64878,27 +63343,27 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Resistencia",
       "brand": "Shell",
       "fuel": "Diesel Premium",
-      "date": "2026-06-07",
-      "price": 2522,
-      "count": 1
+      "date": "2026-06-30",
+      "price": 2540.5,
+      "count": 2
     },
     {
       "province": "Chaco",
       "city": "Resistencia",
       "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-06-07",
-      "price": 2396,
-      "count": 1
+      "date": "2026-06-30",
+      "price": 2397.5,
+      "count": 2
     },
     {
       "province": "Chaco",
       "city": "Resistencia",
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-06-07",
-      "price": 2122,
-      "count": 1
+      "date": "2026-06-30",
+      "price": 2131.5,
+      "count": 2
     },
     {
       "province": "Chaco",
@@ -64971,24 +63436,6 @@ window.STATION_PRICE_REFERENCE = {
       "date": "2026-05-17",
       "price": 2139,
       "count": 2
-    },
-    {
-      "province": "Chaco",
-      "city": "Tres Isletas",
-      "brand": "Blanca",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2420,
-      "count": 1
-    },
-    {
-      "province": "Chaco",
-      "city": "Tres Isletas",
-      "brand": "Blanca",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2160,
-      "count": 1
     },
     {
       "province": "Chubut",
@@ -65289,42 +63736,6 @@ window.STATION_PRICE_REFERENCE = {
     },
     {
       "province": "Cordoba",
-      "city": "Alta Gracia",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2342,
-      "count": 2
-    },
-    {
-      "province": "Cordoba",
-      "city": "Alta Gracia",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2598,
-      "count": 2
-    },
-    {
-      "province": "Cordoba",
-      "city": "Alta Gracia",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2468,
-      "count": 2
-    },
-    {
-      "province": "Cordoba",
-      "city": "Alta Gracia",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2193,
-      "count": 2
-    },
-    {
-      "province": "Cordoba",
       "city": "Arguello",
       "brand": "Gulf",
       "fuel": "Diesel",
@@ -65337,8 +63748,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Arguello",
       "brand": "Gulf",
       "fuel": "Diesel Premium",
-      "date": "2026-06-22",
-      "price": 2438,
+      "date": "2026-06-30",
+      "price": 2433,
       "count": 1
     },
     {
@@ -65363,18 +63774,9 @@ window.STATION_PRICE_REFERENCE = {
       "province": "Cordoba",
       "city": "Arroyito",
       "brand": "YPF",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2449,
-      "count": 1
-    },
-    {
-      "province": "Cordoba",
-      "city": "Arroyito",
-      "brand": "YPF",
       "fuel": "Nafta Super",
-      "date": "2026-05-22",
-      "price": 2149,
+      "date": "2026-06-02",
+      "price": 2069,
       "count": 1
     },
     {
@@ -65598,8 +64000,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Cordoba",
       "brand": "Puma Energy",
       "fuel": "Nafta Super",
-      "date": "2026-06-25",
-      "price": 2099,
+      "date": "2026-06-30",
+      "price": 2155,
       "count": 1
     },
     {
@@ -65607,18 +64009,18 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Cordoba",
       "brand": "Shell",
       "fuel": "Diesel",
-      "date": "2026-06-05",
-      "price": 2344,
-      "count": 7
+      "date": "2026-06-30",
+      "price": 2347.17,
+      "count": 6
     },
     {
       "province": "Cordoba",
       "city": "Cordoba",
       "brand": "Shell",
       "fuel": "Diesel Premium",
-      "date": "2026-06-05",
-      "price": 2579.71,
-      "count": 7
+      "date": "2026-06-30",
+      "price": 2591.5,
+      "count": 6
     },
     {
       "province": "Cordoba",
@@ -65626,34 +64028,34 @@ window.STATION_PRICE_REFERENCE = {
       "brand": "Shell",
       "fuel": "GNC",
       "date": "2026-06-29",
-      "price": 830.33,
-      "count": 6
+      "price": 819.86,
+      "count": 7
     },
     {
       "province": "Cordoba",
       "city": "Cordoba",
       "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-06-05",
-      "price": 2406,
-      "count": 7
+      "date": "2026-06-30",
+      "price": 2408.83,
+      "count": 6
     },
     {
       "province": "Cordoba",
       "city": "Cordoba",
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-06-05",
-      "price": 2168.29,
-      "count": 7
+      "date": "2026-06-30",
+      "price": 2170.5,
+      "count": 6
     },
     {
       "province": "Cordoba",
       "city": "Cordoba",
       "brand": "YPF",
       "fuel": "GNC",
-      "date": "2026-06-26",
-      "price": 808.83,
+      "date": "2026-07-01",
+      "price": 803.83,
       "count": 6
     },
     {
@@ -65712,20 +64114,29 @@ window.STATION_PRICE_REFERENCE = {
     },
     {
       "province": "Cordoba",
-      "city": "Devoto",
-      "brand": "Axion Energy",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2529,
+      "city": "Dean Funes",
+      "brand": "Shell",
+      "fuel": "Diesel",
+      "date": "2026-06-30",
+      "price": 2373,
       "count": 1
     },
     {
       "province": "Cordoba",
-      "city": "Devoto",
-      "brand": "Axion Energy",
+      "city": "Dean Funes",
+      "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2389,
+      "date": "2026-06-30",
+      "price": 2499,
+      "count": 1
+    },
+    {
+      "province": "Cordoba",
+      "city": "Dean Funes",
+      "brand": "Shell",
+      "fuel": "Nafta Super",
+      "date": "2026-06-30",
+      "price": 2235,
       "count": 1
     },
     {
@@ -65939,45 +64350,9 @@ window.STATION_PRICE_REFERENCE = {
       "province": "Cordoba",
       "city": "La Carlota",
       "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2354,
-      "count": 1
-    },
-    {
-      "province": "Cordoba",
-      "city": "La Carlota",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2598,
-      "count": 1
-    },
-    {
-      "province": "Cordoba",
-      "city": "La Carlota",
-      "brand": "Shell",
       "fuel": "GNC",
       "date": "2026-06-02",
       "price": 900,
-      "count": 1
-    },
-    {
-      "province": "Cordoba",
-      "city": "La Carlota",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2468,
-      "count": 1
-    },
-    {
-      "province": "Cordoba",
-      "city": "La Carlota",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2193,
       "count": 1
     },
     {
@@ -66081,42 +64456,6 @@ window.STATION_PRICE_REFERENCE = {
     },
     {
       "province": "Cordoba",
-      "city": "Marcos Juarez",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2324,
-      "count": 2
-    },
-    {
-      "province": "Cordoba",
-      "city": "Marcos Juarez",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2599,
-      "count": 2
-    },
-    {
-      "province": "Cordoba",
-      "city": "Marcos Juarez",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2468,
-      "count": 2
-    },
-    {
-      "province": "Cordoba",
-      "city": "Marcos Juarez",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2193,
-      "count": 2
-    },
-    {
-      "province": "Cordoba",
       "city": "Monte Buey",
       "brand": "Puma Energy",
       "fuel": "GNC",
@@ -66158,42 +64497,6 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Nafta Super",
       "date": "2026-05-23",
       "price": 2179,
-      "count": 1
-    },
-    {
-      "province": "Cordoba",
-      "city": "Morteros",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2347,
-      "count": 1
-    },
-    {
-      "province": "Cordoba",
-      "city": "Morteros",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2584,
-      "count": 1
-    },
-    {
-      "province": "Cordoba",
-      "city": "Morteros",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2445.5,
-      "count": 1
-    },
-    {
-      "province": "Cordoba",
-      "city": "Morteros",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2193,
       "count": 1
     },
     {
@@ -66594,150 +64897,6 @@ window.STATION_PRICE_REFERENCE = {
     },
     {
       "province": "Cordoba",
-      "city": "Villa America",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2342,
-      "count": 1
-    },
-    {
-      "province": "Cordoba",
-      "city": "Villa America",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2598,
-      "count": 1
-    },
-    {
-      "province": "Cordoba",
-      "city": "Villa America",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2467.5,
-      "count": 1
-    },
-    {
-      "province": "Cordoba",
-      "city": "Villa America",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2193,
-      "count": 1
-    },
-    {
-      "province": "Cordoba",
-      "city": "Villa Carlos Paz",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2342,
-      "count": 1
-    },
-    {
-      "province": "Cordoba",
-      "city": "Villa Carlos Paz",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2599,
-      "count": 1
-    },
-    {
-      "province": "Cordoba",
-      "city": "Villa Carlos Paz",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2458,
-      "count": 1
-    },
-    {
-      "province": "Cordoba",
-      "city": "Villa Carlos Paz",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2162,
-      "count": 1
-    },
-    {
-      "province": "Cordoba",
-      "city": "Villa Dolores",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2347,
-      "count": 1
-    },
-    {
-      "province": "Cordoba",
-      "city": "Villa Dolores",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2589,
-      "count": 1
-    },
-    {
-      "province": "Cordoba",
-      "city": "Villa Dolores",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2439,
-      "count": 1
-    },
-    {
-      "province": "Cordoba",
-      "city": "Villa Dolores",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2145,
-      "count": 1
-    },
-    {
-      "province": "Cordoba",
-      "city": "Villa Gral. Belgrano",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2342,
-      "count": 1
-    },
-    {
-      "province": "Cordoba",
-      "city": "Villa Gral. Belgrano",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2598,
-      "count": 1
-    },
-    {
-      "province": "Cordoba",
-      "city": "Villa Gral. Belgrano",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2468,
-      "count": 1
-    },
-    {
-      "province": "Cordoba",
-      "city": "Villa Gral. Belgrano",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2193,
-      "count": 1
-    },
-    {
-      "province": "Cordoba",
       "city": "Villa Maria",
       "brand": "Gulf",
       "fuel": "Diesel",
@@ -66876,18 +65035,18 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Corrientes",
       "brand": "Shell",
       "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2371,
-      "count": 2
+      "date": "2026-06-30",
+      "price": 2343,
+      "count": 1
     },
     {
       "province": "Corrientes",
       "city": "Corrientes",
       "brand": "Shell",
       "fuel": "Diesel Premium",
-      "date": "2026-06-18",
-      "price": 2549,
-      "count": 3
+      "date": "2026-06-30",
+      "price": 2559,
+      "count": 2
     },
     {
       "province": "Corrientes",
@@ -66896,16 +65055,16 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Nafta Premium",
       "date": "2026-06-18",
       "price": 2399,
-      "count": 3
+      "count": 1
     },
     {
       "province": "Corrientes",
       "city": "Corrientes",
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-06-18",
-      "price": 2133,
-      "count": 3
+      "date": "2026-06-30",
+      "price": 2143.5,
+      "count": 2
     },
     {
       "province": "Corrientes",
@@ -67020,8 +65179,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Saladas",
       "brand": "YPF",
       "fuel": "Diesel",
-      "date": "2026-06-29",
-      "price": 2285,
+      "date": "2026-07-01",
+      "price": 2281,
       "count": 1
     },
     {
@@ -67047,8 +65206,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Saladas",
       "brand": "YPF",
       "fuel": "Nafta Super",
-      "date": "2026-06-29",
-      "price": 2080,
+      "date": "2026-07-01",
+      "price": 2077,
       "count": 1
     },
     {
@@ -67260,74 +65419,38 @@ window.STATION_PRICE_REFERENCE = {
     },
     {
       "province": "Entre Rios",
-      "city": "Ceibas",
+      "city": "Chajari",
       "brand": "Shell",
       "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2382,
+      "date": "2026-06-30",
+      "price": 2376,
       "count": 1
     },
     {
       "province": "Entre Rios",
-      "city": "Ceibas",
+      "city": "Chajari",
       "brand": "Shell",
       "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2590,
+      "date": "2026-06-30",
+      "price": 2599,
       "count": 1
     },
     {
       "province": "Entre Rios",
-      "city": "Ceibas",
+      "city": "Chajari",
       "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2466,
+      "date": "2026-06-30",
+      "price": 2471,
       "count": 1
     },
     {
       "province": "Entre Rios",
-      "city": "Ceibas",
+      "city": "Chajari",
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2223,
-      "count": 1
-    },
-    {
-      "province": "Entre Rios",
-      "city": "Chajari",
-      "brand": "Puma Energy",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2356,
-      "count": 1
-    },
-    {
-      "province": "Entre Rios",
-      "city": "Chajari",
-      "brand": "Puma Energy",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2530,
-      "count": 1
-    },
-    {
-      "province": "Entre Rios",
-      "city": "Chajari",
-      "brand": "Puma Energy",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2415,
-      "count": 1
-    },
-    {
-      "province": "Entre Rios",
-      "city": "Chajari",
-      "brand": "Puma Energy",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2176,
+      "date": "2026-06-30",
+      "price": 2218,
       "count": 1
     },
     {
@@ -67364,51 +65487,6 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Nafta Super",
       "date": "2026-05-21",
       "price": 2180,
-      "count": 1
-    },
-    {
-      "province": "Entre Rios",
-      "city": "Colon",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2279,
-      "count": 1
-    },
-    {
-      "province": "Entre Rios",
-      "city": "Colon",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2549,
-      "count": 1
-    },
-    {
-      "province": "Entre Rios",
-      "city": "Colon",
-      "brand": "Shell",
-      "fuel": "GNC",
-      "date": "2026-05-16",
-      "price": 995,
-      "count": 1
-    },
-    {
-      "province": "Entre Rios",
-      "city": "Colon",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2449,
-      "count": 1
-    },
-    {
-      "province": "Entre Rios",
-      "city": "Colon",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2219,
       "count": 1
     },
     {
@@ -67506,36 +65584,36 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Concordia",
       "brand": "Shell",
       "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2383,
-      "count": 1
+      "date": "2026-07-01",
+      "price": 2366,
+      "count": 2
     },
     {
       "province": "Entre Rios",
       "city": "Concordia",
       "brand": "Shell",
       "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2591,
-      "count": 1
+      "date": "2026-07-01",
+      "price": 2599,
+      "count": 2
     },
     {
       "province": "Entre Rios",
       "city": "Concordia",
       "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2466,
-      "count": 1
+      "date": "2026-07-01",
+      "price": 2480,
+      "count": 2
     },
     {
       "province": "Entre Rios",
       "city": "Concordia",
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2223,
-      "count": 1
+      "date": "2026-07-01",
+      "price": 2249,
+      "count": 2
     },
     {
       "province": "Entre Rios",
@@ -67571,42 +65649,6 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Nafta Super",
       "date": "2026-05-23",
       "price": 2189,
-      "count": 1
-    },
-    {
-      "province": "Entre Rios",
-      "city": "Crespo",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2367,
-      "count": 1
-    },
-    {
-      "province": "Entre Rios",
-      "city": "Crespo",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2549,
-      "count": 1
-    },
-    {
-      "province": "Entre Rios",
-      "city": "Crespo",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2449,
-      "count": 1
-    },
-    {
-      "province": "Entre Rios",
-      "city": "Crespo",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2199,
       "count": 1
     },
     {
@@ -67670,42 +65712,6 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Nafta Super",
       "date": "2026-05-23",
       "price": 2169,
-      "count": 1
-    },
-    {
-      "province": "Entre Rios",
-      "city": "Gral. Ramirez",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2367,
-      "count": 1
-    },
-    {
-      "province": "Entre Rios",
-      "city": "Gral. Ramirez",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2549,
-      "count": 1
-    },
-    {
-      "province": "Entre Rios",
-      "city": "Gral. Ramirez",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2449,
-      "count": 1
-    },
-    {
-      "province": "Entre Rios",
-      "city": "Gral. Ramirez",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2199,
       "count": 1
     },
     {
@@ -67787,42 +65793,6 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Nafta Super",
       "date": "2026-06-10",
       "price": 2139,
-      "count": 1
-    },
-    {
-      "province": "Entre Rios",
-      "city": "Gualeguaychu",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2347,
-      "count": 1
-    },
-    {
-      "province": "Entre Rios",
-      "city": "Gualeguaychu",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2590,
-      "count": 1
-    },
-    {
-      "province": "Entre Rios",
-      "city": "Gualeguaychu",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2466,
-      "count": 1
-    },
-    {
-      "province": "Entre Rios",
-      "city": "Gualeguaychu",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2223,
       "count": 1
     },
     {
@@ -67965,8 +65935,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Villa Elisa",
       "brand": "Shell",
       "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2367,
+      "date": "2026-07-01",
+      "price": 2376,
       "count": 1
     },
     {
@@ -67974,8 +65944,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Villa Elisa",
       "brand": "Shell",
       "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2549,
+      "date": "2026-07-01",
+      "price": 2577,
       "count": 1
     },
     {
@@ -67983,8 +65953,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Villa Elisa",
       "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2449,
+      "date": "2026-07-01",
+      "price": 2461,
       "count": 1
     },
     {
@@ -67992,80 +65962,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Villa Elisa",
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2199,
-      "count": 1
-    },
-    {
-      "province": "Formosa",
-      "city": "Clorinda",
-      "brand": "Axion Energy",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2369.5,
-      "count": 1
-    },
-    {
-      "province": "Formosa",
-      "city": "Clorinda",
-      "brand": "Axion Energy",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2599,
-      "count": 1
-    },
-    {
-      "province": "Formosa",
-      "city": "Clorinda",
-      "brand": "Axion Energy",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2454,
-      "count": 1
-    },
-    {
-      "province": "Formosa",
-      "city": "Clorinda",
-      "brand": "Axion Energy",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2154,
-      "count": 1
-    },
-    {
-      "province": "Formosa",
-      "city": "Clorinda",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2370,
-      "count": 1
-    },
-    {
-      "province": "Formosa",
-      "city": "Clorinda",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2599,
-      "count": 1
-    },
-    {
-      "province": "Formosa",
-      "city": "Clorinda",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2454,
-      "count": 1
-    },
-    {
-      "province": "Formosa",
-      "city": "Clorinda",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2154,
+      "date": "2026-07-01",
+      "price": 2225,
       "count": 1
     },
     {
@@ -68366,78 +66264,6 @@ window.STATION_PRICE_REFERENCE = {
       "count": 1
     },
     {
-      "province": "La Rioja",
-      "city": "La Rioja",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2360,
-      "count": 1
-    },
-    {
-      "province": "La Rioja",
-      "city": "La Rioja",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2593,
-      "count": 1
-    },
-    {
-      "province": "La Rioja",
-      "city": "La Rioja",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2499,
-      "count": 1
-    },
-    {
-      "province": "La Rioja",
-      "city": "La Rioja",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2181,
-      "count": 1
-    },
-    {
-      "province": "Mendoza",
-      "city": "Capilla Del Rosario",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2291,
-      "count": 1
-    },
-    {
-      "province": "Mendoza",
-      "city": "Capilla Del Rosario",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2467,
-      "count": 1
-    },
-    {
-      "province": "Mendoza",
-      "city": "Capilla Del Rosario",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2445,
-      "count": 1
-    },
-    {
-      "province": "Mendoza",
-      "city": "Capilla Del Rosario",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2120,
-      "count": 1
-    },
-    {
       "province": "Mendoza",
       "city": "Godoy Cruz",
       "brand": "Blanca",
@@ -68595,8 +66421,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Mendoza",
       "brand": "Shell",
       "fuel": "Diesel",
-      "date": "2026-05-19",
-      "price": 2291,
+      "date": "2026-07-01",
+      "price": 2295,
       "count": 2
     },
     {
@@ -68604,8 +66430,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Mendoza",
       "brand": "Shell",
       "fuel": "Diesel Premium",
-      "date": "2026-05-19",
-      "price": 2467,
+      "date": "2026-07-01",
+      "price": 2483,
       "count": 2
     },
     {
@@ -68613,8 +66439,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Mendoza",
       "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-05-19",
-      "price": 2444.5,
+      "date": "2026-07-01",
+      "price": 2448,
       "count": 2
     },
     {
@@ -68622,8 +66448,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Mendoza",
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-05-19",
-      "price": 2120,
+      "date": "2026-07-01",
+      "price": 2131.5,
       "count": 2
     },
     {
@@ -68631,8 +66457,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Rivadavia",
       "brand": "Blanca",
       "fuel": "GNC",
-      "date": "2026-05-26",
-      "price": 899,
+      "date": "2026-06-29",
+      "price": 945,
       "count": 2
     },
     {
@@ -68660,33 +66486,6 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "GNC",
       "date": "2026-06-23",
       "price": 943.3,
-      "count": 1
-    },
-    {
-      "province": "Mendoza",
-      "city": "Tunuyan",
-      "brand": "Blanca",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2279,
-      "count": 1
-    },
-    {
-      "province": "Mendoza",
-      "city": "Tunuyan",
-      "brand": "Blanca",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2399,
-      "count": 1
-    },
-    {
-      "province": "Mendoza",
-      "city": "Tunuyan",
-      "brand": "Blanca",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2169,
       "count": 1
     },
     {
@@ -68732,42 +66531,6 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "GNC",
       "date": "2026-05-22",
       "price": 957,
-      "count": 1
-    },
-    {
-      "province": "Misiones",
-      "city": "Colonia Andresito",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2383,
-      "count": 1
-    },
-    {
-      "province": "Misiones",
-      "city": "Colonia Andresito",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2677,
-      "count": 1
-    },
-    {
-      "province": "Misiones",
-      "city": "Colonia Andresito",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2589,
-      "count": 1
-    },
-    {
-      "province": "Misiones",
-      "city": "Colonia Andresito",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2262,
       "count": 1
     },
     {
@@ -68916,78 +66679,6 @@ window.STATION_PRICE_REFERENCE = {
     },
     {
       "province": "Misiones",
-      "city": "Posadas",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2383,
-      "count": 2
-    },
-    {
-      "province": "Misiones",
-      "city": "Posadas",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2675,
-      "count": 2
-    },
-    {
-      "province": "Misiones",
-      "city": "Posadas",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2590,
-      "count": 2
-    },
-    {
-      "province": "Misiones",
-      "city": "Posadas",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2288,
-      "count": 2
-    },
-    {
-      "province": "Misiones",
-      "city": "Puerto Iguazu",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2383,
-      "count": 2
-    },
-    {
-      "province": "Misiones",
-      "city": "Puerto Iguazu",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2677,
-      "count": 2
-    },
-    {
-      "province": "Misiones",
-      "city": "Puerto Iguazu",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2589,
-      "count": 2
-    },
-    {
-      "province": "Misiones",
-      "city": "Puerto Iguazu",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2262,
-      "count": 2
-    },
-    {
-      "province": "Misiones",
       "city": "San Ignacio",
       "brand": "Axion Energy",
       "fuel": "Diesel Premium",
@@ -69027,8 +66718,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Añelo",
       "brand": "YPF",
       "fuel": "Diesel Premium",
-      "date": "2026-06-29",
-      "price": 2551,
+      "date": "2026-06-30",
+      "price": 2546,
       "count": 2
     },
     {
@@ -69045,8 +66736,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Añelo",
       "brand": "YPF",
       "fuel": "Nafta Super",
-      "date": "2026-06-29",
-      "price": 1810,
+      "date": "2026-06-30",
+      "price": 1805,
       "count": 2
     },
     {
@@ -69063,8 +66754,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Centenario",
       "brand": "YPF",
       "fuel": "Diesel Premium",
-      "date": "2026-06-29",
-      "price": 2551,
+      "date": "2026-06-30",
+      "price": 2558,
       "count": 1
     },
     {
@@ -69072,8 +66763,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Centenario",
       "brand": "YPF",
       "fuel": "Nafta Premium",
-      "date": "2026-06-29",
-      "price": 2060,
+      "date": "2026-06-30",
+      "price": 2055,
       "count": 1
     },
     {
@@ -69342,8 +67033,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Chimpay",
       "brand": "YPF",
       "fuel": "Diesel Premium",
-      "date": "2026-06-29",
-      "price": 2496,
+      "date": "2026-06-30",
+      "price": 2500,
       "count": 1
     },
     {
@@ -69351,8 +67042,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Chimpay",
       "brand": "YPF",
       "fuel": "Nafta Premium",
-      "date": "2026-06-29",
-      "price": 2080,
+      "date": "2026-06-30",
+      "price": 2086,
       "count": 1
     },
     {
@@ -69628,6 +67319,24 @@ window.STATION_PRICE_REFERENCE = {
     {
       "province": "Rio Negro",
       "city": "Viedma",
+      "brand": "Shell",
+      "fuel": "Diesel Premium",
+      "date": "2026-06-30",
+      "price": 2661,
+      "count": 1
+    },
+    {
+      "province": "Rio Negro",
+      "city": "Viedma",
+      "brand": "Shell",
+      "fuel": "Nafta Super",
+      "date": "2026-06-30",
+      "price": 1889,
+      "count": 1
+    },
+    {
+      "province": "Rio Negro",
+      "city": "Viedma",
       "brand": "YPF",
       "fuel": "Diesel",
       "date": "2026-06-26",
@@ -69734,42 +67443,6 @@ window.STATION_PRICE_REFERENCE = {
       "count": 1
     },
     {
-      "province": "Salta",
-      "city": "Salta",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2417,
-      "count": 1
-    },
-    {
-      "province": "Salta",
-      "city": "Salta",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2669,
-      "count": 1
-    },
-    {
-      "province": "Salta",
-      "city": "Salta",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2531,
-      "count": 1
-    },
-    {
-      "province": "Salta",
-      "city": "Salta",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2262,
-      "count": 1
-    },
-    {
       "province": "San Juan",
       "city": "9 De Julio",
       "brand": "Axion Energy",
@@ -69866,42 +67539,6 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Nafta Super",
       "date": "2026-06-05",
       "price": 2149.5,
-      "count": 1
-    },
-    {
-      "province": "San Luis",
-      "city": "San Luis",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2299,
-      "count": 1
-    },
-    {
-      "province": "San Luis",
-      "city": "San Luis",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2499,
-      "count": 1
-    },
-    {
-      "province": "San Luis",
-      "city": "San Luis",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2430,
-      "count": 1
-    },
-    {
-      "province": "San Luis",
-      "city": "San Luis",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2173,
       "count": 1
     },
     {
@@ -70113,6 +67750,42 @@ window.STATION_PRICE_REFERENCE = {
     },
     {
       "province": "Santa Fe",
+      "city": "Clucellas",
+      "brand": "Shell",
+      "fuel": "Diesel",
+      "date": "2026-06-30",
+      "price": 2348,
+      "count": 1
+    },
+    {
+      "province": "Santa Fe",
+      "city": "Clucellas",
+      "brand": "Shell",
+      "fuel": "Diesel Premium",
+      "date": "2026-06-30",
+      "price": 2599,
+      "count": 1
+    },
+    {
+      "province": "Santa Fe",
+      "city": "Clucellas",
+      "brand": "Shell",
+      "fuel": "Nafta Premium",
+      "date": "2026-06-30",
+      "price": 2447,
+      "count": 1
+    },
+    {
+      "province": "Santa Fe",
+      "city": "Clucellas",
+      "brand": "Shell",
+      "fuel": "Nafta Super",
+      "date": "2026-06-30",
+      "price": 2199,
+      "count": 1
+    },
+    {
+      "province": "Santa Fe",
       "city": "Coronda",
       "brand": "Blanca",
       "fuel": "GNC",
@@ -70293,42 +67966,6 @@ window.STATION_PRICE_REFERENCE = {
     },
     {
       "province": "Santa Fe",
-      "city": "Humbolt",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2336,
-      "count": 1
-    },
-    {
-      "province": "Santa Fe",
-      "city": "Humbolt",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2584,
-      "count": 1
-    },
-    {
-      "province": "Santa Fe",
-      "city": "Humbolt",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2428,
-      "count": 1
-    },
-    {
-      "province": "Santa Fe",
-      "city": "Humbolt",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2166,
-      "count": 1
-    },
-    {
-      "province": "Santa Fe",
       "city": "Los Cardos",
       "brand": "Blanca",
       "fuel": "Diesel",
@@ -70437,6 +68074,15 @@ window.STATION_PRICE_REFERENCE = {
     },
     {
       "province": "Santa Fe",
+      "city": "Perez",
+      "brand": "YPF",
+      "fuel": "GNC",
+      "date": "2026-06-26",
+      "price": 899,
+      "count": 1
+    },
+    {
+      "province": "Santa Fe",
       "city": "Piamonte",
       "brand": "Shell",
       "fuel": "Diesel",
@@ -70496,42 +68142,6 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Diesel Premium",
       "date": "2026-06-18",
       "price": 2452,
-      "count": 1
-    },
-    {
-      "province": "Santa Fe",
-      "city": "Progreso",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2336,
-      "count": 1
-    },
-    {
-      "province": "Santa Fe",
-      "city": "Progreso",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2584,
-      "count": 1
-    },
-    {
-      "province": "Santa Fe",
-      "city": "Progreso",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2428,
-      "count": 1
-    },
-    {
-      "province": "Santa Fe",
-      "city": "Progreso",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2166,
       "count": 1
     },
     {
@@ -70791,18 +68401,9 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Rosario",
       "brand": "Shell",
       "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2348,
-      "count": 2
-    },
-    {
-      "province": "Santa Fe",
-      "city": "Rosario",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2599,
-      "count": 2
+      "date": "2026-07-01",
+      "price": 2367,
+      "count": 1
     },
     {
       "province": "Santa Fe",
@@ -70818,18 +68419,18 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Rosario",
       "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2430,
-      "count": 2
+      "date": "2026-07-01",
+      "price": 2454,
+      "count": 1
     },
     {
       "province": "Santa Fe",
       "city": "Rosario",
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2187,
-      "count": 2
+      "date": "2026-07-01",
+      "price": 2199,
+      "count": 1
     },
     {
       "province": "Santa Fe",
@@ -71292,6 +68893,69 @@ window.STATION_PRICE_REFERENCE = {
     },
     {
       "province": "Santa Fe",
+      "city": "Suardi",
+      "brand": "Shell",
+      "fuel": "Diesel",
+      "date": "2026-07-01",
+      "price": 2364,
+      "count": 1
+    },
+    {
+      "province": "Santa Fe",
+      "city": "Suardi",
+      "brand": "Shell",
+      "fuel": "Diesel Premium",
+      "date": "2026-07-01",
+      "price": 2588,
+      "count": 1
+    },
+    {
+      "province": "Santa Fe",
+      "city": "Suardi",
+      "brand": "Shell",
+      "fuel": "Nafta Premium",
+      "date": "2026-07-01",
+      "price": 2442,
+      "count": 1
+    },
+    {
+      "province": "Santa Fe",
+      "city": "Suardi",
+      "brand": "Shell",
+      "fuel": "Nafta Super",
+      "date": "2026-07-01",
+      "price": 2199,
+      "count": 1
+    },
+    {
+      "province": "Santa Fe",
+      "city": "Sunchales",
+      "brand": "Shell",
+      "fuel": "Diesel Premium",
+      "date": "2026-07-01",
+      "price": 2599,
+      "count": 1
+    },
+    {
+      "province": "Santa Fe",
+      "city": "Sunchales",
+      "brand": "Shell",
+      "fuel": "Nafta Premium",
+      "date": "2026-07-01",
+      "price": 2447,
+      "count": 1
+    },
+    {
+      "province": "Santa Fe",
+      "city": "Sunchales",
+      "brand": "Shell",
+      "fuel": "Nafta Super",
+      "date": "2026-07-01",
+      "price": 2199,
+      "count": 1
+    },
+    {
+      "province": "Santa Fe",
       "city": "Timbues",
       "brand": "Puma Energy",
       "fuel": "Diesel",
@@ -71621,7 +69285,7 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Diesel",
       "date": "2026-05-28",
       "price": 2357,
-      "count": 2
+      "count": 1
     },
     {
       "province": "Santiago Del Estero",
@@ -71630,7 +69294,7 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Diesel Premium",
       "date": "2026-05-28",
       "price": 2604,
-      "count": 2
+      "count": 1
     },
     {
       "province": "Santiago Del Estero",
@@ -71639,7 +69303,7 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Nafta Premium",
       "date": "2026-05-28",
       "price": 2448,
-      "count": 2
+      "count": 1
     },
     {
       "province": "Santiago Del Estero",
@@ -71648,7 +69312,7 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Nafta Super",
       "date": "2026-05-28",
       "price": 2219,
-      "count": 2
+      "count": 1
     },
     {
       "province": "Santiago Del Estero",
@@ -71718,8 +69382,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Santiago Del Estero",
       "brand": "Shell",
       "fuel": "Diesel",
-      "date": "2026-05-18",
-      "price": 2357,
+      "date": "2026-07-01",
+      "price": 2369,
       "count": 1
     },
     {
@@ -71727,8 +69391,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Santiago Del Estero",
       "brand": "Shell",
       "fuel": "Diesel Premium",
-      "date": "2026-05-18",
-      "price": 2604,
+      "date": "2026-07-01",
+      "price": 2619,
       "count": 1
     },
     {
@@ -71736,8 +69400,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Santiago Del Estero",
       "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-05-18",
-      "price": 2448,
+      "date": "2026-07-01",
+      "price": 2460,
       "count": 1
     },
     {
@@ -71745,8 +69409,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Santiago Del Estero",
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-05-18",
-      "price": 2219,
+      "date": "2026-07-01",
+      "price": 2241,
       "count": 1
     },
     {
@@ -71846,42 +69510,6 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Nafta Super",
       "date": "2026-06-02",
       "price": 2246,
-      "count": 1
-    },
-    {
-      "province": "Tucuman",
-      "city": "Banda Del Rio Sali",
-      "brand": "Shell",
-      "fuel": "Diesel",
-      "date": "2026-05-16",
-      "price": 2375,
-      "count": 1
-    },
-    {
-      "province": "Tucuman",
-      "city": "Banda Del Rio Sali",
-      "brand": "Shell",
-      "fuel": "Diesel Premium",
-      "date": "2026-05-16",
-      "price": 2672,
-      "count": 1
-    },
-    {
-      "province": "Tucuman",
-      "city": "Banda Del Rio Sali",
-      "brand": "Shell",
-      "fuel": "Nafta Premium",
-      "date": "2026-05-16",
-      "price": 2480,
-      "count": 1
-    },
-    {
-      "province": "Tucuman",
-      "city": "Banda Del Rio Sali",
-      "brand": "Shell",
-      "fuel": "Nafta Super",
-      "date": "2026-05-16",
-      "price": 2223,
       "count": 1
     },
     {
@@ -72087,8 +69715,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "San Miguel De Tucuman",
       "brand": "Shell",
       "fuel": "Diesel",
-      "date": "2026-06-10",
-      "price": 2399,
+      "date": "2026-06-30",
+      "price": 2414.5,
       "count": 2
     },
     {
@@ -72096,8 +69724,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "San Miguel De Tucuman",
       "brand": "Shell",
       "fuel": "Diesel Premium",
-      "date": "2026-06-10",
-      "price": 2672,
+      "date": "2026-06-30",
+      "price": 2678.5,
       "count": 2
     },
     {
@@ -72114,8 +69742,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "San Miguel De Tucuman",
       "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-06-10",
-      "price": 2480,
+      "date": "2026-06-30",
+      "price": 2489.5,
       "count": 2
     },
     {
@@ -72123,8 +69751,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "San Miguel De Tucuman",
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-06-10",
-      "price": 2223,
+      "date": "2026-06-30",
+      "price": 2229.5,
       "count": 2
     },
     {
@@ -72214,84 +69842,84 @@ window.STATION_PRICE_REFERENCE = {
       "brand": "Axion Energy",
       "fuel": "Diesel",
       "date": "2026-06-26",
-      "price": 2296.02,
-      "count": 165
+      "price": 2295.57,
+      "count": 164
     },
     {
       "brand": "Axion Energy",
       "fuel": "Diesel Premium",
       "date": "2026-06-26",
-      "price": 2534.72,
-      "count": 186
+      "price": 2534.4,
+      "count": 184
     },
     {
       "brand": "Axion Energy",
       "fuel": "GNC",
       "date": "2026-06-26",
-      "price": 846.91,
-      "count": 46
+      "price": 849.53,
+      "count": 45
     },
     {
       "brand": "Axion Energy",
       "fuel": "Nafta Premium",
       "date": "2026-06-26",
-      "price": 2410.37,
-      "count": 200
+      "price": 2410.26,
+      "count": 198
     },
     {
       "brand": "Axion Energy",
       "fuel": "Nafta Super",
       "date": "2026-06-26",
-      "price": 2138.28,
-      "count": 197
+      "price": 2138.2,
+      "count": 196
     },
     {
       "brand": "Blanca",
       "fuel": "Diesel",
       "date": "2026-06-29",
-      "price": 2321.91,
-      "count": 39
+      "price": 2324.01,
+      "count": 35
     },
     {
       "brand": "Blanca",
       "fuel": "Diesel Premium",
       "date": "2026-06-29",
-      "price": 2542.01,
-      "count": 36
+      "price": 2554.13,
+      "count": 32
     },
     {
       "brand": "Blanca",
       "fuel": "GNC",
-      "date": "2026-06-27",
-      "price": 835.8,
-      "count": 63
+      "date": "2026-06-29",
+      "price": 840.27,
+      "count": 64
     },
     {
       "brand": "Blanca",
       "fuel": "Nafta Premium",
       "date": "2026-06-29",
-      "price": 2379.23,
-      "count": 30
+      "price": 2377.48,
+      "count": 29
     },
     {
       "brand": "Blanca",
       "fuel": "Nafta Super",
       "date": "2026-06-29",
-      "price": 2156.64,
-      "count": 46
+      "price": 2159.43,
+      "count": 41
     },
     {
       "brand": "Dapsa S.a.",
       "fuel": "Diesel",
       "date": "2026-06-29",
-      "price": 2245.29,
-      "count": 24
+      "price": 2248.52,
+      "count": 23
     },
     {
       "brand": "Dapsa S.a.",
       "fuel": "Diesel Premium",
-      "date": "2026-06-29",
-      "price": 2433.05,
+      "date": "2026-06-30",
+      "price": 2430.29,
       "count": 21
     },
     {
@@ -72305,15 +69933,15 @@ window.STATION_PRICE_REFERENCE = {
       "brand": "Dapsa S.a.",
       "fuel": "Nafta Premium",
       "date": "2026-06-26",
-      "price": 2313.41,
-      "count": 23
+      "price": 2314.93,
+      "count": 22
     },
     {
       "brand": "Dapsa S.a.",
       "fuel": "Nafta Super",
       "date": "2026-06-29",
-      "price": 2123,
-      "count": 24
+      "price": 2123.52,
+      "count": 23
     },
     {
       "brand": "Gulf",
@@ -72325,8 +69953,8 @@ window.STATION_PRICE_REFERENCE = {
     {
       "brand": "Gulf",
       "fuel": "Diesel Premium",
-      "date": "2026-06-26",
-      "price": 2402.39,
+      "date": "2026-06-30",
+      "price": 2402.15,
       "count": 21
     },
     {
@@ -72354,36 +69982,36 @@ window.STATION_PRICE_REFERENCE = {
       "brand": "Puma Energy",
       "fuel": "Diesel",
       "date": "2026-06-27",
-      "price": 2278.67,
-      "count": 39
+      "price": 2275,
+      "count": 37
     },
     {
       "brand": "Puma Energy",
       "fuel": "Diesel Premium",
-      "date": "2026-06-27",
-      "price": 2501.52,
-      "count": 42
+      "date": "2026-06-30",
+      "price": 2500.83,
+      "count": 41
     },
     {
       "brand": "Puma Energy",
       "fuel": "GNC",
-      "date": "2026-06-29",
-      "price": 868.89,
+      "date": "2026-06-30",
+      "price": 871.39,
       "count": 28
     },
     {
       "brand": "Puma Energy",
       "fuel": "Nafta Premium",
       "date": "2026-06-27",
-      "price": 2306.01,
-      "count": 44
+      "price": 2300.73,
+      "count": 42
     },
     {
       "brand": "Puma Energy",
       "fuel": "Nafta Super",
-      "date": "2026-06-27",
-      "price": 2041.82,
-      "count": 46
+      "date": "2026-06-30",
+      "price": 2037.42,
+      "count": 44
     },
     {
       "brand": "Refinor",
@@ -72423,37 +70051,37 @@ window.STATION_PRICE_REFERENCE = {
     {
       "brand": "Shell",
       "fuel": "Diesel",
-      "date": "2026-06-29",
-      "price": 2281.7,
-      "count": 218
+      "date": "2026-07-01",
+      "price": 2279.92,
+      "count": 130
     },
     {
       "brand": "Shell",
       "fuel": "Diesel Premium",
-      "date": "2026-06-26",
-      "price": 2543.37,
-      "count": 225
+      "date": "2026-07-01",
+      "price": 2547.35,
+      "count": 106
     },
     {
       "brand": "Shell",
       "fuel": "GNC",
-      "date": "2026-06-29",
-      "price": 801.23,
-      "count": 47
+      "date": "2026-06-30",
+      "price": 800.44,
+      "count": 45
     },
     {
       "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-06-26",
-      "price": 2451.66,
-      "count": 225
+      "date": "2026-07-01",
+      "price": 2452.35,
+      "count": 134
     },
     {
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-06-26",
-      "price": 2171.25,
-      "count": 224
+      "date": "2026-07-01",
+      "price": 2171.24,
+      "count": 140
     },
     {
       "brand": "Voy",
@@ -72493,37 +70121,37 @@ window.STATION_PRICE_REFERENCE = {
     {
       "brand": "YPF",
       "fuel": "Diesel",
-      "date": "2026-06-29",
-      "price": 2228.15,
-      "count": 20
+      "date": "2026-07-01",
+      "price": 2223.26,
+      "count": 19
     },
     {
       "brand": "YPF",
       "fuel": "Diesel Premium",
       "date": "2026-06-30",
-      "price": 2444.43,
-      "count": 22
+      "price": 2437.78,
+      "count": 20
     },
     {
       "brand": "YPF",
       "fuel": "GNC",
-      "date": "2026-06-27",
-      "price": 813.66,
-      "count": 54
+      "date": "2026-07-01",
+      "price": 814.39,
+      "count": 56
     },
     {
       "brand": "YPF",
       "fuel": "Nafta Premium",
       "date": "2026-06-30",
-      "price": 2240.19,
-      "count": 21
+      "price": 2221.55,
+      "count": 20
     },
     {
       "brand": "YPF",
       "fuel": "Nafta Super",
-      "date": "2026-06-29",
-      "price": 2026.32,
-      "count": 22
+      "date": "2026-07-01",
+      "price": 2003.1,
+      "count": 21
     }
   ]
 };
