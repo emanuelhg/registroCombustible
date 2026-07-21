@@ -55446,7 +55446,7 @@ window.STATION_PRICE_TIMELINE = {
         "Diesel Premium": 2495.97,
         "Nafta Premium": 2339.75,
         "Nafta Super": 2080.45,
-        "GNC": 835.27
+        "GNC": 823.57
       }
     },
     {
@@ -55466,7 +55466,7 @@ window.STATION_PRICE_TIMELINE = {
         "Diesel Premium": 2464.5,
         "Nafta Premium": 2418.8,
         "Nafta Super": 2137.8,
-        "GNC": 803.8
+        "GNC": 826.09
       }
     }
   ],
@@ -55631,10 +55631,10 @@ window.STATION_PRICE_TIMELINE = {
     {
       "date": "2026-05-01",
       "prices": {
-        "Diesel": 2292.28,
-        "Diesel Premium": 2535.6,
-        "Nafta Premium": 2418.91,
-        "Nafta Super": 2138.65,
+        "Diesel": 2291.42,
+        "Diesel Premium": 2535.15,
+        "Nafta Premium": 2418.54,
+        "Nafta Super": 2137.51,
         "GNC": 803.96
       }
     },
@@ -55651,10 +55651,10 @@ window.STATION_PRICE_TIMELINE = {
     {
       "date": "2026-07-01",
       "prices": {
-        "Diesel": 2302.66,
-        "Diesel Premium": 2574.68,
-        "Nafta Premium": 2470.35,
-        "Nafta Super": 2189.38,
+        "Diesel": 2303.05,
+        "Diesel Premium": 2575.24,
+        "Nafta Premium": 2470.48,
+        "Nafta Super": 2189.54,
         "GNC": 794.87
       }
     }
@@ -55813,7 +55813,7 @@ window.STATION_PRICE_TIMELINE = {
     {
       "date": "2026-05-01",
       "prices": {
-        "GNC": 827.27,
+        "GNC": 832.07,
         "Diesel": 2275.33,
         "Diesel Premium": 2494.38,
         "Nafta Premium": 2391.25,
@@ -55823,7 +55823,7 @@ window.STATION_PRICE_TIMELINE = {
     {
       "date": "2026-06-01",
       "prices": {
-        "GNC": 813.89,
+        "GNC": 798.05,
         "Diesel": 2185.63,
         "Diesel Premium": 2401.38,
         "Nafta Premium": 2202.75,
@@ -55833,11 +55833,11 @@ window.STATION_PRICE_TIMELINE = {
     {
       "date": "2026-07-01",
       "prices": {
-        "Diesel": 2248,
-        "Diesel Premium": 2465,
-        "Nafta Premium": 2220.83,
-        "Nafta Super": 2010.67,
-        "GNC": 780.79
+        "Diesel": 2247.08,
+        "Diesel Premium": 2464.33,
+        "Nafta Premium": 2220.67,
+        "Nafta Super": 2012.17,
+        "GNC": 801.08
       }
     }
   ],
@@ -56005,17 +56005,17 @@ window.STATION_PRICE_TIMELINE = {
     {
       "date": "2026-05-01",
       "prices": {
-        "Diesel": 2359.99,
-        "Diesel Premium": 2561.97,
+        "Diesel": 2360.54,
+        "Diesel Premium": 2560.71,
         "GNC": 859.97,
-        "Nafta Premium": 2373.05,
-        "Nafta Super": 2161.76
+        "Nafta Premium": 2369.86,
+        "Nafta Super": 2160.93
       }
     },
     {
       "date": "2026-06-01",
       "prices": {
-        "GNC": 850.13,
+        "GNC": 849.58,
         "Diesel": 2365.79,
         "Nafta Premium": 2407.07,
         "Nafta Super": 2174.66,
@@ -56025,11 +56025,11 @@ window.STATION_PRICE_TIMELINE = {
     {
       "date": "2026-07-01",
       "prices": {
-        "GNC": 812.47,
-        "Diesel": 2356.33,
-        "Diesel Premium": 2549.31,
-        "Nafta Premium": 2422,
-        "Nafta Super": 2110
+        "GNC": 812.33,
+        "Diesel": 2358.38,
+        "Diesel Premium": 2556.79,
+        "Nafta Premium": 2419.2,
+        "Nafta Super": 2116.71
       }
     }
   ],
@@ -56177,7 +56177,7 @@ window.STATION_PRICE_TIMELINE = {
     {
       "date": "2026-03-01",
       "prices": {
-        "Diesel": 2179.32,
+        "Diesel": 2175.27,
         "Diesel Premium": 2295.33,
         "Nafta Premium": 2257.12,
         "Nafta Super": 1955.25,
@@ -56187,20 +56187,20 @@ window.STATION_PRICE_TIMELINE = {
     {
       "date": "2026-04-01",
       "prices": {
-        "Diesel": 2361.57,
-        "Diesel Premium": 2576.45,
+        "Diesel": 2363.02,
+        "Diesel Premium": 2581.2,
         "Nafta Premium": 2416.13,
-        "Nafta Super": 2167.3,
+        "Nafta Super": 2173.13,
         "GNC": 861.86
       }
     },
     {
       "date": "2026-05-01",
       "prices": {
-        "Diesel Premium": 2532.43,
+        "Diesel Premium": 2532.35,
         "Nafta Premium": 2409.41,
         "Nafta Super": 2155.09,
-        "Diesel": 2292.5,
+        "Diesel": 2292.12,
         "GNC": 843.37
       }
     },
@@ -56208,20 +56208,20 @@ window.STATION_PRICE_TIMELINE = {
       "date": "2026-06-01",
       "prices": {
         "Diesel": 2324.11,
-        "Diesel Premium": 2534.7,
-        "Nafta Super": 2070.46,
+        "Diesel Premium": 2533.58,
+        "Nafta Super": 2075.09,
         "Nafta Premium": 2398.12,
-        "GNC": 845.99
+        "GNC": 849.61
       }
     },
     {
       "date": "2026-07-01",
       "prices": {
-        "GNC": 788.35,
+        "GNC": 790.29,
         "Nafta Premium": 2392.44,
-        "Diesel Premium": 2564.49,
-        "Diesel": 2356.89,
-        "Nafta Super": 2118.64
+        "Diesel Premium": 2565.51,
+        "Diesel": 2357.27,
+        "Nafta Super": 2114.52
       }
     }
   ],
@@ -56390,10 +56390,10 @@ window.STATION_PRICE_TIMELINE = {
     {
       "date": "2026-07-01",
       "prices": {
-        "Diesel": 2212.56,
-        "Diesel Premium": 2365.48,
+        "Diesel": 2212.22,
+        "Diesel Premium": 2365.16,
         "Nafta Premium": 2235.94,
-        "Nafta Super": 2075.4,
+        "Nafta Super": 2075.17,
         "GNC": 828
       }
     }
@@ -56573,9 +56573,9 @@ window.STATION_PRICE_TIMELINE = {
       "date": "2026-07-01",
       "prices": {
         "Diesel": 2234.22,
-        "Diesel Premium": 2433.9,
-        "Nafta Premium": 2318.8,
-        "Nafta Super": 2105.43,
+        "Diesel Premium": 2433.7,
+        "Nafta Premium": 2317.8,
+        "Nafta Super": 2106.14,
         "GNC": 749
       }
     }
@@ -56870,8 +56870,8 @@ window.STATION_PRICE_TIMELINE = {
 
 window.STATION_PRICE_REFERENCE = {
   "meta": {
-    "latestDate": "2026-07-20",
-    "cutoffDate": "2026-06-05",
+    "latestDate": "2026-07-21",
+    "cutoffDate": "2026-06-06",
     "recencyDays": 45
   },
   "local": [
@@ -56891,15 +56891,6 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Diesel Premium",
       "date": "2026-07-01",
       "price": 2356,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "9 De Abril",
-      "brand": "Dapsa S.a.",
-      "fuel": "Nafta Premium",
-      "date": "2026-06-05",
-      "price": 2220,
       "count": 1
     },
     {
@@ -57276,8 +57267,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Balcarce",
       "brand": "Blanca",
       "fuel": "Diesel Premium",
-      "date": "2026-07-16",
-      "price": 2393,
+      "date": "2026-07-20",
+      "price": 2391,
       "count": 1
     },
     {
@@ -57294,8 +57285,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Balcarce",
       "brand": "Blanca",
       "fuel": "Nafta Premium",
-      "date": "2026-07-17",
-      "price": 2290,
+      "date": "2026-07-20",
+      "price": 2285,
       "count": 1
     },
     {
@@ -57303,8 +57294,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Balcarce",
       "brand": "Blanca",
       "fuel": "Nafta Super",
-      "date": "2026-07-16",
-      "price": 2110,
+      "date": "2026-07-20",
+      "price": 2115,
       "count": 1
     },
     {
@@ -57321,8 +57312,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Balcarce",
       "brand": "Dapsa S.a.",
       "fuel": "Diesel Premium",
-      "date": "2026-07-16",
-      "price": 2393,
+      "date": "2026-07-20",
+      "price": 2391,
       "count": 1
     },
     {
@@ -57330,8 +57321,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Balcarce",
       "brand": "Dapsa S.a.",
       "fuel": "Nafta Premium",
-      "date": "2026-07-17",
-      "price": 2290,
+      "date": "2026-07-20",
+      "price": 2285,
       "count": 1
     },
     {
@@ -57339,8 +57330,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Balcarce",
       "brand": "Dapsa S.a.",
       "fuel": "Nafta Super",
-      "date": "2026-07-16",
-      "price": 2110,
+      "date": "2026-07-20",
+      "price": 2115,
       "count": 1
     },
     {
@@ -57711,33 +57702,6 @@ window.STATION_PRICE_REFERENCE = {
       "date": "2026-07-01",
       "price": 2179,
       "count": 2
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Campana",
-      "brand": "Axion Energy",
-      "fuel": "Diesel Premium",
-      "date": "2026-06-05",
-      "price": 2609,
-      "count": 3
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Campana",
-      "brand": "Axion Energy",
-      "fuel": "Nafta Premium",
-      "date": "2026-06-05",
-      "price": 2499,
-      "count": 3
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Campana",
-      "brand": "Axion Energy",
-      "fuel": "Nafta Super",
-      "date": "2026-06-05",
-      "price": 2199,
-      "count": 3
     },
     {
       "province": "Buenos Aires",
@@ -58473,8 +58437,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Florencio Varela",
       "brand": "YPF",
       "fuel": "Diesel",
-      "date": "2026-07-18",
-      "price": 2207,
+      "date": "2026-07-20",
+      "price": 2209,
       "count": 1
     },
     {
@@ -58482,8 +58446,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Florencio Varela",
       "brand": "YPF",
       "fuel": "Diesel Premium",
-      "date": "2026-07-18",
-      "price": 2467,
+      "date": "2026-07-20",
+      "price": 2460,
       "count": 1
     },
     {
@@ -58491,8 +58455,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Florencio Varela",
       "brand": "YPF",
       "fuel": "Nafta Premium",
-      "date": "2026-07-18",
-      "price": 2341,
+      "date": "2026-07-20",
+      "price": 2335,
       "count": 1
     },
     {
@@ -58736,15 +58700,6 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "GNC",
       "date": "2026-07-04",
       "price": 899,
-      "count": 2
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Gral. Rodriguez",
-      "brand": "Axion Energy",
-      "fuel": "Nafta Premium",
-      "date": "2026-06-05",
-      "price": 2539,
       "count": 2
     },
     {
@@ -59580,8 +59535,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Mar Del Plata",
       "brand": "YPF",
       "fuel": "GNC",
-      "date": "2026-06-27",
-      "price": 1099,
+      "date": "2026-07-20",
+      "price": 1029,
       "count": 2
     },
     {
@@ -59778,8 +59733,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Moreno",
       "brand": "Axion Energy",
       "fuel": "GNC",
-      "date": "2026-06-09",
-      "price": 845.67,
+      "date": "2026-07-20",
+      "price": 855.67,
       "count": 3
     },
     {
@@ -59787,8 +59742,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Moreno",
       "brand": "Blanca",
       "fuel": "GNC",
-      "date": "2026-06-08",
-      "price": 869,
+      "date": "2026-07-20",
+      "price": 799,
       "count": 1
     },
     {
@@ -60155,15 +60110,6 @@ window.STATION_PRICE_REFERENCE = {
       "province": "Buenos Aires",
       "city": "Olavarria",
       "brand": "Shell",
-      "fuel": "GNC",
-      "date": "2026-06-05",
-      "price": 949,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Olavarria",
-      "brand": "Shell",
       "fuel": "Nafta Premium",
       "date": "2026-07-01",
       "price": 2476,
@@ -60282,8 +60228,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Pergamino",
       "brand": "Axion Energy",
       "fuel": "Diesel Premium",
-      "date": "2026-06-19",
-      "price": 2564,
+      "date": "2026-07-19",
+      "price": 2594,
       "count": 1
     },
     {
@@ -60390,8 +60336,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Pilar",
       "brand": "YPF",
       "fuel": "Diesel",
-      "date": "2026-07-17",
-      "price": 2200,
+      "date": "2026-07-20",
+      "price": 2199,
       "count": 1
     },
     {
@@ -60399,8 +60345,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Pilar",
       "brand": "YPF",
       "fuel": "Diesel Premium",
-      "date": "2026-07-17",
-      "price": 2503,
+      "date": "2026-07-20",
+      "price": 2500,
       "count": 1
     },
     {
@@ -60417,8 +60363,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Pilar",
       "brand": "YPF",
       "fuel": "Nafta Premium",
-      "date": "2026-07-17",
-      "price": 2352,
+      "date": "2026-07-20",
+      "price": 2351,
       "count": 1
     },
     {
@@ -60426,8 +60372,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Pilar",
       "brand": "YPF",
       "fuel": "Nafta Super",
-      "date": "2026-07-16",
-      "price": 2166,
+      "date": "2026-07-20",
+      "price": 2168,
       "count": 1
     },
     {
@@ -60768,9 +60714,9 @@ window.STATION_PRICE_REFERENCE = {
       "city": "San Martin",
       "brand": "YPF",
       "fuel": "GNC",
-      "date": "2026-06-09",
-      "price": 629,
-      "count": 1
+      "date": "2026-07-20",
+      "price": 649.45,
+      "count": 2
     },
     {
       "province": "Buenos Aires",
@@ -60911,15 +60857,6 @@ window.STATION_PRICE_REFERENCE = {
       "province": "Buenos Aires",
       "city": "San Nicolas",
       "brand": "Gulf",
-      "fuel": "Diesel",
-      "date": "2026-06-05",
-      "price": 2336,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "San Nicolas",
-      "brand": "Gulf",
       "fuel": "Diesel Premium",
       "date": "2026-06-10",
       "price": 2469,
@@ -60932,15 +60869,6 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Nafta Premium",
       "date": "2026-06-10",
       "price": 2349,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "San Nicolas",
-      "brand": "Gulf",
-      "fuel": "Nafta Super",
-      "date": "2026-06-05",
-      "price": 2116,
       "count": 1
     },
     {
@@ -60977,33 +60905,6 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Nafta Super",
       "date": "2026-07-01",
       "price": 2199,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "San Pedro",
-      "brand": "Dapsa S.a.",
-      "fuel": "Diesel",
-      "date": "2026-06-05",
-      "price": 2348,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "San Pedro",
-      "brand": "Dapsa S.a.",
-      "fuel": "Diesel Premium",
-      "date": "2026-06-05",
-      "price": 2448,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "San Pedro",
-      "brand": "Dapsa S.a.",
-      "fuel": "Nafta Super",
-      "date": "2026-06-05",
-      "price": 2167,
       "count": 1
     },
     {
@@ -61047,8 +60948,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "San Pedro",
       "brand": "YPF",
       "fuel": "Diesel",
-      "date": "2026-07-16",
-      "price": 2295,
+      "date": "2026-07-20",
+      "price": 2289,
       "count": 2
     },
     {
@@ -61056,8 +60957,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "San Pedro",
       "brand": "YPF",
       "fuel": "Diesel Premium",
-      "date": "2026-07-17",
-      "price": 2391,
+      "date": "2026-07-18",
+      "price": 2388,
       "count": 2
     },
     {
@@ -61065,8 +60966,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "San Pedro",
       "brand": "YPF",
       "fuel": "Nafta Premium",
-      "date": "2026-07-16",
-      "price": 2285,
+      "date": "2026-07-20",
+      "price": 2284,
       "count": 2
     },
     {
@@ -61074,8 +60975,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "San Pedro",
       "brand": "YPF",
       "fuel": "Nafta Super",
-      "date": "2026-07-17",
-      "price": 2109,
+      "date": "2026-07-20",
+      "price": 2117,
       "count": 2
     },
     {
@@ -61658,24 +61559,6 @@ window.STATION_PRICE_REFERENCE = {
       "province": "Buenos Aires",
       "city": "Villa Adelina",
       "brand": "Dapsa S.a.",
-      "fuel": "GNC",
-      "date": "2026-06-05",
-      "price": 689,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Villa Adelina",
-      "brand": "Dapsa S.a.",
-      "fuel": "Nafta Premium",
-      "date": "2026-06-05",
-      "price": 2261,
-      "count": 1
-    },
-    {
-      "province": "Buenos Aires",
-      "city": "Villa Adelina",
-      "brand": "Dapsa S.a.",
       "fuel": "Nafta Super",
       "date": "2026-07-02",
       "price": 2061,
@@ -61862,15 +61745,6 @@ window.STATION_PRICE_REFERENCE = {
       "count": 1
     },
     {
-      "province": "Buenos Aires",
-      "city": "Wilde",
-      "brand": "YPF",
-      "fuel": "GNC",
-      "date": "2026-06-05",
-      "price": 599,
-      "count": 1
-    },
-    {
       "province": "Capital Federal",
       "city": "Capital Federal",
       "brand": "Axion Energy",
@@ -61884,8 +61758,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Capital Federal",
       "brand": "Blanca",
       "fuel": "GNC",
-      "date": "2026-07-17",
-      "price": 621.97,
+      "date": "2026-07-20",
+      "price": 622.81,
       "count": 12
     },
     {
@@ -62036,9 +61910,63 @@ window.STATION_PRICE_REFERENCE = {
       "province": "Catamarca",
       "city": "S.f.v. De Catamarca",
       "brand": "Blanca",
+      "fuel": "Diesel",
+      "date": "2026-07-20",
+      "price": 2383,
+      "count": 1
+    },
+    {
+      "province": "Catamarca",
+      "city": "S.f.v. De Catamarca",
+      "brand": "Blanca",
+      "fuel": "Diesel Premium",
+      "date": "2026-07-20",
+      "price": 2656,
+      "count": 1
+    },
+    {
+      "province": "Catamarca",
+      "city": "S.f.v. De Catamarca",
+      "brand": "Blanca",
       "fuel": "GNC",
       "date": "2026-07-14",
       "price": 998,
+      "count": 1
+    },
+    {
+      "province": "Catamarca",
+      "city": "S.f.v. De Catamarca",
+      "brand": "Blanca",
+      "fuel": "Nafta Premium",
+      "date": "2026-07-20",
+      "price": 2399,
+      "count": 1
+    },
+    {
+      "province": "Catamarca",
+      "city": "S.f.v. De Catamarca",
+      "brand": "Blanca",
+      "fuel": "Nafta Super",
+      "date": "2026-07-20",
+      "price": 2199,
+      "count": 1
+    },
+    {
+      "province": "Catamarca",
+      "city": "San Fernando Del Valle",
+      "brand": "Shell",
+      "fuel": "Diesel",
+      "date": "2026-07-20",
+      "price": 2383,
+      "count": 1
+    },
+    {
+      "province": "Catamarca",
+      "city": "San Fernando Del Valle",
+      "brand": "Shell",
+      "fuel": "Diesel Premium",
+      "date": "2026-07-20",
+      "price": 2656,
       "count": 1
     },
     {
@@ -62053,37 +61981,28 @@ window.STATION_PRICE_REFERENCE = {
     {
       "province": "Catamarca",
       "city": "San Fernando Del Valle",
+      "brand": "Shell",
+      "fuel": "Nafta Premium",
+      "date": "2026-07-20",
+      "price": 2499,
+      "count": 1
+    },
+    {
+      "province": "Catamarca",
+      "city": "San Fernando Del Valle",
+      "brand": "Shell",
+      "fuel": "Nafta Super",
+      "date": "2026-07-20",
+      "price": 2227,
+      "count": 1
+    },
+    {
+      "province": "Catamarca",
+      "city": "San Fernando Del Valle",
       "brand": "YPF",
       "fuel": "GNC",
       "date": "2026-07-14",
       "price": 998,
-      "count": 1
-    },
-    {
-      "province": "Catamarca",
-      "city": "Santa Maria",
-      "brand": "Dapsa S.a.",
-      "fuel": "Diesel",
-      "date": "2026-06-05",
-      "price": 2275,
-      "count": 1
-    },
-    {
-      "province": "Catamarca",
-      "city": "Santa Maria",
-      "brand": "Dapsa S.a.",
-      "fuel": "Diesel Premium",
-      "date": "2026-06-05",
-      "price": 2480,
-      "count": 1
-    },
-    {
-      "province": "Catamarca",
-      "city": "Santa Maria",
-      "brand": "Dapsa S.a.",
-      "fuel": "Nafta Premium",
-      "date": "2026-06-05",
-      "price": 2260,
       "count": 1
     },
     {
@@ -62217,18 +62136,18 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Comodoro Rivadavia",
       "brand": "Axion Energy",
       "fuel": "Diesel Premium",
-      "date": "2026-07-18",
+      "date": "2026-07-20",
       "price": 2519,
-      "count": 1
+      "count": 4
     },
     {
       "province": "Chubut",
       "city": "Comodoro Rivadavia",
       "brand": "Axion Energy",
       "fuel": "Nafta Super",
-      "date": "2026-07-10",
-      "price": 1908,
-      "count": 2
+      "date": "2026-07-20",
+      "price": 1907,
+      "count": 3
     },
     {
       "province": "Chubut",
@@ -62291,7 +62210,7 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Diesel",
       "date": "2026-07-18",
       "price": 2349,
-      "count": 1
+      "count": 2
     },
     {
       "province": "Chubut",
@@ -62300,7 +62219,7 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Diesel Premium",
       "date": "2026-07-18",
       "price": 2529,
-      "count": 1
+      "count": 2
     },
     {
       "province": "Chubut",
@@ -62621,6 +62540,15 @@ window.STATION_PRICE_REFERENCE = {
       "province": "Cordoba",
       "city": "Cordoba",
       "brand": "Axion Energy",
+      "fuel": "Diesel Premium",
+      "date": "2026-07-18",
+      "price": 2569,
+      "count": 1
+    },
+    {
+      "province": "Cordoba",
+      "city": "Cordoba",
+      "brand": "Axion Energy",
       "fuel": "GNC",
       "date": "2026-06-11",
       "price": 800,
@@ -62649,8 +62577,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Cordoba",
       "brand": "Gulf",
       "fuel": "Diesel",
-      "date": "2026-07-08",
-      "price": 2301,
+      "date": "2026-07-20",
+      "price": 2298,
       "count": 1
     },
     {
@@ -62658,8 +62586,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Cordoba",
       "brand": "Gulf",
       "fuel": "Diesel Premium",
-      "date": "2026-07-08",
-      "price": 2459,
+      "date": "2026-07-20",
+      "price": 2456,
       "count": 1
     },
     {
@@ -62676,8 +62604,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Cordoba",
       "brand": "Gulf",
       "fuel": "Nafta Super",
-      "date": "2026-07-08",
-      "price": 2101,
+      "date": "2026-07-20",
+      "price": 2098,
       "count": 1
     },
     {
@@ -62795,6 +62723,33 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Nafta Super",
       "date": "2026-06-30",
       "price": 2235,
+      "count": 1
+    },
+    {
+      "province": "Cordoba",
+      "city": "Devoto",
+      "brand": "Axion Energy",
+      "fuel": "Diesel",
+      "date": "2026-07-20",
+      "price": 2359,
+      "count": 1
+    },
+    {
+      "province": "Cordoba",
+      "city": "Devoto",
+      "brand": "Axion Energy",
+      "fuel": "Diesel Premium",
+      "date": "2026-07-20",
+      "price": 2559,
+      "count": 1
+    },
+    {
+      "province": "Cordoba",
+      "city": "Devoto",
+      "brand": "Axion Energy",
+      "fuel": "Nafta Super",
+      "date": "2026-07-20",
+      "price": 2189,
       "count": 1
     },
     {
@@ -63846,8 +63801,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Saladas",
       "brand": "YPF",
       "fuel": "Diesel Premium",
-      "date": "2026-07-20",
-      "price": 2413,
+      "date": "2026-07-21",
+      "price": 2421,
       "count": 1
     },
     {
@@ -63855,8 +63810,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Saladas",
       "brand": "YPF",
       "fuel": "Nafta Premium",
-      "date": "2026-07-20",
-      "price": 2293,
+      "date": "2026-07-21",
+      "price": 2300,
       "count": 1
     },
     {
@@ -64037,6 +63992,15 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Diesel Premium",
       "date": "2026-07-18",
       "price": 2559,
+      "count": 1
+    },
+    {
+      "province": "Entre Rios",
+      "city": "Chajari",
+      "brand": "Puma Energy",
+      "fuel": "GNC",
+      "date": "2026-07-20",
+      "price": 1049,
       "count": 1
     },
     {
@@ -65249,6 +65213,15 @@ window.STATION_PRICE_REFERENCE = {
       "province": "Neuquen",
       "city": "Junin De Los Andes",
       "brand": "Axion Energy",
+      "fuel": "Diesel Premium",
+      "date": "2026-07-20",
+      "price": 2689,
+      "count": 1
+    },
+    {
+      "province": "Neuquen",
+      "city": "Junin De Los Andes",
+      "brand": "Axion Energy",
       "fuel": "Nafta Super",
       "date": "2026-06-24",
       "price": 1839,
@@ -65406,33 +65379,6 @@ window.STATION_PRICE_REFERENCE = {
       "date": "2026-07-07",
       "price": 1767,
       "count": 1
-    },
-    {
-      "province": "Rio Negro",
-      "city": "San Carlos De Bariloche",
-      "brand": "Axion Energy",
-      "fuel": "Diesel",
-      "date": "2026-06-05",
-      "price": 2349,
-      "count": 1
-    },
-    {
-      "province": "Rio Negro",
-      "city": "San Carlos De Bariloche",
-      "brand": "Axion Energy",
-      "fuel": "Nafta Premium",
-      "date": "2026-06-05",
-      "price": 2249,
-      "count": 2
-    },
-    {
-      "province": "Rio Negro",
-      "city": "San Carlos De Bariloche",
-      "brand": "Axion Energy",
-      "fuel": "Nafta Super",
-      "date": "2026-06-05",
-      "price": 1899,
-      "count": 2
     },
     {
       "province": "Rio Negro",
@@ -65675,33 +65621,6 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Nafta Super",
       "date": "2026-07-06",
       "price": 2189,
-      "count": 1
-    },
-    {
-      "province": "San Juan",
-      "city": "Rawson",
-      "brand": "Gulf",
-      "fuel": "Diesel",
-      "date": "2026-06-05",
-      "price": 2250,
-      "count": 1
-    },
-    {
-      "province": "San Juan",
-      "city": "Rawson",
-      "brand": "Gulf",
-      "fuel": "Diesel Premium",
-      "date": "2026-06-05",
-      "price": 2425,
-      "count": 1
-    },
-    {
-      "province": "San Juan",
-      "city": "Rawson",
-      "brand": "Gulf",
-      "fuel": "Nafta Premium",
-      "date": "2026-06-05",
-      "price": 2335,
       "count": 1
     },
     {
@@ -66213,8 +66132,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Rosario",
       "brand": "Axion Energy",
       "fuel": "Diesel",
-      "date": "2026-07-15",
-      "price": 2394,
+      "date": "2026-07-20",
+      "price": 2414,
       "count": 1
     },
     {
@@ -66222,8 +66141,8 @@ window.STATION_PRICE_REFERENCE = {
       "city": "Rosario",
       "brand": "Axion Energy",
       "fuel": "Diesel Premium",
-      "date": "2026-07-15",
-      "price": 2649,
+      "date": "2026-07-20",
+      "price": 2669,
       "count": 1
     },
     {
@@ -66296,15 +66215,6 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Diesel",
       "date": "2026-06-11",
       "price": 2280,
-      "count": 1
-    },
-    {
-      "province": "Santa Fe",
-      "city": "Rosario",
-      "brand": "Gulf",
-      "fuel": "Diesel Premium",
-      "date": "2026-06-05",
-      "price": 2443,
       "count": 1
     },
     {
@@ -66426,6 +66336,24 @@ window.STATION_PRICE_REFERENCE = {
     },
     {
       "province": "Santa Fe",
+      "city": "San Carlos Sud",
+      "brand": "Axion Energy",
+      "fuel": "Diesel",
+      "date": "2026-07-18",
+      "price": 2359,
+      "count": 1
+    },
+    {
+      "province": "Santa Fe",
+      "city": "San Carlos Sud",
+      "brand": "Axion Energy",
+      "fuel": "Diesel Premium",
+      "date": "2026-07-18",
+      "price": 2579,
+      "count": 1
+    },
+    {
+      "province": "Santa Fe",
       "city": "San Cristobal",
       "brand": "Dapsa S.a.",
       "fuel": "Diesel",
@@ -66458,6 +66386,33 @@ window.STATION_PRICE_REFERENCE = {
       "fuel": "Nafta Super",
       "date": "2026-06-10",
       "price": 2189,
+      "count": 1
+    },
+    {
+      "province": "Santa Fe",
+      "city": "San Jeronimo",
+      "brand": "Axion Energy",
+      "fuel": "Diesel",
+      "date": "2026-07-18",
+      "price": 2349,
+      "count": 1
+    },
+    {
+      "province": "Santa Fe",
+      "city": "San Jeronimo",
+      "brand": "Axion Energy",
+      "fuel": "Diesel Premium",
+      "date": "2026-07-18",
+      "price": 2579,
+      "count": 1
+    },
+    {
+      "province": "Santa Fe",
+      "city": "San Jeronimo",
+      "brand": "Axion Energy",
+      "fuel": "Nafta Super",
+      "date": "2026-07-18",
+      "price": 2159,
       "count": 1
     },
     {
@@ -67085,36 +67040,9 @@ window.STATION_PRICE_REFERENCE = {
       "province": "Tucuman",
       "city": "San Miguel De Tucuman",
       "brand": "Gulf",
-      "fuel": "Diesel",
-      "date": "2026-06-05",
-      "price": 2356,
-      "count": 1
-    },
-    {
-      "province": "Tucuman",
-      "city": "San Miguel De Tucuman",
-      "brand": "Gulf",
-      "fuel": "Diesel Premium",
-      "date": "2026-06-05",
-      "price": 2499,
-      "count": 1
-    },
-    {
-      "province": "Tucuman",
-      "city": "San Miguel De Tucuman",
-      "brand": "Gulf",
       "fuel": "GNC",
       "date": "2026-07-03",
       "price": 966,
-      "count": 1
-    },
-    {
-      "province": "Tucuman",
-      "city": "San Miguel De Tucuman",
-      "brand": "Gulf",
-      "fuel": "Nafta Super",
-      "date": "2026-06-05",
-      "price": 2159,
       "count": 1
     },
     {
@@ -67221,121 +67149,121 @@ window.STATION_PRICE_REFERENCE = {
     {
       "brand": "Axion Energy",
       "fuel": "Diesel",
-      "date": "2026-07-18",
-      "price": 2334.94,
-      "count": 31
+      "date": "2026-07-20",
+      "price": 2337.35,
+      "count": 34
     },
     {
       "brand": "Axion Energy",
       "fuel": "Diesel Premium",
-      "date": "2026-07-18",
-      "price": 2551.84,
-      "count": 37
+      "date": "2026-07-20",
+      "price": 2551.21,
+      "count": 43
     },
     {
       "brand": "Axion Energy",
       "fuel": "GNC",
-      "date": "2026-07-17",
-      "price": 817.6,
+      "date": "2026-07-20",
+      "price": 818.51,
       "count": 33
     },
     {
       "brand": "Axion Energy",
       "fuel": "Nafta Premium",
       "date": "2026-07-18",
-      "price": 2393.31,
-      "count": 29
+      "price": 2378.77,
+      "count": 22
     },
     {
       "brand": "Axion Energy",
       "fuel": "Nafta Super",
-      "date": "2026-07-18",
-      "price": 2080.86,
-      "count": 44
+      "date": "2026-07-20",
+      "price": 2081.33,
+      "count": 42
     },
     {
       "brand": "Blanca",
       "fuel": "Diesel",
-      "date": "2026-07-18",
-      "price": 2361.73,
-      "count": 26
+      "date": "2026-07-20",
+      "price": 2362.52,
+      "count": 27
     },
     {
       "brand": "Blanca",
       "fuel": "Diesel Premium",
-      "date": "2026-07-18",
-      "price": 2560.08,
-      "count": 24
+      "date": "2026-07-20",
+      "price": 2563.84,
+      "count": 25
     },
     {
       "brand": "Blanca",
       "fuel": "GNC",
-      "date": "2026-07-17",
-      "price": 849.24,
+      "date": "2026-07-20",
+      "price": 848.11,
       "count": 53
     },
     {
       "brand": "Blanca",
       "fuel": "Nafta Premium",
-      "date": "2026-07-18",
-      "price": 2412.1,
-      "count": 20
+      "date": "2026-07-20",
+      "price": 2411.24,
+      "count": 21
     },
     {
       "brand": "Blanca",
       "fuel": "Nafta Super",
-      "date": "2026-07-18",
-      "price": 2125.27,
-      "count": 26
+      "date": "2026-07-20",
+      "price": 2128.19,
+      "count": 27
     },
     {
       "brand": "Dapsa S.a.",
       "fuel": "Diesel",
       "date": "2026-07-17",
-      "price": 2254.53,
-      "count": 19
+      "price": 2247.82,
+      "count": 17
     },
     {
       "brand": "Dapsa S.a.",
       "fuel": "Diesel Premium",
-      "date": "2026-07-16",
-      "price": 2432.33,
-      "count": 18
+      "date": "2026-07-20",
+      "price": 2428.25,
+      "count": 16
     },
     {
       "brand": "Dapsa S.a.",
       "fuel": "GNC",
       "date": "2026-07-01",
-      "price": 801.18,
-      "count": 5
+      "price": 829.23,
+      "count": 4
     },
     {
       "brand": "Dapsa S.a.",
       "fuel": "Nafta Premium",
-      "date": "2026-07-17",
-      "price": 2305.33,
-      "count": 15
+      "date": "2026-07-20",
+      "price": 2319.5,
+      "count": 12
     },
     {
       "brand": "Dapsa S.a.",
       "fuel": "Nafta Super",
-      "date": "2026-07-16",
-      "price": 2118.87,
-      "count": 15
+      "date": "2026-07-20",
+      "price": 2115.79,
+      "count": 14
     },
     {
       "brand": "Gulf",
       "fuel": "Diesel",
-      "date": "2026-07-17",
-      "price": 2256.58,
-      "count": 19
+      "date": "2026-07-20",
+      "price": 2245.63,
+      "count": 16
     },
     {
       "brand": "Gulf",
       "fuel": "Diesel Premium",
-      "date": "2026-07-18",
-      "price": 2413.58,
-      "count": 19
+      "date": "2026-07-20",
+      "price": 2405.51,
+      "count": 16
     },
     {
       "brand": "Gulf",
@@ -67348,15 +67276,15 @@ window.STATION_PRICE_REFERENCE = {
       "brand": "Gulf",
       "fuel": "Nafta Premium",
       "date": "2026-07-18",
-      "price": 2267.83,
-      "count": 15
+      "price": 2263.03,
+      "count": 14
     },
     {
       "brand": "Gulf",
       "fuel": "Nafta Super",
-      "date": "2026-07-18",
-      "price": 2087.06,
-      "count": 19
+      "date": "2026-07-20",
+      "price": 2080.95,
+      "count": 17
     },
     {
       "brand": "Puma Energy",
@@ -67375,9 +67303,9 @@ window.STATION_PRICE_REFERENCE = {
     {
       "brand": "Puma Energy",
       "fuel": "GNC",
-      "date": "2026-07-17",
-      "price": 862.51,
-      "count": 27
+      "date": "2026-07-20",
+      "price": 869.18,
+      "count": 28
     },
     {
       "brand": "Puma Energy",
@@ -67403,37 +67331,37 @@ window.STATION_PRICE_REFERENCE = {
     {
       "brand": "Shell",
       "fuel": "Diesel",
-      "date": "2026-07-17",
-      "price": 2302.95,
-      "count": 248
+      "date": "2026-07-20",
+      "price": 2303.27,
+      "count": 249
     },
     {
       "brand": "Shell",
       "fuel": "Diesel Premium",
-      "date": "2026-07-17",
-      "price": 2576.06,
-      "count": 171
+      "date": "2026-07-20",
+      "price": 2576.53,
+      "count": 172
     },
     {
       "brand": "Shell",
       "fuel": "GNC",
       "date": "2026-07-20",
-      "price": 800,
-      "count": 36
+      "price": 795.74,
+      "count": 35
     },
     {
       "brand": "Shell",
       "fuel": "Nafta Premium",
-      "date": "2026-07-17",
-      "price": 2469.2,
-      "count": 258
+      "date": "2026-07-20",
+      "price": 2469.32,
+      "count": 259
     },
     {
       "brand": "Shell",
       "fuel": "Nafta Super",
-      "date": "2026-07-17",
-      "price": 2188.31,
-      "count": 271
+      "date": "2026-07-20",
+      "price": 2188.45,
+      "count": 272
     },
     {
       "brand": "Voy",
@@ -67467,35 +67395,35 @@ window.STATION_PRICE_REFERENCE = {
       "brand": "YPF",
       "fuel": "Diesel",
       "date": "2026-07-20",
-      "price": 2223.05,
+      "price": 2222.5,
       "count": 20
     },
     {
       "brand": "YPF",
       "fuel": "Diesel Premium",
-      "date": "2026-07-20",
-      "price": 2439.55,
+      "date": "2026-07-21",
+      "price": 2439.15,
       "count": 20
     },
     {
       "brand": "YPF",
       "fuel": "GNC",
-      "date": "2026-07-18",
-      "price": 822.58,
+      "date": "2026-07-20",
+      "price": 821.08,
       "count": 46
     },
     {
       "brand": "YPF",
       "fuel": "Nafta Premium",
-      "date": "2026-07-20",
-      "price": 2213.6,
+      "date": "2026-07-21",
+      "price": 2213.5,
       "count": 20
     },
     {
       "brand": "YPF",
       "fuel": "Nafta Super",
-      "date": "2026-07-19",
-      "price": 1997.45,
+      "date": "2026-07-20",
+      "price": 1998.35,
       "count": 20
     }
   ]
